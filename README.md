@@ -65,7 +65,7 @@ Learn more: [codejana.com](https://codejana.com) (coming soon)
 Have questions, feedback, or just want to connect?
 
 - 📧 Email: [codejanauni@gmail.com](mailto:codejanauni@gmail.com)
-- 👨‍💼 Founder: [K K Sonakiya on LinkedIn](https://www.linkedin.com/in/k-k-sonakiya)
+- 👨‍💼 Founder: [K K Sonakiya on LinkedIn](https://www.linkedin.com/in/kksonakiya/)
 
 ---
 
