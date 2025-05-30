@@ -1,0 +1,168 @@
+
+<!-- Modal -->
+<div class="modal fade" id="createModel" tabindex="-1" aria-labelledby="createModelLabel" aria-hidden="true">
+  <div class="modal-dialog ">
+    <div class="modal-content">
+      <div class="modal-header">
+        <div class="">
+
+            <h1 class="modal-title fs-5 fw-bold text-dark" id="createModelLabel">
+                
+                Create New AI Model    </h1>
+                Define a new model configuration to use within your workspace.
+            </p>
+        </div>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="card shadow-sm border-0 rounded-4 mx-auto p-1">
+
+
+    <form id="modelForm">
+        <input type="hidden" id="model_id" name="model_id" />
+
+      <div class="mb-3">
+        <label for="name" class="form-label">Model Name</label>
+        <input
+          type="text"
+          class="form-control"
+          id="name"
+          name="name"
+          placeholder="E.g. FusionNet 2.1"
+          required
+        />
+      </div>
+
+      <div class="mb-3">
+        <label for="base_model" class="form-label">Base Model</label>
+        <select class="form-select" name="base_model" id="base_model">
+          <option value="sdxl_1_0">Stable Diffusion XL</option>
+          <option value="sd_1_5">Stable Diffusion 1.5</option>
+        </select>
+      </div>
+
+      <div class="mb-3">
+        <label for="model_path" class="form-label">Model Path</label>
+        <input
+          type="text"
+          class="form-control"
+          id="model_path"
+          name="model_path"
+          placeholder="/models/path/model.safetensors"
+        />
+      </div>
+
+      <div class="mb-3">
+        <label for="model_type" class="form-label">Model Type</label>
+        <select class="form-select" id="model_type" name="model_type">
+          <option value="checkpoint">Checkpoint</option>
+          <option value="lora">LoRA</option>
+        </select>
+      </div>
+
+      <div class="mb-3">
+        <label for="description" class="form-label">Model Description</label>
+        <textarea
+          class="form-control"
+          id="description"
+          name="description"
+          rows="2"
+          placeholder="Describe the model, usage, and any specific notes."
+        ></textarea>
+      </div>
+
+      <div class="text-end">
+        <button type="submit" class="btn btn-purple form-control">Save Model</button>
+      </div>
+    </form>
+
+    <div id="alertBox" class="alert mt-3 d-none" role="alert"></div>
+  </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+<script>
+  document
+    .getElementById("modelForm")
+    .addEventListener("submit", async function (event) {
+      event.preventDefault(); // Stop normal form submission
+      const id = document.getElementById("model_id").value;
+
+      const formData = {
+        name: document.getElementById("name").value,
+        base_model: document.getElementById("base_model").value,
+        model_path: document.getElementById("model_path").value,
+        model_type: document.getElementById("model_type").value,
+        description: document.getElementById("description").value,
+      };
+ const url = id ? `/update-model/${id}` : "/create-model";
+      const method = "POST"; // same for both
+      try {
+        const response = await fetch(url, {
+          method,
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(formData),
+        });
+
+        const result = await response.json();
+        const alertBox = document.getElementById("alertBox");
+
+        if (response.ok) {
+          alertBox.className = "alert alert-success mt-3";
+          alertBox.innerText = result.message || "Model created successfully!";
+        alertBox.classList.remove("d-none");
+        // Redirect after a short delay (1 second)
+  setTimeout(() => {
+    window.location.href = "/models";
+  }, 1000);
+        } else {
+          alertBox.className = "alert alert-danger mt-3";
+          alertBox.innerText = result.error || "Failed to create model.";
+        }
+
+        alertBox.classList.remove("d-none");
+      } catch (error) {
+        console.error("Error submitting form:", error);
+      }
+    });
+      // Optional: populate form with model data for editing
+      function editModelFromButton(button) {
+        console.log('Edit Model From Button: ', button)
+  const model = JSON.parse(button.dataset.model);
+  editModel(model);
+}
+  function editModel(model) {
+    console.log("Editing model:", model);
+
+    document.getElementById("model_id").value = model.id;
+    document.getElementById("name").value = model.name;
+
+    // If model_type is 'lora', base_model is nested inside model.details
+    const baseModel = model.model_type === 'lora' && model.details
+      ? model.details.base_model
+      : model.base_model;
+
+    console.log("Resolved base_model:", baseModel);
+    document.getElementById("base_model").value = baseModel;
+
+    document.getElementById("model_path").value = model.model_path;
+    document.getElementById("model_type").value = model.model_type.toLowerCase();
+    document.getElementById("description").value = model.description || "";
+
+    const modal = new bootstrap.Modal(document.getElementById("createModel"));
+    modal.show();
+  }
+</script>
+<script>
+  document.getElementById("createModel").addEventListener("hidden.bs.modal", () => {
+    document.getElementById("modelForm").reset();
+    document.getElementById("model_id").value = ""; // reset ID
+    document.getElementById("alertBox").classList.add("d-none");
+  });
+</script>

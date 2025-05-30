@@ -1,0 +1,196 @@
+{% extends 'layout.html' %} {% block content %}
+<div class="custom-container d-flex gap-3 p-3">
+  <!-- Settings Panel -->
+  <div class="settings card p-4 shadow">
+    <h4 class="mb-3">AI Image Generator</h4>
+    <form id="generateForm">
+      <!-- Prompt -->
+      <div class="mb-3">
+        <label class="form-label">Prompt</label>
+        <textarea
+          class="form-control"
+          id="prompt"
+          rows="4"
+          placeholder="Describe your image..."
+        ></textarea>
+      </div>
+
+      <!-- Negative Prompt -->
+      <div class="mb-3">
+        <label class="form-label">Negative Prompt</label>
+        <textarea
+          class="form-control"
+          id="negative_prompt"
+          rows="2"
+          placeholder="Things to avoid..."
+        ></textarea>
+      </div>
+
+      <!-- Base Model (Multi-select Checkbox) -->
+      <div class="mb-3">
+        <label class="form-label">Base Model</label>
+        {% for model in models['base_models'] %}
+        <div class="form-check">
+          <input
+            class="form-check-input"
+            type="checkbox"
+            value="{{ model['alias'] }}"
+            id="{{ model['alias'] }}"
+            name="base_model"
+          />
+          <label class="form-check-label" for="{{ model['alias'] }}"
+            >{{ model['name'] }}</label
+          >
+        </div>
+        {% endfor %}
+      </div>
+      <!-- LoRA (Radio Select) -->
+      <div class="mb-3">
+        <label class="form-label">Select LoRA</label>
+        <div class="form-check">
+          <input
+            class="form-check-input"
+            type="radio"
+            name="lora"
+            id="no-lora"
+            value="no-lora"
+            checked
+          />
+          <label class="form-check-label" for="no-lora">None</label>
+        </div>
+        {% for model in models['sdxl_loras'] %}
+
+        <div class="form-check">
+          <input
+            class="form-check-input"
+            type="radio"
+            name="lora"
+            id="{{ model['name'] }}"
+            value="{{ model['name'] }}"
+            checked
+          />
+          <label class="form-check-label" for="{{ model['name'] }}"
+            >{{ model['name'] }}</label
+          >
+        </div>
+        {% endfor %}
+      </div>
+
+      <button type="submit" class="btn btn-primary w-100">Generate</button>
+    </form>
+  </div>
+
+  <!-- Image Display Panel -->
+  <div
+    class="images flex-grow-1 d-flex justify-content-center align-items-center shadow"
+  >
+    <!-- Spinner goes here on submit -->
+  </div>
+</div>
+
+<script>
+  document
+    .getElementById("generateForm")
+    .addEventListener("submit", async function (e) {
+      e.preventDefault();
+
+      const prompt = document.getElementById("prompt").value.trim();
+      const negative_prompt = document
+        .getElementById("negative_prompt")
+        .value.trim();
+      const baseModelInputs = document.querySelectorAll(
+        'input[name="base_model"]:checked'
+      );
+      const base_models = Array.from(baseModelInputs).map(
+        (input) => input.value
+      );
+      const lora = document.querySelector('input[name="lora"]:checked')?.value;
+
+      if (!prompt || base_models.length === 0 || !lora) {
+        alert(
+          "Please enter a prompt, select at least one base model, and choose a LoRA."
+        );
+        return;
+      }
+
+      const payload = { prompt, negative_prompt, base_models, lora };
+      console.log("Sending payload:", payload);
+
+      const imagesDiv = document.querySelector(".images");
+      imagesDiv.innerHTML = "";
+      const spinnerMap = {};
+
+      base_models.forEach((model, index) => {
+        const spinnerId = `spinner-${index}`;
+        spinnerMap[model] = spinnerId;
+        imagesDiv.insertAdjacentHTML(
+          "beforeend",
+          `
+      <div id="${spinnerId}" class="d-flex flex-column align-items-center text-center m-2">
+        <div class="spinner-border text-primary" role="status"></div>
+        <button type="button" class="mt-2 btn btn-dark">${model} + ${lora}</button>
+      </div>
+    `
+        );
+      });
+
+      try {
+        const response = await fetch("/stream-generate-image", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(payload),
+        });
+
+        const reader = response.body.getReader();
+        const decoder = new TextDecoder("utf-8");
+        let buffer = "";
+
+        while (true) {
+          const { value, done } = await reader.read();
+          if (done) break;
+
+          buffer += decoder.decode(value, { stream: true });
+
+          let parts = buffer.split("\n\n");
+          buffer = parts.pop(); // Any incomplete chunk is saved for next round
+
+          for (let part of parts) {
+            if (part.startsWith("data: ")) {
+              try {
+                const jsonStr = part.slice(6); // Remove 'data: '
+                const data = JSON.parse(jsonStr);
+                console.log("Received streamed image:", data);
+
+                const containerId = spinnerMap[data.base_model];
+                const container = document.getElementById(containerId);
+                if (container) {
+                  container.outerHTML = `
+                <div class="d-flex flex-column align-items-center text-center m-2">
+                  <div class="glass-reflect">
+                  <img src="${data.image}" class="img-fluid rounded-4 mb-2 shadow" style="max-width: 300px;" />
+                  </div>
+                  <button type="button" class="btn btn-dark shadow">${data.base_model} + ${data.lora}</button>
+                </div>
+              `;
+                }
+              } catch (err) {
+                console.error("Failed to parse streamed data:", err);
+              }
+            }
+          }
+        }
+
+        console.log("Stream complete.");
+      } catch (err) {
+        console.error("Streaming error:", err);
+        Object.values(spinnerMap).forEach((id) => {
+          const el = document.getElementById(id);
+          if (el) {
+            el.innerHTML = `<div class="alert alert-danger">Failed to load image.</div>`;
+          }
+        });
+      }
+    });
+</script>
+
+{% endblock content %}

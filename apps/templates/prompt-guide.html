@@ -1,0 +1,168 @@
+{% extends 'layout.html' %}
+{% block content %}
+     <div class="container my-5">
+    <h1 class="mb-4">🎨 Image Prompt Guide</h1>
+    <p class="text-muted">Write better prompts for SDXL and LoRA-based model comparisons in <strong>CDAI <small style="font-style: italic;" class="text-warning">lite</small></strong>.</p>
+<h4>Generation Details</h4>
+    <ul>
+    <li>Base Model: Dynavision</li>
+    <li>LoRA: Smol Animals</li>
+    
+</ul>
+    <hr />
+
+    <div class="mb-5">
+      <h3>1️⃣ Prompting With vs Without LoRA</h3>
+      <ul>
+        <li><strong>Without LoRA</strong>: Use general style and subject keywords. The base model handles everything.</li>
+        <li><strong>With LoRA</strong>: Reference the LoRA name and use <code>&lt;lora:name:weight&gt;</code> syntax.</li>
+      </ul>
+      <p>💡 Example Format:</p>
+      <pre><code><b>zhibi, chibi, </b> A beautiful landscape, neon lights, night time, rain, reflections</code></pre>
+    <div class="card">
+        <div class="card-body d-flex gap-3 justify-content-center align-items-center">
+           <div class="text-center">
+            
+            <h3>With LoRA</h3>
+
+               <img style="border-radius: 30px; " class="shadow" src="/static/images/generated_20250528_132427.png" alt="">
+            </div>
+            <div class="text-center"><h3>Without LoRA</h3>
+
+                <img style="border-radius: 30px; " class="shadow" src="/static/images/generated_20250528_132357.png" alt="">
+            </div>
+        </div>
+    </div>
+    
+    </div>
+
+    <div class="mb-5">
+      <h3>2️⃣ Use of Prompt Weights</h3>
+      <p>Boost or reduce emphasis on certain words using parentheses or colons.</p>
+      <ul>
+        <li><code>(masterpiece:1.3)</code> increases weight to 130%</li>
+        <li><code>(worst quality:0.5)</code> reduces weight to 50%</li>
+      </ul>
+      <p>🎯 Best Practice: Use weights for style balance, details like lighting, or to avoid bad generations.</p>
+    <p>Updated Prompt: <pre><code>chibi, zhibi, a cute girl, A beautiful landscape,  neon lights, night time, rain, reflections, (masterpiece:1.3), (worst quality:0.5)</code></pre></p>
+        <div class="card">
+        <div class="card-body d-flex gap-3 justify-content-center align-items-center">
+           <div class="text-center">
+            
+            <h3>With Weights</h3>
+
+               <img style="border-radius: 30px; " class="shadow" src="/static/images/generated_20250528_133238.png" alt="">
+            </div>
+            <div class="text-center"><h3>Without Weights</h3>
+
+                <img style="border-radius: 30px; " class="shadow" src="/static/images/generated_20250528_133206.png" alt="">
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <div class="mb-5">
+      <h3>3️⃣ Negative Prompts</h3>
+      <p>Always add a strong negative prompt to avoid poor outputs.</p>
+      <pre><code>negative_prompt: (worst quality, low quality, blurry, distorted, poorly drawn hands, watermark, extra limbs)</code></pre>
+      <div class="card">
+        <div class="card-body d-flex gap-3 justify-content-center align-items-center">
+           <div class="text-center">
+            
+            <h3>With Negative Prompt</h3>
+
+               <img style="border-radius: 30px; " class="shadow" src="/static/images/generated_20250528_133414.png" alt="">
+            </div>
+            <div class="text-center"><h3>Without Negative Prompt</h3>
+
+                <img style="border-radius: 30px; " class="shadow" src="/static/images/generated_20250528_133238.png" alt="">
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <div class="mb-5">
+      <h3>4️⃣ Use Clean Backgrounds for Post-Processing</h3>
+      <p>If you plan to remove the background later or use the image in other design tools:</p>
+      <ul>
+        <li>Use <code>plain background</code>, <code>white background</code>, or <code>studio shot</code> in your prompt</li>
+        <li>Try <code>cutout style</code> or <code>rendered object, centered</code> for object-only shots</li>
+      </ul>
+      <p>🧼 This makes it easier to key out backgrounds or overlay images in Photoshop or Canva.</p>
+     <p>✅ Example Prompt:</p>
+  <pre><code>red leather high heels, product photo, studio shot, plain white background, centered object, high detail</code></pre>
+  <div class="card">
+        <div class="card-body d-flex gap-3 justify-content-center align-items-center">
+           <div class="text-center">
+            
+            <h3>With Background Details</h3>
+
+               <img style="border-radius: 30px; " class="shadow" src="/static/images/generated_20250528_133916.png" alt="">
+            </div>
+            <div class="text-center"><h3>Without Background Details</h3>
+
+                <img style="border-radius: 30px; " class="shadow" src="/static/images/generated_20250528_133414.png" alt="">
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <div class="mb-5">
+      <h3>5️⃣ Prompting for Style</h3>
+      <p>Use descriptive styles for fine-tuned control. Combine genres or artists with LoRA models if needed.</p>
+      <ul>
+        <li><code>cyberpunk cityscape, synthwave colors, backlit silhouette</code></li>
+        <li><code>anime girl in school uniform, sunset, high detail</code></li>
+      </ul>
+      <p>🖌 Add LoRA styles like <code>&lt;lora:pixelart:1&gt;</code> or <code>&lt;lora:comicbookstyle:0.9&gt;</code> to enhance the theme.</p>
+   <p>✅ Example Prompts:</p>
+  <pre>Prompt 1: <code>futuristic samurai, neon armor, cyberpunk city, glowing katana, night, <lora:cyberpunk:0.8></code></pre>
+  
+  <pre>Prompt 2: <code>cute anime cat girl, magical forest, vibrant colors, sparkle effects, <lora:chibi-cute-art:1></code></pre>
+  <div class="card">
+        <div class="card-body d-flex gap-3 justify-content-center align-items-center">
+           <div class="text-center">
+            
+            <h3>Prompt 1</h3>
+
+               <img style="border-radius: 30px; " class="shadow" src="/static/images/generated_20250528_134128.png" alt="">
+            </div>
+            <div class="text-center"><h3>Prompt 2</h3>
+
+                <img style="border-radius: 30px; " class="shadow" src="/static/images/generated_20250528_134235.png" alt="">
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <div class="mb-5">
+      <h3>6️⃣ Add Control (if model supports it)</h3>
+      <p>You can include visual terms that guide composition, such as:</p>
+      <ul>
+        <li><code>centered composition, symmetrical</code></li>
+        <li><code>portrait, close up, upper body, dynamic pose</code></li>
+        <li><code>depth of field, cinematic lighting, rim light</code></li>
+      </ul>
+    <p>✅ Example Prompt:</p>
+  <pre><code>female warrior, cinematic lighting, dramatic shadows, centered composition, close-up portrait, bokeh background, depth of field</code></pre>
+  <div class="card">
+        <div class="card-body d-flex gap-3 justify-content-center align-items-center">
+           <div class="text-center">
+            
+            <h3>Adding Control Words</h3>
+
+               <img style="border-radius: 30px; " class="shadow" src="/static/images/generated_20250528_134623.png" alt="">
+            </div>
+          
+        </div>
+    </div>
+    </div>
+
+
+
+    <hr />
+    <div class="text-muted">
+      <small>Need help with prompts? Reach out: <a href="mailto:codejanauni@gmail.com">codejanauni@gmail.com</a></small>
+    </div>
+  </div>
+{% endblock content %}

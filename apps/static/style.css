@@ -1,0 +1,146 @@
+body {
+  background: #f9fafb;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.card {
+  background-color: #ffffff;
+  border-radius: 1rem;
+  border: none;
+  padding: 2.5rem;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.05);
+}
+
+.form-label {
+  font-weight: 600;
+  color: #111827;
+}
+
+.form-control,
+.form-select {
+  border-radius: 0.75rem;
+  padding: 0.75rem;
+  border: 1px solid #e5e7eb;
+  font-size: 1rem;
+}
+
+.form-control:focus,
+.form-select:focus {
+  border-color: #a855f7;
+  box-shadow: 0 0 0 0.2rem rgba(168, 85, 247, 0.25);
+}
+
+.btn-purple {
+  background: linear-gradient(90deg, #a855f7, #6366f1);
+  color: #ffffff;
+  border: none;
+  padding: 0.65rem 2rem;
+  font-weight: 600;
+  border-radius: 0.75rem;
+  transition: background 0.3s ease-in-out;
+}
+
+.btn-purple:hover {
+  background: linear-gradient(90deg, #9333ea, #4f46e5);
+  color: white;
+}
+
+h2 {
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 0.5rem;
+}
+
+.text-muted {
+  font-size: 0.95rem;
+  color: #6b7280 !important;
+}
+
+.form-header {
+  margin-bottom: 2rem;
+}
+
+/* index page */
+.custom-container {
+  /* border:2px solid red; */
+  width: 100vw;
+  height: calc(100vh - 56px);
+}
+
+.settings {
+  width: 360px;
+  min-width:320px;
+  height: 100%;
+  /* border:2px solid orangered; */
+  border-radius: 30px;
+  overflow-y: auto;
+}
+
+.images {
+  flex-wrap: wrap;
+  overflow-y: auto;
+  height: 100%;
+  /* border:2px solid cyan; */
+  border-radius: 30px;
+  flex-grow: 1;
+  background: linear-gradient(145deg, #ffffff, #cccc);
+}
+
+.image-hover-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.image-compare-checkbox {
+  z-index: 5;
+  cursor: pointer;
+}
+
+.hover-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #ffffff;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.image-hover-wrapper:hover .hover-overlay {
+  opacity: 1;
+}
+
+.glass-reflect {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  border-radius: 1rem;
+}
+
+.glass-reflect::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -50%;
+  width: 200%;
+  height: 100%;
+  background: linear-gradient(120deg, rgba(255, 255, 255, 0.3) 0%, transparent 60%);
+  transform: skewX(-25deg);
+  pointer-events: none;
+  animation: reflect-slide 0.5s ease-in-out;
+}
+
+@keyframes reflect-slide {
+  0% {
+    left: -100%;
+  }
+
+  100% {
+    left: 100%;
+  }
+}

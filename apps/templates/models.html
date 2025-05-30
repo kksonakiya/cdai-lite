@@ -1,0 +1,103 @@
+{% extends 'layout.html' %} {% block content %}
+<div class="container">
+  <div class="d-flex justify-content-between align-items-center mb-4">
+    <h1>AI Model Manager</h1>
+  </div>
+  <button
+    type="button"
+    data-bs-toggle="modal"
+    data-bs-target="#createModel"
+    class="btn btn-purple btn-ai mb-3"
+  >
+    + Add Model
+  </button>
+
+  <!-- Base Models Table -->
+  <div class="card mb-3 shadow">
+    <div class="card-header">
+      <div class="card-title">
+        <h2>Base Models</h2>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="table-container">
+        <table class="table table-hover">
+          <thead>
+            <tr>
+              <th style="max-width: 20px">S.No.</th>
+              <th>Name</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for model in models['base_models'] %}
+            <tr>
+              <td>{{ loop.index }}</td>
+              <td>{{ model['name'] }}</td>
+              <td class="action-btns">
+             
+                <button
+                  class="btn btn-sm btn-outline-info"
+                  data-model='{{ model | tojson | safe }}'
+                  onclick="editModelFromButton(this)"
+                >
+                  Edit
+                </button>
+                 <a
+                  href="{{ url_for('delete_model', id=model['id']) }}"
+                  class="btn btn-sm btn-outline-danger"
+                  >Delete</a
+                >
+              </td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  <div class="card mb-3 shadow">
+    <div class="card-header">
+      <div class="card-title">
+        <h2>LoRA Models</h2>
+      </div>
+    </div>
+    <div class="card-body">
+      <!-- LoRA Models Table -->
+      <div class="table-container">
+        <table class="table table-hover">
+          <thead>
+            <tr>
+              <th style="max-width: 20px">S.No.</th>
+              <th>Name</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for model in models['sdxl_loras'] %}
+            <tr>
+              <td>{{ loop.index }}</td>
+              <td>{{ model['name'] }}</td>
+              <td class="action-btns">
+                <button
+                  class="btn btn-sm btn-outline-info"
+                  data-model='{{ model | tojson | safe }}'
+                  onclick="editModelFromButton(this)"
+                >
+                  Edit
+                </button>
+                <a
+                  href="{{ url_for('delete_model', id=model['id']) }}"
+                  class="btn btn-sm btn-outline-danger"
+                  >Delete</a
+                >
+              </td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+{% include 'modals/create-model.html' %} {% endblock content %}

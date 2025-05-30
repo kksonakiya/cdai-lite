@@ -1,0 +1,242 @@
+{% extends 'layout.html' %} {% block content %}
+<div class="p-4">
+  <h2 class="text-center mb-4 fw-bold">Image Gallery</h2>
+  <div
+    class="d-flex justify-content-start align-items-center gap-2 mb-3"
+    id="compareToolbar"
+  >
+    <button class="btn btn-outline-secondary" id="deselectBtn">
+      Deselect All
+    </button>
+    <button class="btn btn-primary" id="compareBtn">Compare Selected</button>
+  </div>
+
+  {% if images %}
+  <div class="row g-3">
+    {% for image in images %}
+    <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+      <div class="card shadow-sm h-100 border-0 rounded-3 p-0">
+        <div
+          class="position-relative image-hover-wrapper"
+          style="cursor: pointer"
+        >
+          <img
+            src="/static/images/{{ image.file_path }}"
+            alt="{{ image.prompt|e }}"
+            class="card-img-top rounded-top-3 img-fluid"
+            style="object-fit: cover; height: 100%; cursor: pointer"
+            data-bs-toggle="modal"
+            data-bs-target="#imageModal"
+            data-image="{{ image.file_path }}"
+          />
+          <!-- Hover Message Overlay -->
+          <div class="hover-overlay">Click to expand</div>
+          <!-- Info Button (same as before) -->
+
+          <button
+            type="button"
+            class="btn btn-sm btn-light position-absolute top-0 end-0 m-1 rounded-circle"
+            data-bs-toggle="popover"
+            data-bs-title="Image Info"
+            data-bs-html="true"
+            data-bs-trigger="manual"
+            data-bs-content="
+         <strong>Prompt:</strong> {{ image.prompt | replace('<', '&lt;') | replace('>', '&gt;') }}<br>
+
+            <strong>Model:</strong> {{ image.model_used }}<br>
+            <strong>Style:</strong> {{ image.style or 'N/A' }}<br>
+            <strong>Status:</strong> {{ image.status }}<br>
+            <strong>Generated:</strong> {{ image.created_at.strftime('%Y-%m-%d %H:%M') }}
+          "
+            tabindex="0"
+          >
+            <i class="bi bi-info-circle text-dark"></i>
+          </button>
+          <!-- Checkbox -->
+          <input
+            type="checkbox"
+            class="form-check-input image-compare-checkbox position-absolute top-0 start-0 m-2 scale-up"
+            data-file="{{ image.file_path }}"
+            data-base="{{ image.model_used | title}}"
+            data-lora="{{ image.style }}"
+            style="width: 24px; height: 24px"
+          />
+        </div>
+
+        <div class="card-body p-2">
+          <div class="d-flex justify-content-between align-items-center">
+            <div class="btn-group">
+              <button type="button" class="btn btn-dark bg-gradient btn-sm">
+                <small>{{ image.model_used | title }}</small>
+              </button>
+              {% if image.style %}
+              <button type="button" class="btn btn-warning bg-gradient btn-sm">
+                <small> {{ image.style | title }} </small>
+              </button>
+              {% else %}
+              <button type="button" class="btn btn-danger bg-gradient btn-sm">
+                <small> no lora </small>
+              </button>
+                {% endif %}
+            </div>
+            <a
+              class="btn btn-danger bg-gradient btn-sm"
+              href="{{ url_for('delete_image', filename=image.file_path) }}"
+              title="Delete Image"
+              ><i class="bi bi-trash-fill"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+  {% else %}
+  <div class="alert alert-info text-center">No images found.</div>
+  {% endif %}
+</div>
+<!-- include image viewer modal -->
+{% include 'modals/image-viewer.html' %} {% include
+'modals/fullscreen-compare.html' %}
+<!-- Triggers Tooltip -->
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    // Enable popovers
+    const popoverTriggerList = document.querySelectorAll(
+      '[data-bs-toggle="popover"]'
+    );
+    [...popoverTriggerList].forEach((el) => {
+      const popover = new bootstrap.Popover(el, {
+        trigger: "manual",
+        html: true,
+        sanitize: false,
+        placement: "top",
+      });
+
+      el.addEventListener("click", function (e) {
+        // Close other popovers
+        document
+          .querySelectorAll('[data-bs-toggle="popover"]')
+          .forEach((other) => {
+            if (other !== el) {
+              bootstrap.Popover.getInstance(other)?.hide();
+            }
+          });
+
+        // Toggle current popover
+        popover.toggle();
+
+        // Handle outside click
+        const handleClickOutside = (evt) => {
+          const popoverElement = document.querySelector(".popover");
+          if (
+            !el.contains(evt.target) &&
+            !popoverElement?.contains(evt.target)
+          ) {
+            popover.hide();
+            document.removeEventListener("click", handleClickOutside);
+          }
+        };
+
+        setTimeout(() => {
+          document.addEventListener("click", handleClickOutside);
+        }, 0); // Delay to allow initial click to finish
+      });
+    });
+
+    // Handle image click for modal
+    const imageModal = document.getElementById("imageModal");
+    const modalImage = document.getElementById("modalImage");
+    imageModal.addEventListener("click", function (e) {
+      // If the click target is NOT the image itself or a child of it
+      if (!modalImage.contains(e.target)) {
+        const modalInstance = bootstrap.Modal.getInstance(imageModal);
+        modalInstance.hide();
+      }
+    });
+    document.querySelectorAll("img[data-image]").forEach((img) => {
+      img.addEventListener("click", () => {
+        const src = "/static/images/" + img.getAttribute("data-image");
+        modalImage.setAttribute("src", src);
+      });
+    });
+  });
+</script>
+<script>
+  const compareToolbar = document.getElementById("compareToolbar");
+  const compareBtn = document.getElementById("compareBtn");
+  const deselectBtn = document.getElementById("deselectBtn");
+
+  const checkboxes = document.querySelectorAll(".image-compare-checkbox");
+  const selectedImages = new Set();
+
+  checkboxes.forEach((checkbox) => {
+    checkbox.addEventListener("change", function () {
+      const file = this.dataset.file;
+
+      if (this.checked) {
+        selectedImages.add(file);
+      } else {
+        selectedImages.delete(file);
+      }
+
+      //   compareToolbar.classList.toggle("d-none", selectedImages.size < 2);
+    });
+  });
+
+  compareBtn.addEventListener("click", function () {
+    if (selectedImages.size < 2) {
+      const alert = document.createElement("div");
+      alert.className =
+        "alert alert-warning alert-dismissible fade show position-fixed top-0 start-50 translate-middle-x mt-3 z-3";
+      alert.style.zIndex = 2000;
+      alert.role = "alert";
+      alert.innerHTML = `
+      <strong>Oops!</strong> Please select at least 2 images to compare.
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    `;
+
+      document.body.appendChild(alert);
+
+      // Auto remove alert after 4 seconds
+      setTimeout(() => {
+        alert.remove();
+      }, 4000);
+
+      return;
+    }
+    const container = document.getElementById("compareImagesContainer");
+    container.innerHTML = ""; // Clear previous
+
+    selectedImages.forEach((file) => {
+      const checkbox = [...checkboxes].find((cb) => cb.dataset.file === file);
+      const base = checkbox?.dataset.base || "Unknown";
+      const lora = checkbox?.dataset.lora || "None";
+
+      const wrapper = document.createElement("div");
+      wrapper.className = "text-center mb-4";
+
+      const img = document.createElement("img");
+      img.src = "/static/images/" + file;
+      img.className = "img-fluid rounded mb-2";
+      img.style.maxHeight = "90vh";
+
+      const info = document.createElement("div");
+      info.className = "small text-muted";
+      info.innerHTML = `<strong>Base:</strong> ${base}<br><strong>LoRA:</strong> ${lora}`;
+
+      wrapper.appendChild(img);
+      wrapper.appendChild(info);
+      container.appendChild(wrapper);
+    });
+    new bootstrap.Modal(document.getElementById("compareModal")).show();
+  });
+  deselectBtn.addEventListener("click", function () {
+    checkboxes.forEach((checkbox) => {
+      checkbox.checked = false;
+    });
+    selectedImages.clear();
+  });
+</script>
+
+{% endblock content %}

@@ -1,0 +1,433 @@
+{% extends 'layout.html' %} {% block content %}
+<div class="container">
+  <div class="d-flex justify-content-between align-items-center mb-4">
+    <h1>Download Models</h1>
+  </div>
+
+  <!-- Base Models Table -->
+  <div class="card mb-3 shadow">
+    <div class="card-header">
+      <div class="card-title">
+        <h2>Base Models</h2>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="table-container">
+        <table class="table table-hover">
+          <thead>
+            <tr>
+              <th style="max-width: 60px">S.No.</th>
+              <th>Model Name</th>
+              <th>Model Type</th>
+              <th>Model URL</th>
+              <th>Model Size</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>Dynavision</td>
+              <td>Checkpoint</td>
+              <td>
+                <a
+                  href="https://civitai.com/models/122606/dynavision-xl-all-in-one-stylized-3d-sfw-and-nsfw-output-no-refiner-needed"
+                  class="btn btn-purple btn-sm"
+                  target="_blank"
+                  >Visit</a
+                >
+              </td>
+              <td>6.46 Gb</td>
+              <td>
+                <a
+                  href="https://civitai.com/api/download/models/297740?type=Model&format=SafeTensor&size=pruned&fp=fp16"
+                  class="btn btn-warning bg-gradient"
+                >
+                  Download
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>Dreamshaper XL v21 Turbo</td>
+              <td>Checkpoint</td>
+              <td>
+                <a
+                  href="https://civitai.com/models/112902?modelVersionId=351306"
+                  class="btn btn-purple btn-sm"
+                  target="_blank"
+                  >Visit</a
+                >
+              </td>
+              <td>6.46 Gb</td>
+              <td>
+                <a
+                  href="https://civitai.com/api/download/models/351306?type=Model&format=SafeTensor&size=full&fp=fp16"
+                  class="btn btn-warning bg-gradient"
+                  >Download</a
+                >
+              </td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>CyberRealistic XL v5</td>
+              <td>Checkpoint</td>
+              <td>
+                <a
+                  href="https://civitai.com/models/312530?modelVersionId=1766318"
+                  class="btn btn-purple btn-sm"
+                  target="_blank"
+                  >Visit</a
+                >
+              </td>
+              <td>6.46 Gb</td>
+              <td>
+                <a
+                  href="https://civitai.com/api/download/models/1766318?type=Model&format=SafeTensor&size=pruned&fp=fp16"
+                  class="btn btn-warning bg-gradient"
+                  >Download</a
+                >
+              </td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td>JuggernautXL</td>
+              <td>Checkpoint</td>
+              <td>
+                <a
+                  href="https://civitai.com/models/133005/juggernaut-xl"
+                  class="btn btn-purple btn-sm"
+                  target="_blank"
+                  >Visit</a
+                >
+              </td>
+              <td>6.62 Gb</td>
+              <td>
+                <a
+                  href="https://civitai.com/api/download/models/1759168?type=Model&format=SafeTensor&size=full&fp=fp16"
+                  class="btn btn-warning bg-gradient"
+                  >Download</a
+                >
+              </td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td>NightvisionXL V900</td>
+              <td>Checkpoint</td>
+              <td>
+                <a
+                  href="https://civitai.com/models/128607/nightvisionxl"
+                  class="btn btn-purple btn-sm"
+                  target="_blank"
+                  >Visit</a
+                >
+              </td>
+              <td>6.46 Gb</td>
+              <td>
+                <a
+                  href="https://civitai.com/api/download/models/577919?type=Model&format=SafeTensor&size=pruned&fp=fp16"
+                  class="btn btn-warning bg-gradient"
+                  >Download</a
+                >
+              </td>
+            </tr>
+            <tr>
+              <td>6</td>
+              <td>ProtovisionXL</td>
+              <td>Checkpoint</td>
+              <td>
+                <a
+                  href="https://civitai.com/models/125703/protovision-xl-high-fidelity-3d-photorealism-anime-hyperrealism-no-refiner-needed"
+                  class="btn btn-purple btn-sm"
+                  target="_blank"
+                  >Visit</a
+                >
+              </td>
+              <td>6.46 Gb</td>
+              <td>
+                <a
+                  href="https://civitai.com/api/download/models/265938?type=Model&format=SafeTensor&size=pruned&fp=fp16"
+                  class="btn btn-warning bg-gradient"
+                  >Download</a
+                >
+              </td>
+            </tr>
+            <tr>
+              <td>7</td>
+              <td>SDXL Base 1.0</td>
+              <td>Checkpoint</td>
+              <td>
+                <a
+                  href="https://civitai.com/models/101055/sd-xl"
+                  class="btn btn-purple btn-sm"
+                  target="_blank"
+                  >Visit</a
+                >
+              </td>
+              <td>6.46 Gb</td>
+              <td>
+                <a
+                  href="https://civitai.com/api/download/models/128078?type=Model&format=SafeTensor&size=pruned&fp=fp16"
+                  class="btn btn-warning bg-gradient"
+                  >Download</a
+                >
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <!-- Lora Models Table -->
+  <div class="card mb-3 shadow">
+    <div class="card-header">
+      <div class="card-title">
+        <h2>Lora</h2>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="table-container">
+        <table class="table table-hover">
+          <thead>
+            <tr>
+              <th style="max-width: 60px">S.No.</th>
+              <th>Model Name</th>
+              <th>Model Type</th>
+              <th>Model URL</th>
+              <th>Model Size</th>
+              <th>Trigger Words</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- LoRA Models -->
+            <tr>
+              <td>1</td>
+              <td>Smol Animals</td>
+              <td>LoRA</td>
+              <td>
+                <a
+                  href="https://civitai.com/models/186716?modelVersionId=209649"
+                  class="btn btn-purple btn-sm"
+                  target="_blank"
+                  >Visit</a
+                >
+              </td>
+              <td>217.87 Mb</td>
+              <td class="">
+                <small class="badge text-bg-dark"> zhibi, chibi </small>
+              </td>
+              <td>
+                <a
+                  href="https://civitai.com/api/download/models/209649?type=Model&format=SafeTensor"
+                  class="btn btn-warning bg-gradient"
+                  >Download</a
+                >
+              </td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>Logo Redmond</td>
+              <td>LoRA</td>
+              <td>
+                <a
+                  href="https://civitai.com/models/124609/logoredmond-logo-lora-for-sd-xl-10"
+                  class="btn btn-purple btn-sm"
+                  target="_blank"
+                  >Visit</a
+                >
+              </td>
+              <td>162.64 Mb</td>
+              <td class="">
+                <small class="badge text-bg-dark"> logo, logoredmaf </small>
+              </td>
+              <td>
+                <a href="#" class="btn btn-warning bg-gradient">Download</a>
+              </td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>Pixel Art</td>
+              <td>LoRA</td>
+              <td>
+                <a
+                  href="https://civitai.com/models/120096/pixel-art-xl"
+                  class="btn btn-purple btn-sm"
+                  target="_blank"
+                  >Visit</a
+                >
+              </td>
+              <td>162.64 Mb</td>
+              <td class="">
+                <small class="badge text-bg-dark">
+                  (flat shading:1.2), (minimalist:1.4)</small
+                >
+              </td>
+              <td>
+                <a
+                  href="https://civitai.com/api/download/models/135931?type=Model&format=SafeTensor"
+                  class="btn btn-warning bg-gradient"
+                  >Download</a
+                >
+              </td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td>Cyberpunk</td>
+              <td>LoRA</td>
+              <td>
+                <a
+                  href="https://civitai.com/models/128568?modelVersionId=141094"
+                  class="btn btn-purple btn-sm"
+                  target="_blank"
+                  >Visit</a
+                >
+              </td>
+              <td>162.65 Mb</td>
+              <td class="">
+                <small class="badge text-bg-dark">
+                  lora:Cyberpunk _Anime_sdxl:1.0
+                </small>
+              </td>
+              <td>
+                <a
+                  href="https://civitai.com/api/download/models/141094?type=Model&format=SafeTensor"
+                  class="btn btn-warning bg-gradient"
+                  >Download</a
+                >
+              </td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td>Low Poly Art</td>
+              <td>LoRA</td>
+              <td>
+                <a
+                  href="https://civitai.com/models/133120/low-poly"
+                  class="btn btn-purple btn-sm"
+                  target="_blank"
+                  >Visit</a
+                >
+              </td>
+              <td>217.87 Mb</td>
+              <td class="">
+                <small class="badge text-bg-dark"> lora:LowpolySDXL:1</small>
+              </td>
+              <td>
+                <a
+                  href="https://civitai.com/api/download/models/146502?type=Model&format=SafeTensor"
+                  class="btn btn-warning bg-gradient"
+                  >Download</a
+                >
+              </td>
+            </tr>
+            <tr>
+              <td>6</td>
+              <td>Surreal Harmony</td>
+              <td>LoRA</td>
+              <td>
+                <a
+                  href="https://civitai.com/models/36722/surreal-harmony"
+                  class="btn btn-purple btn-sm"
+                  target="_blank"
+                  >Visit</a
+                >
+              </td>
+              <td>217.87 Mb</td>
+              <td class="">
+                <small class="badge text-bg-dark"> Surreal Harmony</small>
+              </td>
+              <td>
+                <a
+                  href="https://civitai.com/api/download/models/154228?type=Model&format=SafeTensor"
+                  class="btn btn-warning bg-gradient"
+                  >Download</a
+                >
+              </td>
+            </tr>
+            <tr>
+              <td>7</td>
+              <td>Sci-fi Worlds</td>
+              <td>LoRA</td>
+              <td>
+                <a
+                  href="https://civitai.com/models/105945?modelVersionId=140624"
+                  class="btn btn-purple btn-sm"
+                  target="_blank"
+                  >Visit</a
+                >
+              </td>
+              <td>162.64 Mb</td>
+              <td class="">
+                <small class="badge text-bg-dark">
+                  lora:Sci-fi_Environments_sdxl:0.8
+                </small>
+              </td>
+              <td>
+                <a
+                  href="https://civitai.com/api/download/models/140624?type=Model&format=SafeTensor"
+                  class="btn btn-warning bg-gradient"
+                  >Download</a
+                >
+              </td>
+            </tr>
+            <tr>
+              <td>8</td>
+              <td>Comic Book Style</td>
+              <td>LoRA</td>
+              <td>
+                <a
+                  href="https://civitai.com/models/462611?modelVersionId=1331990"
+                  class="btn btn-purple btn-sm"
+                  target="_blank"
+                  >Visit</a
+                >
+              </td>
+              <td>435.34 Mb</td>
+              <td class="">
+                <small
+                  class="badge text-bg-dark"
+                  style="
+                    max-width: 200px;
+                    white-space: normal;
+                    word-break: break-word;
+                  "
+                >
+                  graphic novel, drawing, anime, cartoon, comic book strip page,
+                  comic strip sequence page, comic strip style,
+                </small>
+              </td>
+              <td>
+                <a
+                  href="https://civitai.com/api/download/models/1331990?type=Model&format=SafeTensor"
+                  class="btn btn-warning bg-gradient"
+                  >Download</a
+                >
+              </td>
+            </tr>
+            <tr>
+              <td>9</td>
+              <td>Paper Cutout</td>
+              <td>LoRA</td>
+              <td>
+                <a href="https://civitai.com/models/204503/paper-cutout-style-sdxl-dreambooth-lora" class="btn btn-purple btn-sm" target="_blank"
+                  >Visit</a
+                >
+              </td>
+              <td>54.76 Mb</td>
+              <td class="">
+                <small class="badge text-bg-dark"> PaperCutout style </small>
+              </td>
+              <td>
+                <a href="https://civitai.com/api/download/models/230254?type=Model&format=SafeTensor" class="btn btn-warning bg-gradient">Download</a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock content %}
