@@ -4,6 +4,12 @@
 
 ---
 
+## Watch the APP Live in Action - How to Use CDAI Lite
+
+https://youtu.be/PA_E0I28qkw
+
+---
+
 ## 🔍 Our Mission
 
 To provide a fast, simple, and private way to test and compare image generation models — including various **LoRA combinations** — empowering users to make informed decisions while staying offline and in control.
@@ -76,4 +82,3 @@ Have questions, feedback, or just want to connect?
 ---
 
 > **Tip**: If you enjoy using CDAI Lite, consider sharing it with other AI creators or tagging us on social media!
->
