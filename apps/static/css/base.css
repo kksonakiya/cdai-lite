@@ -1,0 +1,54 @@
+body {
+    padding-top: 90px;
+}
+
+.footer-section {
+    padding: 60px 0 40px;
+    background: #ffffff;
+    border-top: 1px solid rgba(0,0,0,0.05);
+}
+
+/* BRAND */
+.footer-brand {
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.footer-text {
+    font-size: 0.9rem;
+    color: #6b7280;
+}
+
+/* HEADINGS */
+.footer-heading {
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #111827;
+}
+
+/* LINKS */
+.footer-links {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin-bottom: 6px;
+}
+
+.footer-links a {
+    text-decoration: none;
+    font-size: 0.85rem;
+    color: #6b7280;
+}
+
+.footer-links a:hover {
+    color: #111827;
+}
+
+/* BOTTOM */
+.footer-bottom {
+    font-size: 0.8rem;
+    color: #9ca3af;
+}

@@ -4102,3 +4102,401 @@
 2026-03-24 01:54:26,230 — flask-app — INFO — Using resolution: 512x768
 2026-03-24 01:54:30,469 — flask-app — DEBUG — Generated filename: G:\K K Sonakiya\Projects\30. AI Image Generation\1. Image Generation\CDAI Lite\apps\static\images\generated_20260324_015430.png
 2026-03-24 01:54:30,509 — flask-app — INFO — Image saved at: G:\K K Sonakiya\Projects\30. AI Image Generation\1. Image Generation\CDAI Lite\apps\static\images\generated_20260324_015430.png
+2026-03-24 13:09:09,068 — flask-app — INFO — ImageGenerator initialized with device=cuda
+2026-03-24 13:09:09,071 — flask-app — INFO — [Generate] Request params: {'base_model': 'dynavision', 'image_style': 'Smol Animals', 'prompt': 'cute lion chibi zhibi', 'negative_prompt': ''}
+2026-03-24 13:09:09,072 — flask-app — INFO — Switching base model from None to dynavision
+2026-03-24 13:09:09,073 — flask-app — INFO — Base Model Details: {'id': '2', 'name': 'Dynavision', 'model_type': 'checkpoint', 'alias': 'dynavision', 'model_path': 'C:\\Users\\kkson\\Models\\dynavision.safetensors', 'output_dir': 'dynavision', 'base_model': 'sdxl_1_0'}
+2026-03-24 13:09:09,074 — flask-app — INFO — Loading base model: dynavision from C:\Users\kkson\Models\dynavision.safetensors with base_model as sdxl_1_0
+2026-03-24 13:09:21,773 — flask-app — INFO — LORA Name: Smol Animals | Adapter Name: Smol Animals | PATH: C:\Users\kkson\Models\Lora\smol-animals.safetensors 
+2026-03-24 13:09:25,791 — flask-app — INFO — LoRA loaded: Smol Animals
+2026-03-24 13:09:25,792 — flask-app — INFO — Using resolution: 512x768
+2026-03-24 13:09:30,528 — flask-app — DEBUG — Generated filename: G:\K K Sonakiya\Projects\30. AI Image Generation\1. Image Generation\CDAI Lite\apps\static\images\generated_20260324_130930.png
+2026-03-24 13:09:30,574 — flask-app — INFO — Image saved at: G:\K K Sonakiya\Projects\30. AI Image Generation\1. Image Generation\CDAI Lite\apps\static\images\generated_20260324_130930.png
+2026-03-24 13:11:34,470 — flask-app — INFO — ImageGenerator initialized with device=cuda
+2026-03-24 13:11:34,473 — flask-app — INFO — [Generate] Request params: {'base_model': 'dynavision', 'image_style': 'Smol Animals', 'prompt': 'frozen princess chibi zhibi', 'negative_prompt': ''}
+2026-03-24 13:11:34,475 — flask-app — INFO — Switching base model from None to dynavision
+2026-03-24 13:11:34,476 — flask-app — INFO — Base Model Details: {'id': '2', 'name': 'Dynavision', 'model_type': 'checkpoint', 'alias': 'dynavision', 'model_path': 'C:\\Users\\kkson\\Models\\dynavision.safetensors', 'output_dir': 'dynavision', 'base_model': 'sdxl_1_0'}
+2026-03-24 13:11:34,478 — flask-app — INFO — Loading base model: dynavision from C:\Users\kkson\Models\dynavision.safetensors with base_model as sdxl_1_0
+2026-03-24 13:11:41,481 — flask-app — INFO — LORA Name: Smol Animals | Adapter Name: Smol Animals | PATH: C:\Users\kkson\Models\Lora\smol-animals.safetensors 
+2026-03-24 13:11:45,164 — flask-app — INFO — LoRA loaded: Smol Animals
+2026-03-24 13:11:45,165 — flask-app — INFO — Using resolution: 512x768
+2026-03-24 13:11:50,755 — flask-app — DEBUG — Generated filename: G:\K K Sonakiya\Projects\30. AI Image Generation\1. Image Generation\CDAI Lite\apps\static\images\generated_20260324_131150.png
+2026-03-24 13:11:50,835 — flask-app — INFO — Image saved at: G:\K K Sonakiya\Projects\30. AI Image Generation\1. Image Generation\CDAI Lite\apps\static\images\generated_20260324_131150.png
+2026-03-24 22:39:42,993 — flask-app — INFO — ImageGenerator initialized with device=cuda
+2026-03-24 22:39:42,999 — flask-app — INFO — [Generate] Request params: {'base_model': 'dreamshaper-xl-v21-turbo', 'image_style': 'Paper Cutout', 'prompt': 'boho rainbow wall art, neutral pastel tones, minimalist nursery decor, soft beige and terracotta colors, clean background, printable poster style', 'negative_prompt': 'blurry, low quality, cluttered, too many elements, dark colors'}
+2026-03-24 22:39:43,000 — flask-app — INFO — Switching base model from None to dreamshaper-xl-v21-turbo
+2026-03-24 22:39:43,001 — flask-app — INFO — Base Model Details: {'id': '3', 'name': 'Dreamshaper XL v21 Turbo', 'model_type': 'checkpoint', 'alias': 'dreamshaper-xl-v21-turbo', 'model_path': 'G:\\K K Sonakiya\\Projects\\30. AI Image Generation\\1. Image Generation\\Models\\Active Models & Loras\\dreamshaperXL_v21TurboDPMSDE.safetensors', 'output_dir': 'dreamshaper_xl_v21_turbo', 'base_model': 'sdxl_1_0'}
+2026-03-24 22:39:43,003 — flask-app — INFO — Loading base model: dreamshaper-xl-v21-turbo from G:\K K Sonakiya\Projects\30. AI Image Generation\1. Image Generation\Models\Active Models & Loras\dreamshaperXL_v21TurboDPMSDE.safetensors with base_model as sdxl_1_0
+2026-03-24 22:40:06,185 — flask-app — INFO — LORA Name: Paper Cutout | Adapter Name: Paper Cutout | PATH: G:\K K Sonakiya\Projects\30. AI Image Generation\1. Image Generation\Models\Active Models & Loras\Lora\sdxl-PaperCutouts-Dreambooth.safetensors 
+2026-03-24 22:40:09,098 — flask-app — INFO — LoRA loaded: Paper Cutout
+2026-03-24 22:40:09,099 — flask-app — INFO — Using resolution: 512x768
+2026-03-24 22:40:13,147 — flask-app — DEBUG — Generated filename: G:\K K Sonakiya\Projects\30. AI Image Generation\1. Image Generation\CDAI Lite\apps\static\images\generated_20260324_224013.png
+2026-03-24 22:40:13,227 — flask-app — INFO — Image saved at: G:\K K Sonakiya\Projects\30. AI Image Generation\1. Image Generation\CDAI Lite\apps\static\images\generated_20260324_224013.png
+2026-03-24 22:40:42,515 — flask-app — INFO — ImageGenerator initialized with device=cuda
+2026-03-24 22:40:42,517 — flask-app — INFO — [Generate] Request params: {'base_model': 'dreamshaper-xl-v21-turbo', 'image_style': 'Paper Cutout', 'prompt': 'boho sun arch wall art, beige aesthetic, minimalist abstract shapes, terracotta and cream palette, modern printable poster, clean composition, Etsy style', 'negative_prompt': 'messy, too colorful, complex background, low resolution, shadows'}
+2026-03-24 22:40:42,519 — flask-app — INFO — Switching base model from None to dreamshaper-xl-v21-turbo
+2026-03-24 22:40:42,520 — flask-app — INFO — Base Model Details: {'id': '3', 'name': 'Dreamshaper XL v21 Turbo', 'model_type': 'checkpoint', 'alias': 'dreamshaper-xl-v21-turbo', 'model_path': 'G:\\K K Sonakiya\\Projects\\30. AI Image Generation\\1. Image Generation\\Models\\Active Models & Loras\\dreamshaperXL_v21TurboDPMSDE.safetensors', 'output_dir': 'dreamshaper_xl_v21_turbo', 'base_model': 'sdxl_1_0'}
+2026-03-24 22:40:42,521 — flask-app — INFO — Loading base model: dreamshaper-xl-v21-turbo from G:\K K Sonakiya\Projects\30. AI Image Generation\1. Image Generation\Models\Active Models & Loras\dreamshaperXL_v21TurboDPMSDE.safetensors with base_model as sdxl_1_0
+2026-03-24 22:40:48,338 — flask-app — INFO — LORA Name: Paper Cutout | Adapter Name: Paper Cutout | PATH: G:\K K Sonakiya\Projects\30. AI Image Generation\1. Image Generation\Models\Active Models & Loras\Lora\sdxl-PaperCutouts-Dreambooth.safetensors 
+2026-03-24 22:40:50,880 — flask-app — INFO — LoRA loaded: Paper Cutout
+2026-03-24 22:40:50,881 — flask-app — INFO — Using resolution: 512x768
+2026-03-24 22:40:55,192 — flask-app — DEBUG — Generated filename: G:\K K Sonakiya\Projects\30. AI Image Generation\1. Image Generation\CDAI Lite\apps\static\images\generated_20260324_224055.png
+2026-03-24 22:40:55,236 — flask-app — INFO — Image saved at: G:\K K Sonakiya\Projects\30. AI Image Generation\1. Image Generation\CDAI Lite\apps\static\images\generated_20260324_224055.png
+2026-03-24 22:41:12,944 — flask-app — INFO — ImageGenerator initialized with device=cuda
+2026-03-24 22:41:12,946 — flask-app — INFO — [Generate] Request params: {'base_model': 'cyberrealistic-xl-v5', 'image_style': 'Paper Cutout', 'prompt': 'abstract boho wall art, organic shapes, terracotta brown beige palette, modern minimal poster design, printable wall decor, Etsy aesthetic', 'negative_prompt': 'text, faces, clutter, too detailed, bright neon colors'}
+2026-03-24 22:41:12,947 — flask-app — INFO — Switching base model from None to cyberrealistic-xl-v5
+2026-03-24 22:41:12,948 — flask-app — INFO — Base Model Details: {'id': '4', 'name': 'CyberRealistic XL v5', 'model_type': 'checkpoint', 'alias': 'cyberrealistic-xl-v5', 'model_path': 'G:\\K K Sonakiya\\Projects\\30. AI Image Generation\\1. Image Generation\\Models\\Active Models & Loras\\cyberrealisticXL_v5.safetensors', 'output_dir': 'cyberrealistic_xl_v5', 'base_model': 'sdxl_1_0'}
+2026-03-24 22:41:12,949 — flask-app — INFO — Loading base model: cyberrealistic-xl-v5 from G:\K K Sonakiya\Projects\30. AI Image Generation\1. Image Generation\Models\Active Models & Loras\cyberrealisticXL_v5.safetensors with base_model as sdxl_1_0
+2026-03-24 22:41:36,838 — flask-app — INFO — LORA Name: Paper Cutout | Adapter Name: Paper Cutout | PATH: G:\K K Sonakiya\Projects\30. AI Image Generation\1. Image Generation\Models\Active Models & Loras\Lora\sdxl-PaperCutouts-Dreambooth.safetensors 
+2026-03-24 22:41:39,482 — flask-app — INFO — LoRA loaded: Paper Cutout
+2026-03-24 22:41:39,483 — flask-app — INFO — Using resolution: 512x768
+2026-03-24 22:41:44,110 — flask-app — DEBUG — Generated filename: G:\K K Sonakiya\Projects\30. AI Image Generation\1. Image Generation\CDAI Lite\apps\static\images\generated_20260324_224144.png
+2026-03-24 22:41:44,146 — flask-app — INFO — Image saved at: G:\K K Sonakiya\Projects\30. AI Image Generation\1. Image Generation\CDAI Lite\apps\static\images\generated_20260324_224144.png
+2026-03-24 22:55:17,441 — flask-app — INFO — ImageGenerator initialized with device=cuda
+2026-03-24 22:55:17,445 — flask-app — INFO — [Generate] Request params: {'base_model': 'dreamshaper-xl-v21-turbo', 'image_style': 'Smol Animals', 'prompt': 'cute baby elephant nursery wall art, watercolor style, pastel colors, soft pink and blue tones, minimal background, printable poster', 'negative_prompt': 'dark colors, clutter, too detailed, realistic photo, text'}
+2026-03-24 22:55:17,446 — flask-app — INFO — Switching base model from None to dreamshaper-xl-v21-turbo
+2026-03-24 22:55:17,447 — flask-app — INFO — Base Model Details: {'id': '3', 'name': 'Dreamshaper XL v21 Turbo', 'model_type': 'checkpoint', 'alias': 'dreamshaper-xl-v21-turbo', 'model_path': 'G:\\K K Sonakiya\\Projects\\30. AI Image Generation\\1. Image Generation\\Models\\Active Models & Loras\\dreamshaperXL_v21TurboDPMSDE.safetensors', 'output_dir': 'dreamshaper_xl_v21_turbo', 'base_model': 'sdxl_1_0'}
+2026-03-24 22:55:17,448 — flask-app — INFO — Loading base model: dreamshaper-xl-v21-turbo from G:\K K Sonakiya\Projects\30. AI Image Generation\1. Image Generation\Models\Active Models & Loras\dreamshaperXL_v21TurboDPMSDE.safetensors with base_model as sdxl_1_0
+2026-03-24 22:55:22,570 — flask-app — INFO — LORA Name: Smol Animals | Adapter Name: Smol Animals | PATH: C:\Users\kkson\Models\Lora\smol-animals.safetensors 
+2026-03-24 22:55:26,332 — flask-app — INFO — LoRA loaded: Smol Animals
+2026-03-24 22:55:26,333 — flask-app — INFO — Using resolution: 512x768
+2026-03-24 22:55:31,397 — flask-app — DEBUG — Generated filename: G:\K K Sonakiya\Projects\30. AI Image Generation\1. Image Generation\CDAI Lite\apps\static\images\generated_20260324_225531.png
+2026-03-24 22:55:31,449 — flask-app — INFO — Image saved at: G:\K K Sonakiya\Projects\30. AI Image Generation\1. Image Generation\CDAI Lite\apps\static\images\generated_20260324_225531.png
+2026-03-24 22:55:56,118 — flask-app — INFO — ImageGenerator initialized with device=cuda
+2026-03-24 22:55:56,120 — flask-app — INFO — [Generate] Request params: {'base_model': 'dynavision', 'image_style': 'Smol Animals', 'prompt': 'cute baby elephant nursery wall art, watercolor style, pastel colors, soft pink and blue tones, minimal background, printable poster', 'negative_prompt': 'dark colors, clutter, too detailed, realistic photo, text'}
+2026-03-24 22:55:56,121 — flask-app — INFO — Switching base model from None to dynavision
+2026-03-24 22:55:56,121 — flask-app — INFO — Base Model Details: {'id': '2', 'name': 'Dynavision', 'model_type': 'checkpoint', 'alias': 'dynavision', 'model_path': 'C:\\Users\\kkson\\Models\\dynavision.safetensors', 'output_dir': 'dynavision', 'base_model': 'sdxl_1_0'}
+2026-03-24 22:55:56,123 — flask-app — INFO — Loading base model: dynavision from C:\Users\kkson\Models\dynavision.safetensors with base_model as sdxl_1_0
+2026-03-24 22:56:10,683 — flask-app — INFO — LORA Name: Smol Animals | Adapter Name: Smol Animals | PATH: C:\Users\kkson\Models\Lora\smol-animals.safetensors 
+2026-03-24 22:56:13,655 — flask-app — INFO — LoRA loaded: Smol Animals
+2026-03-24 22:56:13,656 — flask-app — INFO — Using resolution: 512x768
+2026-03-24 22:56:17,967 — flask-app — DEBUG — Generated filename: G:\K K Sonakiya\Projects\30. AI Image Generation\1. Image Generation\CDAI Lite\apps\static\images\generated_20260324_225617.png
+2026-03-24 22:56:18,008 — flask-app — INFO — Image saved at: G:\K K Sonakiya\Projects\30. AI Image Generation\1. Image Generation\CDAI Lite\apps\static\images\generated_20260324_225617.png
+2026-03-24 22:56:18,019 — flask-app — INFO — [Generate] Request params: {'base_model': 'dreamshaper-xl-v21-turbo', 'image_style': 'Smol Animals', 'prompt': 'cute baby elephant nursery wall art, watercolor style, pastel colors, soft pink and blue tones, minimal background, printable poster', 'negative_prompt': 'dark colors, clutter, too detailed, realistic photo, text'}
+2026-03-24 22:56:18,020 — flask-app — INFO — Switching base model from dynavision to dreamshaper-xl-v21-turbo
+2026-03-24 22:56:18,023 — flask-app — INFO — Unloading pipeline and clearing CUDA cache
+2026-03-24 22:56:18,164 — flask-app — INFO — Base Model Details: {'id': '3', 'name': 'Dreamshaper XL v21 Turbo', 'model_type': 'checkpoint', 'alias': 'dreamshaper-xl-v21-turbo', 'model_path': 'G:\\K K Sonakiya\\Projects\\30. AI Image Generation\\1. Image Generation\\Models\\Active Models & Loras\\dreamshaperXL_v21TurboDPMSDE.safetensors', 'output_dir': 'dreamshaper_xl_v21_turbo', 'base_model': 'sdxl_1_0'}
+2026-03-24 22:56:18,166 — flask-app — INFO — Loading base model: dreamshaper-xl-v21-turbo from G:\K K Sonakiya\Projects\30. AI Image Generation\1. Image Generation\Models\Active Models & Loras\dreamshaperXL_v21TurboDPMSDE.safetensors with base_model as sdxl_1_0
+2026-03-24 22:56:22,822 — flask-app — INFO — LORA Name: Smol Animals | Adapter Name: Smol Animals | PATH: C:\Users\kkson\Models\Lora\smol-animals.safetensors 
+2026-03-24 22:56:25,404 — flask-app — INFO — LoRA loaded: Smol Animals
+2026-03-24 22:56:25,405 — flask-app — INFO — Using resolution: 512x768
+2026-03-24 22:56:29,814 — flask-app — DEBUG — Generated filename: G:\K K Sonakiya\Projects\30. AI Image Generation\1. Image Generation\CDAI Lite\apps\static\images\generated_20260324_225629.png
+2026-03-24 22:56:29,847 — flask-app — INFO — Image saved at: G:\K K Sonakiya\Projects\30. AI Image Generation\1. Image Generation\CDAI Lite\apps\static\images\generated_20260324_225629.png
+2026-03-24 22:56:29,855 — flask-app — INFO — [Generate] Request params: {'base_model': 'cyberrealistic-xl-v5', 'image_style': 'Smol Animals', 'prompt': 'cute baby elephant nursery wall art, watercolor style, pastel colors, soft pink and blue tones, minimal background, printable poster', 'negative_prompt': 'dark colors, clutter, too detailed, realistic photo, text'}
+2026-03-24 22:56:29,856 — flask-app — INFO — Switching base model from dreamshaper-xl-v21-turbo to cyberrealistic-xl-v5
+2026-03-24 22:56:29,857 — flask-app — INFO — Unloading pipeline and clearing CUDA cache
+2026-03-24 22:56:30,008 — flask-app — INFO — Base Model Details: {'id': '4', 'name': 'CyberRealistic XL v5', 'model_type': 'checkpoint', 'alias': 'cyberrealistic-xl-v5', 'model_path': 'G:\\K K Sonakiya\\Projects\\30. AI Image Generation\\1. Image Generation\\Models\\Active Models & Loras\\cyberrealisticXL_v5.safetensors', 'output_dir': 'cyberrealistic_xl_v5', 'base_model': 'sdxl_1_0'}
+2026-03-24 22:56:30,010 — flask-app — INFO — Loading base model: cyberrealistic-xl-v5 from G:\K K Sonakiya\Projects\30. AI Image Generation\1. Image Generation\Models\Active Models & Loras\cyberrealisticXL_v5.safetensors with base_model as sdxl_1_0
+2026-03-24 22:56:51,955 — flask-app — INFO — LORA Name: Smol Animals | Adapter Name: Smol Animals | PATH: C:\Users\kkson\Models\Lora\smol-animals.safetensors 
+2026-03-24 22:56:54,694 — flask-app — INFO — LoRA loaded: Smol Animals
+2026-03-24 22:56:54,696 — flask-app — INFO — Using resolution: 512x768
+2026-03-24 22:56:58,659 — flask-app — DEBUG — Generated filename: G:\K K Sonakiya\Projects\30. AI Image Generation\1. Image Generation\CDAI Lite\apps\static\images\generated_20260324_225658.png
+2026-03-24 22:56:58,690 — flask-app — INFO — Image saved at: G:\K K Sonakiya\Projects\30. AI Image Generation\1. Image Generation\CDAI Lite\apps\static\images\generated_20260324_225658.png
+2026-03-24 23:03:49,162 — flask-app — INFO — ImageGenerator initialized with device=cuda
+2026-03-24 23:03:49,164 — flask-app — INFO — [Generate] Request params: {'base_model': 'dreamshaper-xl-v21-turbo', 'image_style': None, 'prompt': 'baby elephant nursery wall art with quote "Dream Big Little One", minimalist beige aesthetic, soft tones, clean typography, printable poster, Etsy style', 'negative_prompt': 'messy layout, too many elements, dark colors, low quality'}
+2026-03-24 23:03:49,165 — flask-app — INFO — Switching base model from None to dreamshaper-xl-v21-turbo
+2026-03-24 23:03:49,166 — flask-app — INFO — Base Model Details: {'id': '3', 'name': 'Dreamshaper XL v21 Turbo', 'model_type': 'checkpoint', 'alias': 'dreamshaper-xl-v21-turbo', 'model_path': 'G:\\K K Sonakiya\\Projects\\30. AI Image Generation\\1. Image Generation\\Models\\Active Models & Loras\\dreamshaperXL_v21TurboDPMSDE.safetensors', 'output_dir': 'dreamshaper_xl_v21_turbo', 'base_model': 'sdxl_1_0'}
+2026-03-24 23:03:49,167 — flask-app — INFO — Loading base model: dreamshaper-xl-v21-turbo from G:\K K Sonakiya\Projects\30. AI Image Generation\1. Image Generation\Models\Active Models & Loras\dreamshaperXL_v21TurboDPMSDE.safetensors with base_model as sdxl_1_0
+2026-03-24 23:03:54,446 — flask-app — INFO — Using resolution: 512x768
+2026-03-24 23:03:58,801 — flask-app — DEBUG — Generated filename: G:\K K Sonakiya\Projects\30. AI Image Generation\1. Image Generation\CDAI Lite\apps\static\images\generated_20260324_230358.png
+2026-03-24 23:03:58,840 — flask-app — INFO — Image saved at: G:\K K Sonakiya\Projects\30. AI Image Generation\1. Image Generation\CDAI Lite\apps\static\images\generated_20260324_230358.png
+2026-03-24 23:04:20,966 — flask-app — INFO — ImageGenerator initialized with device=cuda
+2026-03-24 23:04:20,968 — flask-app — INFO — [Generate] Request params: {'base_model': 'dreamshaper-xl-v21-turbo', 'image_style': None, 'prompt': 'baby elephant nursery wall art with quote "Dream", minimalist beige aesthetic, soft tones, clean typography, printable poster, Etsy style', 'negative_prompt': 'messy layout, too many elements, dark colors, low quality'}
+2026-03-24 23:04:20,969 — flask-app — INFO — Switching base model from None to dreamshaper-xl-v21-turbo
+2026-03-24 23:04:20,970 — flask-app — INFO — Base Model Details: {'id': '3', 'name': 'Dreamshaper XL v21 Turbo', 'model_type': 'checkpoint', 'alias': 'dreamshaper-xl-v21-turbo', 'model_path': 'G:\\K K Sonakiya\\Projects\\30. AI Image Generation\\1. Image Generation\\Models\\Active Models & Loras\\dreamshaperXL_v21TurboDPMSDE.safetensors', 'output_dir': 'dreamshaper_xl_v21_turbo', 'base_model': 'sdxl_1_0'}
+2026-03-24 23:04:20,971 — flask-app — INFO — Loading base model: dreamshaper-xl-v21-turbo from G:\K K Sonakiya\Projects\30. AI Image Generation\1. Image Generation\Models\Active Models & Loras\dreamshaperXL_v21TurboDPMSDE.safetensors with base_model as sdxl_1_0
+2026-03-24 23:04:26,392 — flask-app — INFO — Using resolution: 512x768
+2026-03-24 23:04:30,616 — flask-app — DEBUG — Generated filename: G:\K K Sonakiya\Projects\30. AI Image Generation\1. Image Generation\CDAI Lite\apps\static\images\generated_20260324_230430.png
+2026-03-24 23:04:30,650 — flask-app — INFO — Image saved at: G:\K K Sonakiya\Projects\30. AI Image Generation\1. Image Generation\CDAI Lite\apps\static\images\generated_20260324_230430.png
+2026-03-24 23:05:35,544 — flask-app — INFO — ImageGenerator initialized with device=cuda
+2026-03-24 23:05:35,546 — flask-app — INFO — [Generate] Request params: {'base_model': 'cyberrealistic-xl-v5', 'image_style': 'Smol Animals', 'prompt': 'cute elephant nursery poster, colorful playful style, balloons stars clouds, bright pastel palette, kids room decor, watercolor illustration', 'negative_prompt': 'dark tones, realistic photography, cluttered composition, low resolution'}
+2026-03-24 23:05:35,547 — flask-app — INFO — Switching base model from None to cyberrealistic-xl-v5
+2026-03-24 23:05:35,550 — flask-app — INFO — Base Model Details: {'id': '4', 'name': 'CyberRealistic XL v5', 'model_type': 'checkpoint', 'alias': 'cyberrealistic-xl-v5', 'model_path': 'G:\\K K Sonakiya\\Projects\\30. AI Image Generation\\1. Image Generation\\Models\\Active Models & Loras\\cyberrealisticXL_v5.safetensors', 'output_dir': 'cyberrealistic_xl_v5', 'base_model': 'sdxl_1_0'}
+2026-03-24 23:05:35,551 — flask-app — INFO — Loading base model: cyberrealistic-xl-v5 from G:\K K Sonakiya\Projects\30. AI Image Generation\1. Image Generation\Models\Active Models & Loras\cyberrealisticXL_v5.safetensors with base_model as sdxl_1_0
+2026-03-24 23:05:40,797 — flask-app — INFO — LORA Name: Smol Animals | Adapter Name: Smol Animals | PATH: C:\Users\kkson\Models\Lora\smol-animals.safetensors 
+2026-03-24 23:05:43,838 — flask-app — INFO — LoRA loaded: Smol Animals
+2026-03-24 23:05:43,839 — flask-app — INFO — Using resolution: 512x768
+2026-03-24 23:05:48,179 — flask-app — DEBUG — Generated filename: G:\K K Sonakiya\Projects\30. AI Image Generation\1. Image Generation\CDAI Lite\apps\static\images\generated_20260324_230548.png
+2026-03-24 23:05:48,219 — flask-app — INFO — Image saved at: G:\K K Sonakiya\Projects\30. AI Image Generation\1. Image Generation\CDAI Lite\apps\static\images\generated_20260324_230548.png
+2026-03-24 23:07:59,737 — flask-app — INFO — ImageGenerator initialized with device=cuda
+2026-03-24 23:07:59,739 — flask-app — INFO — [Generate] Request params: {'base_model': 'dreamshaper-xl-v21-turbo', 'image_style': None, 'prompt': 'minimalist quote poster, bold sans serif typography, black text on white background, modern wall art, clean layout, printable poster', 'negative_prompt': 'colorful, clutter, shadows, gradients, textures, images'}
+2026-03-24 23:07:59,741 — flask-app — INFO — Switching base model from None to dreamshaper-xl-v21-turbo
+2026-03-24 23:07:59,742 — flask-app — INFO — Base Model Details: {'id': '3', 'name': 'Dreamshaper XL v21 Turbo', 'model_type': 'checkpoint', 'alias': 'dreamshaper-xl-v21-turbo', 'model_path': 'G:\\K K Sonakiya\\Projects\\30. AI Image Generation\\1. Image Generation\\Models\\Active Models & Loras\\dreamshaperXL_v21TurboDPMSDE.safetensors', 'output_dir': 'dreamshaper_xl_v21_turbo', 'base_model': 'sdxl_1_0'}
+2026-03-24 23:07:59,745 — flask-app — INFO — Loading base model: dreamshaper-xl-v21-turbo from G:\K K Sonakiya\Projects\30. AI Image Generation\1. Image Generation\Models\Active Models & Loras\dreamshaperXL_v21TurboDPMSDE.safetensors with base_model as sdxl_1_0
+2026-03-24 23:08:05,230 — flask-app — INFO — Using resolution: 512x768
+2026-03-24 23:08:09,623 — flask-app — DEBUG — Generated filename: G:\K K Sonakiya\Projects\30. AI Image Generation\1. Image Generation\CDAI Lite\apps\static\images\generated_20260324_230809.png
+2026-03-24 23:08:09,654 — flask-app — INFO — Image saved at: G:\K K Sonakiya\Projects\30. AI Image Generation\1. Image Generation\CDAI Lite\apps\static\images\generated_20260324_230809.png
+2026-03-24 23:08:29,071 — flask-app — INFO — ImageGenerator initialized with device=cuda
+2026-03-24 23:08:29,073 — flask-app — INFO — [Generate] Request params: {'base_model': 'dynavision', 'image_style': None, 'prompt': 'minimalist quote poster, bold sans serif typography, black text on white background, modern wall art, clean layout, printable poster', 'negative_prompt': 'colorful, clutter, shadows, gradients, textures, images'}
+2026-03-24 23:08:29,074 — flask-app — INFO — Switching base model from None to dynavision
+2026-03-24 23:08:29,075 — flask-app — INFO — Base Model Details: {'id': '2', 'name': 'Dynavision', 'model_type': 'checkpoint', 'alias': 'dynavision', 'model_path': 'C:\\Users\\kkson\\Models\\dynavision.safetensors', 'output_dir': 'dynavision', 'base_model': 'sdxl_1_0'}
+2026-03-24 23:08:29,077 — flask-app — INFO — Loading base model: dynavision from C:\Users\kkson\Models\dynavision.safetensors with base_model as sdxl_1_0
+2026-03-24 23:08:43,245 — flask-app — INFO — Using resolution: 512x768
+2026-03-24 23:08:47,606 — flask-app — DEBUG — Generated filename: G:\K K Sonakiya\Projects\30. AI Image Generation\1. Image Generation\CDAI Lite\apps\static\images\generated_20260324_230847.png
+2026-03-24 23:08:47,645 — flask-app — INFO — Image saved at: G:\K K Sonakiya\Projects\30. AI Image Generation\1. Image Generation\CDAI Lite\apps\static\images\generated_20260324_230847.png
+2026-03-24 23:08:47,658 — flask-app — INFO — [Generate] Request params: {'base_model': 'dreamshaper-xl-v21-turbo', 'image_style': None, 'prompt': 'minimalist quote poster, bold sans serif typography, black text on white background, modern wall art, clean layout, printable poster', 'negative_prompt': 'colorful, clutter, shadows, gradients, textures, images'}
+2026-03-24 23:08:47,661 — flask-app — INFO — Switching base model from dynavision to dreamshaper-xl-v21-turbo
+2026-03-24 23:08:47,662 — flask-app — INFO — Unloading pipeline and clearing CUDA cache
+2026-03-24 23:08:47,784 — flask-app — INFO — Base Model Details: {'id': '3', 'name': 'Dreamshaper XL v21 Turbo', 'model_type': 'checkpoint', 'alias': 'dreamshaper-xl-v21-turbo', 'model_path': 'G:\\K K Sonakiya\\Projects\\30. AI Image Generation\\1. Image Generation\\Models\\Active Models & Loras\\dreamshaperXL_v21TurboDPMSDE.safetensors', 'output_dir': 'dreamshaper_xl_v21_turbo', 'base_model': 'sdxl_1_0'}
+2026-03-24 23:08:47,785 — flask-app — INFO — Loading base model: dreamshaper-xl-v21-turbo from G:\K K Sonakiya\Projects\30. AI Image Generation\1. Image Generation\Models\Active Models & Loras\dreamshaperXL_v21TurboDPMSDE.safetensors with base_model as sdxl_1_0
+2026-03-24 23:08:52,719 — flask-app — INFO — Using resolution: 512x768
+2026-03-24 23:08:57,060 — flask-app — DEBUG — Generated filename: G:\K K Sonakiya\Projects\30. AI Image Generation\1. Image Generation\CDAI Lite\apps\static\images\generated_20260324_230857.png
+2026-03-24 23:08:57,095 — flask-app — INFO — Image saved at: G:\K K Sonakiya\Projects\30. AI Image Generation\1. Image Generation\CDAI Lite\apps\static\images\generated_20260324_230857.png
+2026-03-24 23:08:57,102 — flask-app — INFO — [Generate] Request params: {'base_model': 'cyberrealistic-xl-v5', 'image_style': None, 'prompt': 'minimalist quote poster, bold sans serif typography, black text on white background, modern wall art, clean layout, printable poster', 'negative_prompt': 'colorful, clutter, shadows, gradients, textures, images'}
+2026-03-24 23:08:57,105 — flask-app — INFO — Switching base model from dreamshaper-xl-v21-turbo to cyberrealistic-xl-v5
+2026-03-24 23:08:57,107 — flask-app — INFO — Unloading pipeline and clearing CUDA cache
+2026-03-24 23:08:57,233 — flask-app — INFO — Base Model Details: {'id': '4', 'name': 'CyberRealistic XL v5', 'model_type': 'checkpoint', 'alias': 'cyberrealistic-xl-v5', 'model_path': 'G:\\K K Sonakiya\\Projects\\30. AI Image Generation\\1. Image Generation\\Models\\Active Models & Loras\\cyberrealisticXL_v5.safetensors', 'output_dir': 'cyberrealistic_xl_v5', 'base_model': 'sdxl_1_0'}
+2026-03-24 23:08:57,234 — flask-app — INFO — Loading base model: cyberrealistic-xl-v5 from G:\K K Sonakiya\Projects\30. AI Image Generation\1. Image Generation\Models\Active Models & Loras\cyberrealisticXL_v5.safetensors with base_model as sdxl_1_0
+2026-03-24 23:09:19,310 — flask-app — INFO — Using resolution: 512x768
+2026-03-24 23:09:23,636 — flask-app — DEBUG — Generated filename: G:\K K Sonakiya\Projects\30. AI Image Generation\1. Image Generation\CDAI Lite\apps\static\images\generated_20260324_230923.png
+2026-03-24 23:09:23,670 — flask-app — INFO — Image saved at: G:\K K Sonakiya\Projects\30. AI Image Generation\1. Image Generation\CDAI Lite\apps\static\images\generated_20260324_230923.png
+2026-03-24 23:09:23,678 — flask-app — INFO — [Generate] Request params: {'base_model': 'juggernautxl', 'image_style': None, 'prompt': 'minimalist quote poster, bold sans serif typography, black text on white background, modern wall art, clean layout, printable poster', 'negative_prompt': 'colorful, clutter, shadows, gradients, textures, images'}
+2026-03-24 23:09:23,680 — flask-app — INFO — Switching base model from cyberrealistic-xl-v5 to juggernautxl
+2026-03-24 23:09:23,681 — flask-app — INFO — Unloading pipeline and clearing CUDA cache
+2026-03-24 23:09:23,810 — flask-app — INFO — Base Model Details: {'id': '5', 'name': 'JuggernautXL', 'model_type': 'checkpoint', 'alias': 'juggernautxl', 'model_path': 'G:\\K K Sonakiya\\Projects\\30. AI Image Generation\\1. Image Generation\\Models\\Active Models & Loras\\juggernautXL.safetensors', 'output_dir': 'juggernautxl', 'base_model': 'sdxl_1_0'}
+2026-03-24 23:09:23,811 — flask-app — INFO — Loading base model: juggernautxl from G:\K K Sonakiya\Projects\30. AI Image Generation\1. Image Generation\Models\Active Models & Loras\juggernautXL.safetensors with base_model as sdxl_1_0
+2026-03-24 23:09:46,760 — flask-app — INFO — Using resolution: 512x768
+2026-03-24 23:09:51,014 — flask-app — DEBUG — Generated filename: G:\K K Sonakiya\Projects\30. AI Image Generation\1. Image Generation\CDAI Lite\apps\static\images\generated_20260324_230951.png
+2026-03-24 23:09:51,045 — flask-app — INFO — Image saved at: G:\K K Sonakiya\Projects\30. AI Image Generation\1. Image Generation\CDAI Lite\apps\static\images\generated_20260324_230951.png
+2026-03-24 23:09:51,054 — flask-app — INFO — [Generate] Request params: {'base_model': 'nightvisionxl-v900', 'image_style': None, 'prompt': 'minimalist quote poster, bold sans serif typography, black text on white background, modern wall art, clean layout, printable poster', 'negative_prompt': 'colorful, clutter, shadows, gradients, textures, images'}
+2026-03-24 23:09:51,056 — flask-app — INFO — Switching base model from juggernautxl to nightvisionxl-v900
+2026-03-24 23:09:51,059 — flask-app — INFO — Unloading pipeline and clearing CUDA cache
+2026-03-24 23:09:51,179 — flask-app — INFO — Base Model Details: {'id': '6', 'name': 'NightvisionXL V900', 'model_type': 'checkpoint', 'alias': 'nightvisionxl-v900', 'model_path': 'G:\\K K Sonakiya\\Projects\\30. AI Image Generation\\1. Image Generation\\Models\\Active Models & Loras\\nightvisionxl_V900.safetensors', 'output_dir': 'nightvisionxl_v900', 'base_model': 'sdxl_1_0'}
+2026-03-24 23:09:51,182 — flask-app — INFO — Loading base model: nightvisionxl-v900 from G:\K K Sonakiya\Projects\30. AI Image Generation\1. Image Generation\Models\Active Models & Loras\nightvisionxl_V900.safetensors with base_model as sdxl_1_0
+2026-03-24 23:10:13,749 — flask-app — INFO — Using resolution: 512x768
+2026-03-24 23:10:18,398 — flask-app — DEBUG — Generated filename: G:\K K Sonakiya\Projects\30. AI Image Generation\1. Image Generation\CDAI Lite\apps\static\images\generated_20260324_231018.png
+2026-03-24 23:10:18,435 — flask-app — INFO — Image saved at: G:\K K Sonakiya\Projects\30. AI Image Generation\1. Image Generation\CDAI Lite\apps\static\images\generated_20260324_231018.png
+2026-03-24 23:10:18,443 — flask-app — INFO — [Generate] Request params: {'base_model': 'protovisionxl', 'image_style': None, 'prompt': 'minimalist quote poster, bold sans serif typography, black text on white background, modern wall art, clean layout, printable poster', 'negative_prompt': 'colorful, clutter, shadows, gradients, textures, images'}
+2026-03-24 23:10:18,446 — flask-app — INFO — Switching base model from nightvisionxl-v900 to protovisionxl
+2026-03-24 23:10:18,448 — flask-app — INFO — Unloading pipeline and clearing CUDA cache
+2026-03-24 23:10:18,580 — flask-app — INFO — Base Model Details: {'id': '7', 'name': 'ProtovisionXL', 'model_type': 'checkpoint', 'alias': 'protovisionxl', 'model_path': 'G:\\K K Sonakiya\\Projects\\30. AI Image Generation\\1. Image Generation\\Models\\Active Models & Loras\\protovisionXL.safetensors', 'output_dir': 'protovisionxl', 'base_model': 'sdxl_1_0'}
+2026-03-24 23:10:18,582 — flask-app — INFO — Loading base model: protovisionxl from G:\K K Sonakiya\Projects\30. AI Image Generation\1. Image Generation\Models\Active Models & Loras\protovisionXL.safetensors with base_model as sdxl_1_0
+2026-03-24 23:10:41,208 — flask-app — INFO — Using resolution: 512x768
+2026-03-24 23:10:45,533 — flask-app — DEBUG — Generated filename: G:\K K Sonakiya\Projects\30. AI Image Generation\1. Image Generation\CDAI Lite\apps\static\images\generated_20260324_231045.png
+2026-03-24 23:10:45,566 — flask-app — INFO — Image saved at: G:\K K Sonakiya\Projects\30. AI Image Generation\1. Image Generation\CDAI Lite\apps\static\images\generated_20260324_231045.png
+2026-03-24 23:10:45,580 — flask-app — INFO — [Generate] Request params: {'base_model': 'sdxl-base-1.0', 'image_style': None, 'prompt': 'minimalist quote poster, bold sans serif typography, black text on white background, modern wall art, clean layout, printable poster', 'negative_prompt': 'colorful, clutter, shadows, gradients, textures, images'}
+2026-03-24 23:10:45,581 — flask-app — INFO — Switching base model from protovisionxl to sdxl-base-1.0
+2026-03-24 23:10:45,583 — flask-app — INFO — Unloading pipeline and clearing CUDA cache
+2026-03-24 23:10:45,714 — flask-app — INFO — Base Model Details: {'id': '8', 'name': 'SDXL Base 1.0', 'model_type': 'checkpoint', 'alias': 'sdxl-base-1.0', 'model_path': 'G:\\K K Sonakiya\\Projects\\30. AI Image Generation\\1. Image Generation\\Models\\Active Models & Loras\\sd_xl_base_1.0_0.9vae.safetensors', 'output_dir': 'sdxl_base_1.0', 'base_model': 'sdxl_1_0'}
+2026-03-24 23:10:45,716 — flask-app — INFO — Loading base model: sdxl-base-1.0 from G:\K K Sonakiya\Projects\30. AI Image Generation\1. Image Generation\Models\Active Models & Loras\sd_xl_base_1.0_0.9vae.safetensors with base_model as sdxl_1_0
+2026-03-24 23:11:07,939 — flask-app — INFO — Using resolution: 512x768
+2026-03-24 23:11:12,334 — flask-app — DEBUG — Generated filename: G:\K K Sonakiya\Projects\30. AI Image Generation\1. Image Generation\CDAI Lite\apps\static\images\generated_20260324_231112.png
+2026-03-24 23:11:12,363 — flask-app — INFO — Image saved at: G:\K K Sonakiya\Projects\30. AI Image Generation\1. Image Generation\CDAI Lite\apps\static\images\generated_20260324_231112.png
+2026-03-24 23:11:12,371 — flask-app — INFO — [Generate] Request params: {'base_model': 'sdxl-faetastic-v24', 'image_style': None, 'prompt': 'minimalist quote poster, bold sans serif typography, black text on white background, modern wall art, clean layout, printable poster', 'negative_prompt': 'colorful, clutter, shadows, gradients, textures, images'}
+2026-03-24 23:11:12,373 — flask-app — INFO — Switching base model from sdxl-base-1.0 to sdxl-faetastic-v24
+2026-03-24 23:11:12,374 — flask-app — INFO — Unloading pipeline and clearing CUDA cache
+2026-03-24 23:11:12,497 — flask-app — INFO — Base Model Details: {'id': '9', 'name': 'SDXL Faetastic v24', 'model_type': 'checkpoint', 'alias': 'sdxl-faetastic-v24', 'model_path': 'G:\\K K Sonakiya\\Projects\\30. AI Image Generation\\1. Image Generation\\Models\\Active Models & Loras\\SDXLFaetastic_v24.safetensors', 'output_dir': 'sdxl_faetastic_v24', 'base_model': 'sdxl_1_0'}
+2026-03-24 23:11:12,499 — flask-app — INFO — Loading base model: sdxl-faetastic-v24 from G:\K K Sonakiya\Projects\30. AI Image Generation\1. Image Generation\Models\Active Models & Loras\SDXLFaetastic_v24.safetensors with base_model as sdxl_1_0
+2026-03-24 23:11:34,892 — flask-app — INFO — Using resolution: 512x768
+2026-03-24 23:11:38,891 — flask-app — DEBUG — Generated filename: G:\K K Sonakiya\Projects\30. AI Image Generation\1. Image Generation\CDAI Lite\apps\static\images\generated_20260324_231138.png
+2026-03-24 23:11:38,928 — flask-app — INFO — Image saved at: G:\K K Sonakiya\Projects\30. AI Image Generation\1. Image Generation\CDAI Lite\apps\static\images\generated_20260324_231138.png
+2026-03-24 23:19:30,784 — flask-app — INFO — ImageGenerator initialized with device=cuda
+2026-03-24 23:19:30,786 — flask-app — INFO — [Generate] Request params: {'base_model': 'sdxl-base-1.0', 'image_style': 'Text Aid SDXL', 'prompt': 'minimalist quote poster, bold sans serif typography, black text on white background, modern wall art, clean layout, printable poster', 'negative_prompt': 'colorful, clutter, shadows, gradients, textures, images'}
+2026-03-24 23:19:30,787 — flask-app — INFO — Switching base model from None to sdxl-base-1.0
+2026-03-24 23:19:30,789 — flask-app — INFO — Base Model Details: {'id': '8', 'name': 'SDXL Base 1.0', 'model_type': 'checkpoint', 'alias': 'sdxl-base-1.0', 'model_path': 'G:\\K K Sonakiya\\Projects\\30. AI Image Generation\\1. Image Generation\\Models\\Active Models & Loras\\sd_xl_base_1.0_0.9vae.safetensors', 'output_dir': 'sdxl_base_1.0', 'base_model': 'sdxl_1_0'}
+2026-03-24 23:19:30,790 — flask-app — INFO — Loading base model: sdxl-base-1.0 from G:\K K Sonakiya\Projects\30. AI Image Generation\1. Image Generation\Models\Active Models & Loras\sd_xl_base_1.0_0.9vae.safetensors with base_model as sdxl_1_0
+2026-03-24 23:19:35,744 — flask-app — INFO — LORA Name: Text Aid SDXL | Adapter Name: Text Aid SDXL | PATH: G:\K K Sonakiya\Projects\30. AI Image Generation\1. Image Generation\Models\Active Models & Loras\Lora\Text_Aid_SDXL.safetensors 
+2026-03-24 23:19:38,601 — flask-app — INFO — LoRA loaded: Text Aid SDXL
+2026-03-24 23:19:38,603 — flask-app — INFO — Using resolution: 512x768
+2026-03-24 23:19:42,637 — flask-app — DEBUG — Generated filename: G:\K K Sonakiya\Projects\30. AI Image Generation\1. Image Generation\CDAI Lite\apps\static\images\generated_20260324_231942.png
+2026-03-24 23:19:42,681 — flask-app — INFO — Image saved at: G:\K K Sonakiya\Projects\30. AI Image Generation\1. Image Generation\CDAI Lite\apps\static\images\generated_20260324_231942.png
+2026-03-24 23:20:11,407 — flask-app — INFO — ImageGenerator initialized with device=cuda
+2026-03-24 23:20:11,408 — flask-app — INFO — [Generate] Request params: {'base_model': 'sdxl-base-1.0', 'image_style': 'Text Aid SDXL', 'prompt': 'cat holding a sign with text:"i am not real" <lora:text:.8>', 'negative_prompt': 'colorful, clutter, shadows, gradients, textures, images'}
+2026-03-24 23:20:11,409 — flask-app — INFO — Switching base model from None to sdxl-base-1.0
+2026-03-24 23:20:11,410 — flask-app — INFO — Base Model Details: {'id': '8', 'name': 'SDXL Base 1.0', 'model_type': 'checkpoint', 'alias': 'sdxl-base-1.0', 'model_path': 'G:\\K K Sonakiya\\Projects\\30. AI Image Generation\\1. Image Generation\\Models\\Active Models & Loras\\sd_xl_base_1.0_0.9vae.safetensors', 'output_dir': 'sdxl_base_1.0', 'base_model': 'sdxl_1_0'}
+2026-03-24 23:20:11,412 — flask-app — INFO — Loading base model: sdxl-base-1.0 from G:\K K Sonakiya\Projects\30. AI Image Generation\1. Image Generation\Models\Active Models & Loras\sd_xl_base_1.0_0.9vae.safetensors with base_model as sdxl_1_0
+2026-03-24 23:20:16,908 — flask-app — INFO — LORA Name: Text Aid SDXL | Adapter Name: Text Aid SDXL | PATH: G:\K K Sonakiya\Projects\30. AI Image Generation\1. Image Generation\Models\Active Models & Loras\Lora\Text_Aid_SDXL.safetensors 
+2026-03-24 23:20:20,007 — flask-app — INFO — LoRA loaded: Text Aid SDXL
+2026-03-24 23:20:20,008 — flask-app — INFO — Using resolution: 512x768
+2026-03-24 23:20:24,428 — flask-app — DEBUG — Generated filename: G:\K K Sonakiya\Projects\30. AI Image Generation\1. Image Generation\CDAI Lite\apps\static\images\generated_20260324_232024.png
+2026-03-24 23:20:24,455 — flask-app — INFO — Image saved at: G:\K K Sonakiya\Projects\30. AI Image Generation\1. Image Generation\CDAI Lite\apps\static\images\generated_20260324_232024.png
+2026-03-24 23:20:53,841 — flask-app — INFO — ImageGenerator initialized with device=cuda
+2026-03-24 23:20:53,843 — flask-app — INFO — [Generate] Request params: {'base_model': 'sdxl-faetastic-v24', 'image_style': 'Text Aid SDXL', 'prompt': 'cat holding a sign with text:"i am not real" <lora:text:.8>', 'negative_prompt': 'colorful, clutter, shadows, gradients, textures, images'}
+2026-03-24 23:20:53,844 — flask-app — INFO — Switching base model from None to sdxl-faetastic-v24
+2026-03-24 23:20:53,845 — flask-app — INFO — Base Model Details: {'id': '9', 'name': 'SDXL Faetastic v24', 'model_type': 'checkpoint', 'alias': 'sdxl-faetastic-v24', 'model_path': 'G:\\K K Sonakiya\\Projects\\30. AI Image Generation\\1. Image Generation\\Models\\Active Models & Loras\\SDXLFaetastic_v24.safetensors', 'output_dir': 'sdxl_faetastic_v24', 'base_model': 'sdxl_1_0'}
+2026-03-24 23:20:53,845 — flask-app — INFO — Loading base model: sdxl-faetastic-v24 from G:\K K Sonakiya\Projects\30. AI Image Generation\1. Image Generation\Models\Active Models & Loras\SDXLFaetastic_v24.safetensors with base_model as sdxl_1_0
+2026-03-24 23:20:59,378 — flask-app — INFO — LORA Name: Text Aid SDXL | Adapter Name: Text Aid SDXL | PATH: G:\K K Sonakiya\Projects\30. AI Image Generation\1. Image Generation\Models\Active Models & Loras\Lora\Text_Aid_SDXL.safetensors 
+2026-03-24 23:21:02,349 — flask-app — INFO — LoRA loaded: Text Aid SDXL
+2026-03-24 23:21:02,350 — flask-app — INFO — Using resolution: 512x768
+2026-03-24 23:21:06,124 — flask-app — DEBUG — Generated filename: G:\K K Sonakiya\Projects\30. AI Image Generation\1. Image Generation\CDAI Lite\apps\static\images\generated_20260324_232106.png
+2026-03-24 23:21:06,161 — flask-app — INFO — Image saved at: G:\K K Sonakiya\Projects\30. AI Image Generation\1. Image Generation\CDAI Lite\apps\static\images\generated_20260324_232106.png
+2026-03-24 23:21:18,338 — flask-app — INFO — ImageGenerator initialized with device=cuda
+2026-03-24 23:21:18,340 — flask-app — INFO — [Generate] Request params: {'base_model': 'protovisionxl', 'image_style': 'Text Aid SDXL', 'prompt': 'cat holding a sign with text:"i am not real" <lora:text:.8>', 'negative_prompt': 'colorful, clutter, shadows, gradients, textures, images'}
+2026-03-24 23:21:18,342 — flask-app — INFO — Switching base model from None to protovisionxl
+2026-03-24 23:21:18,343 — flask-app — INFO — Base Model Details: {'id': '7', 'name': 'ProtovisionXL', 'model_type': 'checkpoint', 'alias': 'protovisionxl', 'model_path': 'G:\\K K Sonakiya\\Projects\\30. AI Image Generation\\1. Image Generation\\Models\\Active Models & Loras\\protovisionXL.safetensors', 'output_dir': 'protovisionxl', 'base_model': 'sdxl_1_0'}
+2026-03-24 23:21:18,344 — flask-app — INFO — Loading base model: protovisionxl from G:\K K Sonakiya\Projects\30. AI Image Generation\1. Image Generation\Models\Active Models & Loras\protovisionXL.safetensors with base_model as sdxl_1_0
+2026-03-24 23:21:40,605 — flask-app — INFO — LORA Name: Text Aid SDXL | Adapter Name: Text Aid SDXL | PATH: G:\K K Sonakiya\Projects\30. AI Image Generation\1. Image Generation\Models\Active Models & Loras\Lora\Text_Aid_SDXL.safetensors 
+2026-03-24 23:21:43,567 — flask-app — INFO — LoRA loaded: Text Aid SDXL
+2026-03-24 23:21:43,568 — flask-app — INFO — Using resolution: 512x768
+2026-03-24 23:21:47,204 — flask-app — DEBUG — Generated filename: G:\K K Sonakiya\Projects\30. AI Image Generation\1. Image Generation\CDAI Lite\apps\static\images\generated_20260324_232147.png
+2026-03-24 23:21:47,243 — flask-app — INFO — Image saved at: G:\K K Sonakiya\Projects\30. AI Image Generation\1. Image Generation\CDAI Lite\apps\static\images\generated_20260324_232147.png
+2026-03-24 23:21:55,302 — flask-app — INFO — ImageGenerator initialized with device=cuda
+2026-03-24 23:21:55,305 — flask-app — INFO — [Generate] Request params: {'base_model': 'nightvisionxl-v900', 'image_style': 'Text Aid SDXL', 'prompt': 'cat holding a sign with text:"i am not real" <lora:text:.8>', 'negative_prompt': 'colorful, clutter, shadows, gradients, textures, images'}
+2026-03-24 23:21:55,306 — flask-app — INFO — Switching base model from None to nightvisionxl-v900
+2026-03-24 23:21:55,307 — flask-app — INFO — Base Model Details: {'id': '6', 'name': 'NightvisionXL V900', 'model_type': 'checkpoint', 'alias': 'nightvisionxl-v900', 'model_path': 'G:\\K K Sonakiya\\Projects\\30. AI Image Generation\\1. Image Generation\\Models\\Active Models & Loras\\nightvisionxl_V900.safetensors', 'output_dir': 'nightvisionxl_v900', 'base_model': 'sdxl_1_0'}
+2026-03-24 23:21:55,307 — flask-app — INFO — Loading base model: nightvisionxl-v900 from G:\K K Sonakiya\Projects\30. AI Image Generation\1. Image Generation\Models\Active Models & Loras\nightvisionxl_V900.safetensors with base_model as sdxl_1_0
+2026-03-24 23:22:17,447 — flask-app — INFO — LORA Name: Text Aid SDXL | Adapter Name: Text Aid SDXL | PATH: G:\K K Sonakiya\Projects\30. AI Image Generation\1. Image Generation\Models\Active Models & Loras\Lora\Text_Aid_SDXL.safetensors 
+2026-03-24 23:22:20,368 — flask-app — INFO — LoRA loaded: Text Aid SDXL
+2026-03-24 23:22:20,370 — flask-app — INFO — Using resolution: 512x768
+2026-03-24 23:22:23,986 — flask-app — DEBUG — Generated filename: G:\K K Sonakiya\Projects\30. AI Image Generation\1. Image Generation\CDAI Lite\apps\static\images\generated_20260324_232223.png
+2026-03-24 23:22:24,014 — flask-app — INFO — Image saved at: G:\K K Sonakiya\Projects\30. AI Image Generation\1. Image Generation\CDAI Lite\apps\static\images\generated_20260324_232223.png
+2026-03-24 23:22:36,073 — flask-app — INFO — ImageGenerator initialized with device=cuda
+2026-03-24 23:22:36,075 — flask-app — INFO — [Generate] Request params: {'base_model': 'juggernautxl', 'image_style': 'Text Aid SDXL', 'prompt': 'cat holding a sign with text:"i am not real" <lora:text:.8>', 'negative_prompt': 'colorful, clutter, shadows, gradients, textures, images'}
+2026-03-24 23:22:36,076 — flask-app — INFO — Switching base model from None to juggernautxl
+2026-03-24 23:22:36,078 — flask-app — INFO — Base Model Details: {'id': '5', 'name': 'JuggernautXL', 'model_type': 'checkpoint', 'alias': 'juggernautxl', 'model_path': 'G:\\K K Sonakiya\\Projects\\30. AI Image Generation\\1. Image Generation\\Models\\Active Models & Loras\\juggernautXL.safetensors', 'output_dir': 'juggernautxl', 'base_model': 'sdxl_1_0'}
+2026-03-24 23:22:36,079 — flask-app — INFO — Loading base model: juggernautxl from G:\K K Sonakiya\Projects\30. AI Image Generation\1. Image Generation\Models\Active Models & Loras\juggernautXL.safetensors with base_model as sdxl_1_0
+2026-03-24 23:22:59,898 — flask-app — INFO — LORA Name: Text Aid SDXL | Adapter Name: Text Aid SDXL | PATH: G:\K K Sonakiya\Projects\30. AI Image Generation\1. Image Generation\Models\Active Models & Loras\Lora\Text_Aid_SDXL.safetensors 
+2026-03-24 23:23:03,179 — flask-app — INFO — LoRA loaded: Text Aid SDXL
+2026-03-24 23:23:03,181 — flask-app — INFO — Using resolution: 512x768
+2026-03-24 23:23:07,503 — flask-app — DEBUG — Generated filename: G:\K K Sonakiya\Projects\30. AI Image Generation\1. Image Generation\CDAI Lite\apps\static\images\generated_20260324_232307.png
+2026-03-24 23:23:07,530 — flask-app — INFO — Image saved at: G:\K K Sonakiya\Projects\30. AI Image Generation\1. Image Generation\CDAI Lite\apps\static\images\generated_20260324_232307.png
+2026-03-24 23:23:18,366 — flask-app — INFO — ImageGenerator initialized with device=cuda
+2026-03-24 23:23:18,368 — flask-app — INFO — [Generate] Request params: {'base_model': 'dynavision', 'image_style': 'Text Aid SDXL', 'prompt': 'cat holding a sign with text:"i am not real" <lora:text:.8>', 'negative_prompt': 'colorful, clutter, shadows, gradients, textures, images'}
+2026-03-24 23:23:18,369 — flask-app — INFO — Switching base model from None to dynavision
+2026-03-24 23:23:18,370 — flask-app — INFO — Base Model Details: {'id': '2', 'name': 'Dynavision', 'model_type': 'checkpoint', 'alias': 'dynavision', 'model_path': 'C:\\Users\\kkson\\Models\\dynavision.safetensors', 'output_dir': 'dynavision', 'base_model': 'sdxl_1_0'}
+2026-03-24 23:23:18,371 — flask-app — INFO — Loading base model: dynavision from C:\Users\kkson\Models\dynavision.safetensors with base_model as sdxl_1_0
+2026-03-24 23:23:32,936 — flask-app — INFO — LORA Name: Text Aid SDXL | Adapter Name: Text Aid SDXL | PATH: G:\K K Sonakiya\Projects\30. AI Image Generation\1. Image Generation\Models\Active Models & Loras\Lora\Text_Aid_SDXL.safetensors 
+2026-03-24 23:23:36,167 — flask-app — INFO — LoRA loaded: Text Aid SDXL
+2026-03-24 23:23:36,168 — flask-app — INFO — Using resolution: 512x768
+2026-03-24 23:23:40,485 — flask-app — DEBUG — Generated filename: G:\K K Sonakiya\Projects\30. AI Image Generation\1. Image Generation\CDAI Lite\apps\static\images\generated_20260324_232340.png
+2026-03-24 23:23:40,526 — flask-app — INFO — Image saved at: G:\K K Sonakiya\Projects\30. AI Image Generation\1. Image Generation\CDAI Lite\apps\static\images\generated_20260324_232340.png
+2026-03-24 23:23:40,539 — flask-app — INFO — [Generate] Request params: {'base_model': 'dreamshaper-xl-v21-turbo', 'image_style': 'Text Aid SDXL', 'prompt': 'cat holding a sign with text:"i am not real" <lora:text:.8>', 'negative_prompt': 'colorful, clutter, shadows, gradients, textures, images'}
+2026-03-24 23:23:40,541 — flask-app — INFO — Switching base model from dynavision to dreamshaper-xl-v21-turbo
+2026-03-24 23:23:40,542 — flask-app — INFO — Unloading pipeline and clearing CUDA cache
+2026-03-24 23:23:40,708 — flask-app — INFO — Base Model Details: {'id': '3', 'name': 'Dreamshaper XL v21 Turbo', 'model_type': 'checkpoint', 'alias': 'dreamshaper-xl-v21-turbo', 'model_path': 'G:\\K K Sonakiya\\Projects\\30. AI Image Generation\\1. Image Generation\\Models\\Active Models & Loras\\dreamshaperXL_v21TurboDPMSDE.safetensors', 'output_dir': 'dreamshaper_xl_v21_turbo', 'base_model': 'sdxl_1_0'}
+2026-03-24 23:23:40,710 — flask-app — INFO — Loading base model: dreamshaper-xl-v21-turbo from G:\K K Sonakiya\Projects\30. AI Image Generation\1. Image Generation\Models\Active Models & Loras\dreamshaperXL_v21TurboDPMSDE.safetensors with base_model as sdxl_1_0
+2026-03-24 23:24:03,849 — flask-app — INFO — LORA Name: Text Aid SDXL | Adapter Name: Text Aid SDXL | PATH: G:\K K Sonakiya\Projects\30. AI Image Generation\1. Image Generation\Models\Active Models & Loras\Lora\Text_Aid_SDXL.safetensors 
+2026-03-24 23:24:06,973 — flask-app — INFO — LoRA loaded: Text Aid SDXL
+2026-03-24 23:24:06,975 — flask-app — INFO — Using resolution: 512x768
+2026-03-24 23:24:11,291 — flask-app — DEBUG — Generated filename: G:\K K Sonakiya\Projects\30. AI Image Generation\1. Image Generation\CDAI Lite\apps\static\images\generated_20260324_232411.png
+2026-03-24 23:24:11,323 — flask-app — INFO — Image saved at: G:\K K Sonakiya\Projects\30. AI Image Generation\1. Image Generation\CDAI Lite\apps\static\images\generated_20260324_232411.png
+2026-03-24 23:24:11,330 — flask-app — INFO — [Generate] Request params: {'base_model': 'cyberrealistic-xl-v5', 'image_style': 'Text Aid SDXL', 'prompt': 'cat holding a sign with text:"i am not real" <lora:text:.8>', 'negative_prompt': 'colorful, clutter, shadows, gradients, textures, images'}
+2026-03-24 23:24:11,331 — flask-app — INFO — Switching base model from dreamshaper-xl-v21-turbo to cyberrealistic-xl-v5
+2026-03-24 23:24:11,334 — flask-app — INFO — Unloading pipeline and clearing CUDA cache
+2026-03-24 23:24:11,501 — flask-app — INFO — Base Model Details: {'id': '4', 'name': 'CyberRealistic XL v5', 'model_type': 'checkpoint', 'alias': 'cyberrealistic-xl-v5', 'model_path': 'G:\\K K Sonakiya\\Projects\\30. AI Image Generation\\1. Image Generation\\Models\\Active Models & Loras\\cyberrealisticXL_v5.safetensors', 'output_dir': 'cyberrealistic_xl_v5', 'base_model': 'sdxl_1_0'}
+2026-03-24 23:24:11,502 — flask-app — INFO — Loading base model: cyberrealistic-xl-v5 from G:\K K Sonakiya\Projects\30. AI Image Generation\1. Image Generation\Models\Active Models & Loras\cyberrealisticXL_v5.safetensors with base_model as sdxl_1_0
+2026-03-24 23:24:34,497 — flask-app — INFO — LORA Name: Text Aid SDXL | Adapter Name: Text Aid SDXL | PATH: G:\K K Sonakiya\Projects\30. AI Image Generation\1. Image Generation\Models\Active Models & Loras\Lora\Text_Aid_SDXL.safetensors 
+2026-03-24 23:24:37,957 — flask-app — INFO — LoRA loaded: Text Aid SDXL
+2026-03-24 23:24:37,959 — flask-app — INFO — Using resolution: 512x768
+2026-03-24 23:24:42,595 — flask-app — DEBUG — Generated filename: G:\K K Sonakiya\Projects\30. AI Image Generation\1. Image Generation\CDAI Lite\apps\static\images\generated_20260324_232442.png
+2026-03-24 23:24:42,634 — flask-app — INFO — Image saved at: G:\K K Sonakiya\Projects\30. AI Image Generation\1. Image Generation\CDAI Lite\apps\static\images\generated_20260324_232442.png
+2026-03-24 23:24:42,642 — flask-app — INFO — [Generate] Request params: {'base_model': 'juggernautxl', 'image_style': 'Text Aid SDXL', 'prompt': 'cat holding a sign with text:"i am not real" <lora:text:.8>', 'negative_prompt': 'colorful, clutter, shadows, gradients, textures, images'}
+2026-03-24 23:24:42,644 — flask-app — INFO — Switching base model from cyberrealistic-xl-v5 to juggernautxl
+2026-03-24 23:24:42,646 — flask-app — INFO — Unloading pipeline and clearing CUDA cache
+2026-03-24 23:24:42,813 — flask-app — INFO — Base Model Details: {'id': '5', 'name': 'JuggernautXL', 'model_type': 'checkpoint', 'alias': 'juggernautxl', 'model_path': 'G:\\K K Sonakiya\\Projects\\30. AI Image Generation\\1. Image Generation\\Models\\Active Models & Loras\\juggernautXL.safetensors', 'output_dir': 'juggernautxl', 'base_model': 'sdxl_1_0'}
+2026-03-24 23:24:42,815 — flask-app — INFO — Loading base model: juggernautxl from G:\K K Sonakiya\Projects\30. AI Image Generation\1. Image Generation\Models\Active Models & Loras\juggernautXL.safetensors with base_model as sdxl_1_0
+2026-03-24 23:25:06,030 — flask-app — INFO — LORA Name: Text Aid SDXL | Adapter Name: Text Aid SDXL | PATH: G:\K K Sonakiya\Projects\30. AI Image Generation\1. Image Generation\Models\Active Models & Loras\Lora\Text_Aid_SDXL.safetensors 
+2026-03-24 23:25:08,933 — flask-app — INFO — LoRA loaded: Text Aid SDXL
+2026-03-24 23:25:08,935 — flask-app — INFO — Using resolution: 512x768
+2026-03-24 23:25:13,290 — flask-app — DEBUG — Generated filename: G:\K K Sonakiya\Projects\30. AI Image Generation\1. Image Generation\CDAI Lite\apps\static\images\generated_20260324_232513.png
+2026-03-24 23:25:13,324 — flask-app — INFO — Image saved at: G:\K K Sonakiya\Projects\30. AI Image Generation\1. Image Generation\CDAI Lite\apps\static\images\generated_20260324_232513.png
+2026-03-24 23:27:07,044 — flask-app — INFO — ImageGenerator initialized with device=cuda
+2026-03-24 23:27:07,046 — flask-app — INFO — [Generate] Request params: {'base_model': 'dynavision', 'image_style': 'Text Aid SDXL', 'prompt': 'minimalist quote poster, readable clean typography, text:"Stay humble work hard be kind" <lora:text:.8>, elegant serif font, centered layout, lots of whitespace, black text on off-white background, modern printable wall art, Etsy style, high clarity text, sharp letters', 'negative_prompt': 'blurry text, distorted letters, misspelled words, warped typography, messy layout, too many fonts, decorative fonts, shadows, gradients, clutter, low resolution'}
+2026-03-24 23:27:07,047 — flask-app — INFO — Switching base model from None to dynavision
+2026-03-24 23:27:07,048 — flask-app — INFO — Base Model Details: {'id': '2', 'name': 'Dynavision', 'model_type': 'checkpoint', 'alias': 'dynavision', 'model_path': 'C:\\Users\\kkson\\Models\\dynavision.safetensors', 'output_dir': 'dynavision', 'base_model': 'sdxl_1_0'}
+2026-03-24 23:27:07,049 — flask-app — INFO — Loading base model: dynavision from C:\Users\kkson\Models\dynavision.safetensors with base_model as sdxl_1_0
+2026-03-24 23:27:21,632 — flask-app — INFO — LORA Name: Text Aid SDXL | Adapter Name: Text Aid SDXL | PATH: G:\K K Sonakiya\Projects\30. AI Image Generation\1. Image Generation\Models\Active Models & Loras\Lora\Text_Aid_SDXL.safetensors 
+2026-03-24 23:27:24,694 — flask-app — INFO — LoRA loaded: Text Aid SDXL
+2026-03-24 23:27:24,695 — flask-app — INFO — Using resolution: 512x768
+2026-03-24 23:27:28,907 — flask-app — DEBUG — Generated filename: G:\K K Sonakiya\Projects\30. AI Image Generation\1. Image Generation\CDAI Lite\apps\static\images\generated_20260324_232728.png
+2026-03-24 23:27:28,942 — flask-app — INFO — Image saved at: G:\K K Sonakiya\Projects\30. AI Image Generation\1. Image Generation\CDAI Lite\apps\static\images\generated_20260324_232728.png
+2026-03-24 23:27:28,951 — flask-app — INFO — [Generate] Request params: {'base_model': 'dreamshaper-xl-v21-turbo', 'image_style': 'Text Aid SDXL', 'prompt': 'minimalist quote poster, readable clean typography, text:"Stay humble work hard be kind" <lora:text:.8>, elegant serif font, centered layout, lots of whitespace, black text on off-white background, modern printable wall art, Etsy style, high clarity text, sharp letters', 'negative_prompt': 'blurry text, distorted letters, misspelled words, warped typography, messy layout, too many fonts, decorative fonts, shadows, gradients, clutter, low resolution'}
+2026-03-24 23:27:28,953 — flask-app — INFO — Switching base model from dynavision to dreamshaper-xl-v21-turbo
+2026-03-24 23:27:28,955 — flask-app — INFO — Unloading pipeline and clearing CUDA cache
+2026-03-24 23:27:29,124 — flask-app — INFO — Base Model Details: {'id': '3', 'name': 'Dreamshaper XL v21 Turbo', 'model_type': 'checkpoint', 'alias': 'dreamshaper-xl-v21-turbo', 'model_path': 'G:\\K K Sonakiya\\Projects\\30. AI Image Generation\\1. Image Generation\\Models\\Active Models & Loras\\dreamshaperXL_v21TurboDPMSDE.safetensors', 'output_dir': 'dreamshaper_xl_v21_turbo', 'base_model': 'sdxl_1_0'}
+2026-03-24 23:27:29,125 — flask-app — INFO — Loading base model: dreamshaper-xl-v21-turbo from G:\K K Sonakiya\Projects\30. AI Image Generation\1. Image Generation\Models\Active Models & Loras\dreamshaperXL_v21TurboDPMSDE.safetensors with base_model as sdxl_1_0
+2026-03-24 23:27:51,779 — flask-app — INFO — LORA Name: Text Aid SDXL | Adapter Name: Text Aid SDXL | PATH: G:\K K Sonakiya\Projects\30. AI Image Generation\1. Image Generation\Models\Active Models & Loras\Lora\Text_Aid_SDXL.safetensors 
+2026-03-24 23:27:55,289 — flask-app — INFO — LoRA loaded: Text Aid SDXL
+2026-03-24 23:27:55,291 — flask-app — INFO — Using resolution: 512x768
+2026-03-24 23:28:21,246 — flask-app — DEBUG — Generated filename: G:\K K Sonakiya\Projects\30. AI Image Generation\1. Image Generation\CDAI Lite\apps\static\images\generated_20260324_232821.png
+2026-03-24 23:28:21,280 — flask-app — INFO — Image saved at: G:\K K Sonakiya\Projects\30. AI Image Generation\1. Image Generation\CDAI Lite\apps\static\images\generated_20260324_232821.png
+2026-03-24 23:28:21,289 — flask-app — INFO — [Generate] Request params: {'base_model': 'cyberrealistic-xl-v5', 'image_style': 'Text Aid SDXL', 'prompt': 'minimalist quote poster, readable clean typography, text:"Stay humble work hard be kind" <lora:text:.8>, elegant serif font, centered layout, lots of whitespace, black text on off-white background, modern printable wall art, Etsy style, high clarity text, sharp letters', 'negative_prompt': 'blurry text, distorted letters, misspelled words, warped typography, messy layout, too many fonts, decorative fonts, shadows, gradients, clutter, low resolution'}
+2026-03-24 23:28:21,292 — flask-app — INFO — Switching base model from dreamshaper-xl-v21-turbo to cyberrealistic-xl-v5
+2026-03-24 23:28:21,293 — flask-app — INFO — Unloading pipeline and clearing CUDA cache
+2026-03-24 23:28:21,489 — flask-app — INFO — Base Model Details: {'id': '4', 'name': 'CyberRealistic XL v5', 'model_type': 'checkpoint', 'alias': 'cyberrealistic-xl-v5', 'model_path': 'G:\\K K Sonakiya\\Projects\\30. AI Image Generation\\1. Image Generation\\Models\\Active Models & Loras\\cyberrealisticXL_v5.safetensors', 'output_dir': 'cyberrealistic_xl_v5', 'base_model': 'sdxl_1_0'}
+2026-03-24 23:28:21,491 — flask-app — INFO — Loading base model: cyberrealistic-xl-v5 from G:\K K Sonakiya\Projects\30. AI Image Generation\1. Image Generation\Models\Active Models & Loras\cyberrealisticXL_v5.safetensors with base_model as sdxl_1_0
+2026-03-24 23:28:44,980 — flask-app — INFO — LORA Name: Text Aid SDXL | Adapter Name: Text Aid SDXL | PATH: G:\K K Sonakiya\Projects\30. AI Image Generation\1. Image Generation\Models\Active Models & Loras\Lora\Text_Aid_SDXL.safetensors 
+2026-03-24 23:28:48,512 — flask-app — INFO — LoRA loaded: Text Aid SDXL
+2026-03-24 23:28:48,513 — flask-app — INFO — Using resolution: 512x768
+2026-03-24 23:29:04,613 — flask-app — DEBUG — Generated filename: G:\K K Sonakiya\Projects\30. AI Image Generation\1. Image Generation\CDAI Lite\apps\static\images\generated_20260324_232904.png
+2026-03-24 23:29:04,637 — flask-app — INFO — Image saved at: G:\K K Sonakiya\Projects\30. AI Image Generation\1. Image Generation\CDAI Lite\apps\static\images\generated_20260324_232904.png
+2026-03-24 23:29:04,645 — flask-app — INFO — [Generate] Request params: {'base_model': 'juggernautxl', 'image_style': 'Text Aid SDXL', 'prompt': 'minimalist quote poster, readable clean typography, text:"Stay humble work hard be kind" <lora:text:.8>, elegant serif font, centered layout, lots of whitespace, black text on off-white background, modern printable wall art, Etsy style, high clarity text, sharp letters', 'negative_prompt': 'blurry text, distorted letters, misspelled words, warped typography, messy layout, too many fonts, decorative fonts, shadows, gradients, clutter, low resolution'}
+2026-03-24 23:29:04,648 — flask-app — INFO — Switching base model from cyberrealistic-xl-v5 to juggernautxl
+2026-03-24 23:29:04,649 — flask-app — INFO — Unloading pipeline and clearing CUDA cache
+2026-03-24 23:29:04,842 — flask-app — INFO — Base Model Details: {'id': '5', 'name': 'JuggernautXL', 'model_type': 'checkpoint', 'alias': 'juggernautxl', 'model_path': 'G:\\K K Sonakiya\\Projects\\30. AI Image Generation\\1. Image Generation\\Models\\Active Models & Loras\\juggernautXL.safetensors', 'output_dir': 'juggernautxl', 'base_model': 'sdxl_1_0'}
+2026-03-24 23:29:04,844 — flask-app — INFO — Loading base model: juggernautxl from G:\K K Sonakiya\Projects\30. AI Image Generation\1. Image Generation\Models\Active Models & Loras\juggernautXL.safetensors with base_model as sdxl_1_0
+2026-03-24 23:29:28,540 — flask-app — INFO — LORA Name: Text Aid SDXL | Adapter Name: Text Aid SDXL | PATH: G:\K K Sonakiya\Projects\30. AI Image Generation\1. Image Generation\Models\Active Models & Loras\Lora\Text_Aid_SDXL.safetensors 
+2026-03-24 23:29:31,825 — flask-app — INFO — LoRA loaded: Text Aid SDXL
+2026-03-24 23:29:31,827 — flask-app — INFO — Using resolution: 512x768
+2026-03-24 23:29:36,224 — flask-app — DEBUG — Generated filename: G:\K K Sonakiya\Projects\30. AI Image Generation\1. Image Generation\CDAI Lite\apps\static\images\generated_20260324_232936.png
+2026-03-24 23:29:36,262 — flask-app — INFO — Image saved at: G:\K K Sonakiya\Projects\30. AI Image Generation\1. Image Generation\CDAI Lite\apps\static\images\generated_20260324_232936.png
+2026-03-24 23:36:39,250 — flask-app — INFO — ImageGenerator initialized with device=cuda
+2026-03-24 23:36:39,253 — flask-app — INFO — [Generate] Request params: {'base_model': 'dynavision', 'image_style': 'Harrlogos XL', 'prompt': 'minimalist quote poster, readable clean typography, text:"Stay humble work hard be kind" <lora:text:.8>, elegant serif font, centered layout, lots of whitespace, black text on off-white background, modern printable wall art, Etsy style, high clarity text, sharp letters', 'negative_prompt': 'blurry text, distorted letters, misspelled words, warped typography, messy layout, too many fonts, decorative fonts, shadows, gradients, clutter, low resolution'}
+2026-03-24 23:36:39,255 — flask-app — INFO — Switching base model from None to dynavision
+2026-03-24 23:36:39,257 — flask-app — INFO — Base Model Details: {'id': '2', 'name': 'Dynavision', 'model_type': 'checkpoint', 'alias': 'dynavision', 'model_path': 'C:\\Users\\kkson\\Models\\dynavision.safetensors', 'output_dir': 'dynavision', 'base_model': 'sdxl_1_0'}
+2026-03-24 23:36:39,258 — flask-app — INFO — Loading base model: dynavision from C:\Users\kkson\Models\dynavision.safetensors with base_model as sdxl_1_0
+2026-03-24 23:36:54,269 — flask-app — INFO — LORA Name: Harrlogos XL | Adapter Name: Harrlogos XL | PATH: G:\K K Sonakiya\Projects\30. AI Image Generation\1. Image Generation\Models\Active Models & Loras\Lora\Harrlogos_v2.0_XL.safetensors 
+2026-03-24 23:36:58,500 — flask-app — INFO — LoRA loaded: Harrlogos XL
+2026-03-24 23:36:58,502 — flask-app — INFO — Using resolution: 512x768
+2026-03-24 23:37:03,111 — flask-app — DEBUG — Generated filename: G:\K K Sonakiya\Projects\30. AI Image Generation\1. Image Generation\CDAI Lite\apps\static\images\generated_20260324_233703.png
+2026-03-24 23:37:03,147 — flask-app — INFO — Image saved at: G:\K K Sonakiya\Projects\30. AI Image Generation\1. Image Generation\CDAI Lite\apps\static\images\generated_20260324_233703.png
+2026-03-24 23:37:37,111 — flask-app — INFO — ImageGenerator initialized with device=cuda
+2026-03-24 23:37:37,113 — flask-app — INFO — [Generate] Request params: {'base_model': 'dynavision', 'image_style': 'Harrlogos XL', 'prompt': '("Stay humble work hard be kind":1.4), minimalist quote poster, clean readable typography, elegant serif font, centered layout, lots of whitespace, black text on off-white background, modern printable wall art, Etsy style, high clarity, sharp letters <lora:text:0.8>', 'negative_prompt': 'blurry text, distorted letters, misspelled words, malformed typography, double letters, repeating letters, messy layout, decorative fonts, shadows, gradients, clutter'}
+2026-03-24 23:37:37,115 — flask-app — INFO — Switching base model from None to dynavision
+2026-03-24 23:37:37,116 — flask-app — INFO — Base Model Details: {'id': '2', 'name': 'Dynavision', 'model_type': 'checkpoint', 'alias': 'dynavision', 'model_path': 'C:\\Users\\kkson\\Models\\dynavision.safetensors', 'output_dir': 'dynavision', 'base_model': 'sdxl_1_0'}
+2026-03-24 23:37:37,118 — flask-app — INFO — Loading base model: dynavision from C:\Users\kkson\Models\dynavision.safetensors with base_model as sdxl_1_0
+2026-03-24 23:37:42,943 — flask-app — INFO — LORA Name: Harrlogos XL | Adapter Name: Harrlogos XL | PATH: G:\K K Sonakiya\Projects\30. AI Image Generation\1. Image Generation\Models\Active Models & Loras\Lora\Harrlogos_v2.0_XL.safetensors 
+2026-03-24 23:37:45,684 — flask-app — INFO — LoRA loaded: Harrlogos XL
+2026-03-24 23:37:45,686 — flask-app — INFO — Using resolution: 512x768
+2026-03-24 23:37:50,131 — flask-app — DEBUG — Generated filename: G:\K K Sonakiya\Projects\30. AI Image Generation\1. Image Generation\CDAI Lite\apps\static\images\generated_20260324_233750.png
+2026-03-24 23:37:50,161 — flask-app — INFO — Image saved at: G:\K K Sonakiya\Projects\30. AI Image Generation\1. Image Generation\CDAI Lite\apps\static\images\generated_20260324_233750.png
+2026-03-24 23:42:20,315 — flask-app — INFO — ImageGenerator initialized with device=cuda
+2026-03-24 23:42:20,317 — flask-app — INFO — [Generate] Request params: {'base_model': 'dynavision', 'image_style': 'Text Aid SDXL', 'prompt': 'a framed minimalist poster on a wall, bold typography, black text saying text:"Stay humble work hard be kind", clean modern interior, high contrast, simple design <lora:text:0.8>', 'negative_prompt': 'blurry text, distorted letters, misspelled words, malformed typography, double letters, messy layout, clutter, too many objects'}
+2026-03-24 23:42:20,319 — flask-app — INFO — Switching base model from None to dynavision
+2026-03-24 23:42:20,320 — flask-app — INFO — Base Model Details: {'id': '2', 'name': 'Dynavision', 'model_type': 'checkpoint', 'alias': 'dynavision', 'model_path': 'C:\\Users\\kkson\\Models\\dynavision.safetensors', 'output_dir': 'dynavision', 'base_model': 'sdxl_1_0'}
+2026-03-24 23:42:20,321 — flask-app — INFO — Loading base model: dynavision from C:\Users\kkson\Models\dynavision.safetensors with base_model as sdxl_1_0
+2026-03-24 23:42:25,558 — flask-app — INFO — LORA Name: Text Aid SDXL | Adapter Name: Text Aid SDXL | PATH: G:\K K Sonakiya\Projects\30. AI Image Generation\1. Image Generation\Models\Active Models & Loras\Lora\Text_Aid_SDXL.safetensors 
+2026-03-24 23:42:28,775 — flask-app — INFO — LoRA loaded: Text Aid SDXL
+2026-03-24 23:42:28,776 — flask-app — INFO — Using resolution: 512x768
+2026-03-24 23:42:33,273 — flask-app — DEBUG — Generated filename: G:\K K Sonakiya\Projects\30. AI Image Generation\1. Image Generation\CDAI Lite\apps\static\images\generated_20260324_234233.png
+2026-03-24 23:42:33,310 — flask-app — INFO — Image saved at: G:\K K Sonakiya\Projects\30. AI Image Generation\1. Image Generation\CDAI Lite\apps\static\images\generated_20260324_234233.png
+2026-03-24 23:43:10,827 — flask-app — INFO — ImageGenerator initialized with device=cuda
+2026-03-24 23:43:10,829 — flask-app — INFO — [Generate] Request params: {'base_model': 'dynavision', 'image_style': 'Harrlogos XL', 'prompt': '("Stay humble work hard be kind":1.5), minimalist quote poster, bold sans serif typography, black text on pure white background, strong contrast, centered layout, modern poster design, clean spacing, readable text <lora:text:0.8>', 'negative_prompt': 'blurry text, distorted letters, misspelled words, malformed typography, double letters, messy layout, clutter, too many objects'}
+2026-03-24 23:43:10,830 — flask-app — INFO — Switching base model from None to dynavision
+2026-03-24 23:43:10,831 — flask-app — INFO — Base Model Details: {'id': '2', 'name': 'Dynavision', 'model_type': 'checkpoint', 'alias': 'dynavision', 'model_path': 'C:\\Users\\kkson\\Models\\dynavision.safetensors', 'output_dir': 'dynavision', 'base_model': 'sdxl_1_0'}
+2026-03-24 23:43:10,833 — flask-app — INFO — Loading base model: dynavision from C:\Users\kkson\Models\dynavision.safetensors with base_model as sdxl_1_0
+2026-03-24 23:43:16,115 — flask-app — INFO — LORA Name: Harrlogos XL | Adapter Name: Harrlogos XL | PATH: G:\K K Sonakiya\Projects\30. AI Image Generation\1. Image Generation\Models\Active Models & Loras\Lora\Harrlogos_v2.0_XL.safetensors 
+2026-03-24 23:43:18,749 — flask-app — INFO — LoRA loaded: Harrlogos XL
+2026-03-24 23:43:18,750 — flask-app — INFO — Using resolution: 512x768
+2026-03-24 23:43:23,034 — flask-app — DEBUG — Generated filename: G:\K K Sonakiya\Projects\30. AI Image Generation\1. Image Generation\CDAI Lite\apps\static\images\generated_20260324_234323.png
+2026-03-24 23:43:23,062 — flask-app — INFO — Image saved at: G:\K K Sonakiya\Projects\30. AI Image Generation\1. Image Generation\CDAI Lite\apps\static\images\generated_20260324_234323.png
+2026-03-24 23:44:16,809 — flask-app — INFO — ImageGenerator initialized with device=cuda
+2026-03-24 23:44:16,810 — flask-app — INFO — [Generate] Request params: {'base_model': 'dynavision', 'image_style': 'Text Aid SDXL', 'prompt': 'a framed minimalist poster on a wall, bold typography, black text saying "Stay Humble", modern interior, clean white background, strong contrast <lora:text:0.8>', 'negative_prompt': 'blurry text, distorted letters, misspelled words, malformed typography, double letters, messy layout, clutter, too many objects'}
+2026-03-24 23:44:16,811 — flask-app — INFO — Switching base model from None to dynavision
+2026-03-24 23:44:16,812 — flask-app — INFO — Base Model Details: {'id': '2', 'name': 'Dynavision', 'model_type': 'checkpoint', 'alias': 'dynavision', 'model_path': 'C:\\Users\\kkson\\Models\\dynavision.safetensors', 'output_dir': 'dynavision', 'base_model': 'sdxl_1_0'}
+2026-03-24 23:44:16,813 — flask-app — INFO — Loading base model: dynavision from C:\Users\kkson\Models\dynavision.safetensors with base_model as sdxl_1_0
+2026-03-24 23:44:22,396 — flask-app — INFO — LORA Name: Text Aid SDXL | Adapter Name: Text Aid SDXL | PATH: G:\K K Sonakiya\Projects\30. AI Image Generation\1. Image Generation\Models\Active Models & Loras\Lora\Text_Aid_SDXL.safetensors 
+2026-03-24 23:44:25,365 — flask-app — INFO — LoRA loaded: Text Aid SDXL
+2026-03-24 23:44:25,367 — flask-app — INFO — Using resolution: 512x768
+2026-03-24 23:44:29,934 — flask-app — DEBUG — Generated filename: G:\K K Sonakiya\Projects\30. AI Image Generation\1. Image Generation\CDAI Lite\apps\static\images\generated_20260324_234429.png
+2026-03-24 23:44:29,967 — flask-app — INFO — Image saved at: G:\K K Sonakiya\Projects\30. AI Image Generation\1. Image Generation\CDAI Lite\apps\static\images\generated_20260324_234429.png
+2026-03-24 23:44:45,566 — flask-app — INFO — ImageGenerator initialized with device=cuda
+2026-03-24 23:44:45,568 — flask-app — INFO — [Generate] Request params: {'base_model': 'dynavision', 'image_style': 'Text Aid SDXL', 'prompt': 'a framed minimalist wall art poster, elegant serif typography, text "Stay Humble", soft beige aesthetic room, premium interior, lots of whitespace, clean layout <lora:text:0.8>', 'negative_prompt': 'blurry text, distorted letters, misspelled words, malformed typography, double letters, messy layout, clutter, too many objects'}
+2026-03-24 23:44:45,569 — flask-app — INFO — Switching base model from None to dynavision
+2026-03-24 23:44:45,570 — flask-app — INFO — Base Model Details: {'id': '2', 'name': 'Dynavision', 'model_type': 'checkpoint', 'alias': 'dynavision', 'model_path': 'C:\\Users\\kkson\\Models\\dynavision.safetensors', 'output_dir': 'dynavision', 'base_model': 'sdxl_1_0'}
+2026-03-24 23:44:45,571 — flask-app — INFO — Loading base model: dynavision from C:\Users\kkson\Models\dynavision.safetensors with base_model as sdxl_1_0
+2026-03-24 23:44:51,318 — flask-app — INFO — LORA Name: Text Aid SDXL | Adapter Name: Text Aid SDXL | PATH: G:\K K Sonakiya\Projects\30. AI Image Generation\1. Image Generation\Models\Active Models & Loras\Lora\Text_Aid_SDXL.safetensors 
+2026-03-24 23:44:54,338 — flask-app — INFO — LoRA loaded: Text Aid SDXL
+2026-03-24 23:44:54,339 — flask-app — INFO — Using resolution: 512x768
+2026-03-24 23:44:58,828 — flask-app — DEBUG — Generated filename: G:\K K Sonakiya\Projects\30. AI Image Generation\1. Image Generation\CDAI Lite\apps\static\images\generated_20260324_234458.png
+2026-03-24 23:44:58,867 — flask-app — INFO — Image saved at: G:\K K Sonakiya\Projects\30. AI Image Generation\1. Image Generation\CDAI Lite\apps\static\images\generated_20260324_234458.png
+2026-03-24 23:45:07,296 — flask-app — INFO — ImageGenerator initialized with device=cuda
+2026-03-24 23:45:07,298 — flask-app — INFO — [Generate] Request params: {'base_model': 'dynavision', 'image_style': 'Text Aid SDXL', 'prompt': 'a modern minimalist poster in a bright room, thin elegant typography, text "Stay Humble", airy layout, subtle tones, contemporary decor <lora:text:0.8>', 'negative_prompt': 'blurry text, distorted letters, misspelled words, malformed typography, double letters, messy layout, clutter, too many objects'}
+2026-03-24 23:45:07,298 — flask-app — INFO — Switching base model from None to dynavision
+2026-03-24 23:45:07,300 — flask-app — INFO — Base Model Details: {'id': '2', 'name': 'Dynavision', 'model_type': 'checkpoint', 'alias': 'dynavision', 'model_path': 'C:\\Users\\kkson\\Models\\dynavision.safetensors', 'output_dir': 'dynavision', 'base_model': 'sdxl_1_0'}
+2026-03-24 23:45:07,301 — flask-app — INFO — Loading base model: dynavision from C:\Users\kkson\Models\dynavision.safetensors with base_model as sdxl_1_0
+2026-03-24 23:45:12,678 — flask-app — INFO — LORA Name: Text Aid SDXL | Adapter Name: Text Aid SDXL | PATH: G:\K K Sonakiya\Projects\30. AI Image Generation\1. Image Generation\Models\Active Models & Loras\Lora\Text_Aid_SDXL.safetensors 
+2026-03-24 23:45:15,749 — flask-app — INFO — LoRA loaded: Text Aid SDXL
+2026-03-24 23:45:15,751 — flask-app — INFO — Using resolution: 512x768
+2026-03-24 23:45:20,313 — flask-app — DEBUG — Generated filename: G:\K K Sonakiya\Projects\30. AI Image Generation\1. Image Generation\CDAI Lite\apps\static\images\generated_20260324_234520.png
+2026-03-24 23:45:20,354 — flask-app — INFO — Image saved at: G:\K K Sonakiya\Projects\30. AI Image Generation\1. Image Generation\CDAI Lite\apps\static\images\generated_20260324_234520.png

@@ -58,12 +58,15 @@ with app.app_context():
 
         return {"base_models": base_models, "sdxl_loras": sdxl_loras}
 
-
 @app.route("/")
+def landing_page():
+    return render_template("pages/landing/landing.html", title='Home Page')
+
+@app.route("/playground")
 def index():
     MODEL_REGISTRY = build_model_registry()
     print(f"MODEL Registry: {MODEL_REGISTRY}")
-    return render_template("index.html", models=MODEL_REGISTRY, title="Playground")
+    return render_template("pages/index.html", models=MODEL_REGISTRY, title="Playground")
 
 @app.route("/prompt-guide")
 def prompt_guide():
@@ -72,7 +75,7 @@ def prompt_guide():
 @app.get("/gallery")
 def gallery():
     images = ImageGeneration.query.order_by(ImageGeneration.created_at.desc()).all()
-    return render_template("gallery.html", title="Gallery", images=images)
+    return render_template("pages/app_pp/gallery.html", title="Gallery", images=images)
 
 
 @app.get("/download-models")
@@ -102,7 +105,7 @@ def about_us():
 def manage_models():
     MODEL_REGISTRY = build_model_registry()
 
-    return render_template("models.html", models=MODEL_REGISTRY)
+    return render_template("pages/app_pp/models.html", models=MODEL_REGISTRY)
 
 
 @app.post("/create-model")
@@ -267,7 +270,7 @@ def delete_image(filename):
 
 @app.route("/v1")
 def version1():
-    return render_template("index-1.html")
+    return render_template("pages/index-1.html")
 
 @app.route("/v2")
 def version2():

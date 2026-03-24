@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% include "layouts/_head.html" %}
+</head>
+
+<body class="{% block body_class %}{% endblock %}">
+
+    {% include "includes/navigation.html" %}
+
+    {% include "includes/flash_message.html" %}
+
+    <main class="main-content">
+        {% block content %}{% endblock %}
+    </main>
+
+    {% include "includes/footer.html" %}
+
+    <!-- JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+
+    {% block extra_js %}{% endblock %}
+
+</body>
+</html>

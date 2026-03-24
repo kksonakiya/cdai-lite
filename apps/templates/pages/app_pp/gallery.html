@@ -1,4 +1,4 @@
-{% extends 'layout.html' %} {% block content %}
+{% extends 'pages/layout.html' %} {% block content %}
 <div class="p-4">
   <h2 class="text-center mb-4 fw-bold">Image Gallery</h2>
   <div
@@ -96,8 +96,8 @@
   {% endif %}
 </div>
 <!-- include image viewer modal -->
-{% include 'modals/image-viewer.html' %} {% include
-'modals/fullscreen-compare.html' %}
+{% include 'components/modals/image-viewer.html' %} {% include
+'components/modals/fullscreen-compare.html' %}
 <!-- Triggers Tooltip -->
 <script>
   document.addEventListener("DOMContentLoaded", function () {
