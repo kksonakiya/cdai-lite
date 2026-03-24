@@ -1,0 +1,662 @@
+[
+  {
+    "id": "uc_001",
+    "name": "tshirt_design_testing",
+    "validated_keywords": [
+      {
+        "keyword": "print on demand shirts",
+        "avg_monthly_searches": "1K-10K",
+        "competition_intent": "VERY_HIGH",
+        "top_of_page_bid_low": 209.92,
+        "top_of_page_bid_high": 774.35,
+        "priority_score": 10,
+        "intent_type": "buyer_creator",
+        "notes": "STRONGEST keyword - direct money intent"
+      },
+      {
+        "keyword": "sell shirts on etsy",
+        "avg_monthly_searches": "100-1K",
+        "competition_intent": "VERY_HIGH",
+        "top_of_page_bid_low": 101.21,
+        "top_of_page_bid_high": 408.6,
+        "priority_score": 9,
+        "intent_type": "pure_creator",
+        "notes": "Direct ICP - HIGH conversion"
+      },
+      {
+        "keyword": "etsy t shirt",
+        "avg_monthly_searches": "1K-10K",
+        "competition_intent": "MEDIUM",
+        "top_of_page_bid_low": 0.94,
+        "top_of_page_bid_high": 56.23,
+        "priority_score": 7,
+        "intent_type": "buyer_heavy",
+        "notes": "Traffic keyword, not ideal but useful"
+      },
+      {
+        "keyword": "etsy custom t shirts",
+        "avg_monthly_searches": "1K-10K",
+        "competition_intent": "MEDIUM",
+        "top_of_page_bid_low": 0.94,
+        "top_of_page_bid_high": 351.43,
+        "priority_score": 7,
+        "intent_type": "buyer_creator_mix",
+        "notes": "Good hybrid keyword"
+      },
+      {
+        "keyword": "graphic tees etsy",
+        "avg_monthly_searches": "1K-10K",
+        "competition_intent": "LOW",
+        "top_of_page_bid_low": 0.94,
+        "top_of_page_bid_high": 0.94,
+        "priority_score": 6,
+        "intent_type": "buyer_heavy",
+        "notes": "Traffic only"
+      },
+      {
+        "keyword": "etsy tshirt design",
+        "avg_monthly_searches": "100-1K",
+        "competition_intent": "HIGH",
+        "top_of_page_bid_low": 0.94,
+        "top_of_page_bid_high": 396.41,
+        "priority_score": 8,
+        "intent_type": "creator",
+        "notes": "Strong relevance to your product"
+      }
+    ],
+    "rejected_keywords": [
+      "etsy trending shirts",
+      "etsy best selling shirts",
+      "etsy shirt business",
+      "etsy merch shirts",
+      "etsy niche shirts",
+      "printify etsy shirts",
+      "printful etsy shirts",
+      "print on demand etsy shirts"
+    ],
+    "insights": [
+      "CPC reveals real intent: 'print on demand shirts' is your GOLD keyword",
+      "Most 'etsy shirts' traffic is buyers, not sellers",
+      "Direct 'sell' keywords have lower volume but highest conversion",
+      "Long tail Etsy business keywords are too low volume to start with"
+    ],
+    "build_focus": [
+      "position product around print on demand workflow",
+      "highlight 'test before you sell' messaging",
+      "focus on variation comparison UI",
+      "mockups are critical for this usecase",
+      "speed matters more than image quality"
+    ],
+    "content_direction": [
+      "I tested print on demand shirts before selling",
+      "Stop uploading random Etsy shirts",
+      "This is why your Etsy t-shirts don’t sell",
+      "How I tested 10 designs before uploading"
+    ]
+  },
+  {
+    "id": "uc_002",
+    "name": "sticker_pack_testing",
+    "validated_keywords": [
+      {
+        "keyword": "etsy stickers",
+        "avg_monthly_searches": "1K-10K",
+        "competition_intent": "HIGH",
+        "top_of_page_bid_low": 0.94,
+        "top_of_page_bid_high": 150.53,
+        "priority_score": 9,
+        "intent_type": "buyer_heavy",
+        "notes": "Highest volume entry point, traffic driver"
+      },
+      {
+        "keyword": "sell stickers on etsy",
+        "avg_monthly_searches": "100-1K",
+        "competition_intent": "VERY_HIGH",
+        "top_of_page_bid_low": 21.67,
+        "top_of_page_bid_high": 326.79,
+        "priority_score": 10,
+        "intent_type": "pure_creator",
+        "notes": "Direct ICP, strongest conversion keyword"
+      },
+      {
+        "keyword": "etsy custom stickers",
+        "avg_monthly_searches": "1K-10K",
+        "competition_intent": "HIGH",
+        "top_of_page_bid_low": 36.93,
+        "top_of_page_bid_high": 323.88,
+        "priority_score": 9,
+        "intent_type": "buyer_creator_mix",
+        "notes": "High CPC + volume, strong hybrid keyword"
+      },
+      {
+        "keyword": "etsy sticker shop",
+        "avg_monthly_searches": "100-1K",
+        "competition_intent": "MEDIUM",
+        "top_of_page_bid_low": 0.94,
+        "top_of_page_bid_high": 177.35,
+        "priority_score": 7,
+        "intent_type": "buyer_creator_mix",
+        "notes": "Shop intent, useful for funnel entry"
+      },
+      {
+        "keyword": "etsy vinyl stickers",
+        "avg_monthly_searches": "100-1K",
+        "competition_intent": "MEDIUM",
+        "top_of_page_bid_low": 0.94,
+        "top_of_page_bid_high": 211.49,
+        "priority_score": 8,
+        "intent_type": "buyer_creator_mix",
+        "notes": "Product-specific, monetizable niche"
+      },
+      {
+        "keyword": "etsy planner stickers",
+        "avg_monthly_searches": "100-1K",
+        "competition_intent": "LOW",
+        "top_of_page_bid_low": 0.94,
+        "top_of_page_bid_high": 0.94,
+        "priority_score": 7,
+        "intent_type": "buyer_niche",
+        "notes": "Strong niche, content opportunity"
+      },
+      {
+        "keyword": "digital products to sell on etsy",
+        "avg_monthly_searches": "100-1K",
+        "competition_intent": "VERY_HIGH",
+        "top_of_page_bid_low": 48.73,
+        "top_of_page_bid_high": 311.28,
+        "priority_score": 9,
+        "intent_type": "pure_creator",
+        "notes": "High intent creators, not sticker specific but relevant"
+      },
+      {
+        "keyword": "best digital products to sell on etsy",
+        "avg_monthly_searches": "100-1K",
+        "competition_intent": "VERY_HIGH",
+        "top_of_page_bid_low": 53.42,
+        "top_of_page_bid_high": 358.93,
+        "priority_score": 9,
+        "intent_type": "pure_creator",
+        "notes": "Discovery keyword, great for content funnel"
+      }
+    ],
+    "rejected_keywords": [
+      "sticker packs etsy",
+      "printable stickers etsy",
+      "digital stickers etsy",
+      "etsy aesthetic stickers",
+      "etsy charms",
+      "etsy croc charms",
+      "etsy phone cases",
+      "etsy accessories",
+      "etsy handmade products"
+    ],
+    "insights": [
+      "‘sell stickers on etsy’ is the strongest conversion keyword",
+      "‘etsy stickers’ is high traffic but buyer-heavy",
+      "custom + vinyl keywords show strong monetization intent",
+      "digital product keywords expand reach beyond stickers",
+      "low volume ‘sticker pack’ terms are not worth targeting initially"
+    ],
+    "build_focus": [
+      "focus on rapid variation generation for small assets",
+      "grid-based comparison UI (important for stickers)",
+      "batch export (zip packs)",
+      "transparent background handling",
+      "bundle/group testing (packs vs single designs)"
+    ],
+    "content_direction": [
+      "I tested 20 sticker designs before selling on Etsy",
+      "Stop guessing your sticker designs",
+      "Best sticker styles that actually sell",
+      "How I built a sticker pack that sells"
+    ]
+  },
+  {
+    "id": "uc_003",
+    "name": "clipart_bundle_testing",
+    "validated_keywords": [
+      {
+        "keyword": "etsy embroidery designs",
+        "avg_monthly_searches": "1K-10K",
+        "competition_intent": "MEDIUM",
+        "top_of_page_bid_low": 0.94,
+        "top_of_page_bid_high": 0.94,
+        "priority_score": 8,
+        "intent_type": "creator",
+        "notes": "Strong volume + directly relevant to design assets"
+      },
+      {
+        "keyword": "etsy clipart",
+        "avg_monthly_searches": "100-1K",
+        "competition_intent": "LOW",
+        "top_of_page_bid_low": 0.94,
+        "top_of_page_bid_high": 0.94,
+        "priority_score": 8,
+        "intent_type": "creator",
+        "notes": "Core keyword, highly relevant"
+      },
+      {
+        "keyword": "svg files etsy",
+        "avg_monthly_searches": "100-1K",
+        "competition_intent": "LOW",
+        "top_of_page_bid_low": 0.94,
+        "top_of_page_bid_high": 0.94,
+        "priority_score": 8,
+        "intent_type": "creator",
+        "notes": "Cricut ecosystem, strong ICP"
+      },
+      {
+        "keyword": "clipart for cricut",
+        "avg_monthly_searches": "100-1K",
+        "competition_intent": "HIGH",
+        "top_of_page_bid_low": 59.98,
+        "top_of_page_bid_high": 125.6,
+        "priority_score": 9,
+        "intent_type": "creator",
+        "notes": "High CPC = strong commercial intent"
+      },
+      {
+        "keyword": "etsy cricut designs",
+        "avg_monthly_searches": "100-1K",
+        "competition_intent": "LOW",
+        "top_of_page_bid_low": 0.94,
+        "top_of_page_bid_high": 0.94,
+        "priority_score": 8,
+        "intent_type": "creator",
+        "notes": "Strong overlap with clipart ecosystem"
+      },
+      {
+        "keyword": "etsy digital products",
+        "avg_monthly_searches": "1K-10K",
+        "competition_intent": "HIGH",
+        "top_of_page_bid_low": 0.94,
+        "top_of_page_bid_high": 204.3,
+        "priority_score": 9,
+        "intent_type": "pure_creator",
+        "notes": "Broad but high intent entry point"
+      },
+      {
+        "keyword": "digital products to sell on etsy",
+        "avg_monthly_searches": "100-1K",
+        "competition_intent": "VERY_HIGH",
+        "top_of_page_bid_low": 48.73,
+        "top_of_page_bid_high": 311.28,
+        "priority_score": 10,
+        "intent_type": "pure_creator",
+        "notes": "Top-tier keyword across all usecases"
+      },
+      {
+        "keyword": "best digital products to sell on etsy",
+        "avg_monthly_searches": "100-1K",
+        "competition_intent": "VERY_HIGH",
+        "top_of_page_bid_low": 53.42,
+        "top_of_page_bid_high": 358.93,
+        "priority_score": 10,
+        "intent_type": "pure_creator",
+        "notes": "Discovery keyword, strong funnel entry"
+      },
+      {
+        "keyword": "selling digital products on etsy",
+        "avg_monthly_searches": "100-1K",
+        "competition_intent": "HIGH",
+        "top_of_page_bid_low": 36.55,
+        "top_of_page_bid_high": 306.44,
+        "priority_score": 9,
+        "intent_type": "pure_creator",
+        "notes": "Direct seller intent"
+      },
+      {
+        "keyword": "selling digital art on etsy",
+        "avg_monthly_searches": "100-1K",
+        "competition_intent": "HIGH",
+        "top_of_page_bid_low": 45.92,
+        "top_of_page_bid_high": 263.34,
+        "priority_score": 9,
+        "intent_type": "pure_creator",
+        "notes": "Art-specific creator intent"
+      }
+    ],
+    "rejected_keywords": [
+      "digital clipart etsy",
+      "cricut designs etsy",
+      "etsy digital prints",
+      "etsy artwork",
+      "etsy prints",
+      "etsy art prints",
+      "wedding clipart etsy",
+      "kids clipart etsy",
+      "floral clipart etsy",
+      "branding clipart etsy",
+      "logo elements clipart",
+      "watercolor clipart etsy",
+      "seasonal clipart etsy",
+      "business clipart etsy",
+      "commercial use clipart etsy",
+      "png clipart bundle"
+    ],
+    "insights": [
+      "Clipart ecosystem is tightly connected to Cricut + digital products",
+      "‘clipart for cricut’ is the strongest monetization keyword here",
+      "Digital product keywords dominate this space more than clipart-specific terms",
+      "Most niche clipart keywords have extremely low volume (not worth targeting initially)",
+      "This usecase is more creator-heavy than buyer-heavy (good for conversion)"
+    ],
+    "build_focus": [
+      "bundle-based comparison (not single image)",
+      "style consistency across multiple outputs",
+      "multi-export (zip bundles)",
+      "template reuse for collections",
+      "tagging + grouping system for experiments"
+    ],
+    "content_direction": [
+      "I tested clipart bundles before selling on Etsy",
+      "Best digital products to sell on Etsy (tested)",
+      "Why your clipart bundles don’t sell",
+      "How to create a profitable clipart bundle"
+    ]
+  },
+  {
+    "id": "uc_004",
+    "name": "printable_wall_art_testing",
+    "validated_keywords": [
+      {
+        "keyword": "etsy wall art",
+        "avg_monthly_searches": "1K-10K",
+        "competition_intent": "HIGH",
+        "top_of_page_bid_low": 0.94,
+        "top_of_page_bid_high": 71.74,
+        "priority_score": 9,
+        "intent_type": "buyer_heavy",
+        "notes": "Primary entry keyword, high volume"
+      },
+      {
+        "keyword": "etsy prints",
+        "avg_monthly_searches": "1K-10K",
+        "competition_intent": "HIGH",
+        "top_of_page_bid_low": 0.94,
+        "top_of_page_bid_high": 100.77,
+        "priority_score": 9,
+        "intent_type": "buyer_heavy",
+        "notes": "Strong traffic driver"
+      },
+      {
+        "keyword": "etsy art prints",
+        "avg_monthly_searches": "1K-10K",
+        "competition_intent": "HIGH",
+        "top_of_page_bid_low": 0.94,
+        "top_of_page_bid_high": 93.86,
+        "priority_score": 9,
+        "intent_type": "buyer_heavy",
+        "notes": "Highly relevant + strong demand"
+      },
+      {
+        "keyword": "etsy printable art",
+        "avg_monthly_searches": "1K-10K",
+        "competition_intent": "HIGH",
+        "top_of_page_bid_low": 0.94,
+        "top_of_page_bid_high": 93.86,
+        "priority_score": 10,
+        "intent_type": "buyer_creator_mix",
+        "notes": "BEST keyword for this usecase (direct overlap)"
+      },
+      {
+        "keyword": "etsy wall decor",
+        "avg_monthly_searches": "1K-10K",
+        "competition_intent": "MEDIUM",
+        "top_of_page_bid_low": 0.94,
+        "top_of_page_bid_high": 18.74,
+        "priority_score": 7,
+        "intent_type": "buyer_heavy",
+        "notes": "Broad but useful for reach"
+      },
+      {
+        "keyword": "etsy canvas prints",
+        "avg_monthly_searches": "100-1K",
+        "competition_intent": "HIGH",
+        "top_of_page_bid_low": 0.94,
+        "top_of_page_bid_high": 252.0,
+        "priority_score": 9,
+        "intent_type": "buyer_creator_mix",
+        "notes": "High CPC = strong monetization"
+      },
+      {
+        "keyword": "etsy canvas art",
+        "avg_monthly_searches": "100-1K",
+        "competition_intent": "HIGH",
+        "top_of_page_bid_low": 0.94,
+        "top_of_page_bid_high": 252.0,
+        "priority_score": 9,
+        "intent_type": "buyer_creator_mix",
+        "notes": "Similar to canvas prints, valuable niche"
+      },
+      {
+        "keyword": "etsy artwork",
+        "avg_monthly_searches": "1K-10K",
+        "competition_intent": "HIGH",
+        "top_of_page_bid_low": 0.94,
+        "top_of_page_bid_high": 119.37,
+        "priority_score": 8,
+        "intent_type": "buyer_heavy",
+        "notes": "Broad art discovery keyword"
+      },
+      {
+        "keyword": "etsy paintings",
+        "avg_monthly_searches": "1K-10K",
+        "competition_intent": "MEDIUM",
+        "top_of_page_bid_low": 0.94,
+        "top_of_page_bid_high": 43.4,
+        "priority_score": 7,
+        "intent_type": "buyer_heavy",
+        "notes": "More traditional art but still relevant"
+      },
+      {
+        "keyword": "printable wall art etsy",
+        "avg_monthly_searches": "100-1K",
+        "competition_intent": "LOW",
+        "top_of_page_bid_low": 0.94,
+        "top_of_page_bid_high": 0.94,
+        "priority_score": 10,
+        "intent_type": "buyer_creator_mix",
+        "notes": "Highly specific + aligned keyword"
+      },
+      {
+        "keyword": "large wall art etsy",
+        "avg_monthly_searches": "100-1K",
+        "competition_intent": "MEDIUM",
+        "top_of_page_bid_low": 0.94,
+        "top_of_page_bid_high": 89.25,
+        "priority_score": 8,
+        "intent_type": "buyer_niche",
+        "notes": "Strong niche variation"
+      }
+    ],
+    "rejected_keywords": [
+      "etsy wall prints",
+      "etsy digital prints",
+      "etsy abstract art",
+      "etsy abstract wall art",
+      "etsy black and white prints",
+      "etsy botanical prints",
+      "etsy watercolor prints",
+      "etsy original art",
+      "etsy paintings on canvas",
+      "etsy gallery wall",
+      "etsy wall decor living room",
+      "minimalist wall art etsy",
+      "boho wall art etsy",
+      "nursery wall art etsy",
+      "modern wall art etsy",
+      "bedroom wall art etsy"
+    ],
+    "insights": [
+      "‘etsy printable art’ and ‘printable wall art etsy’ are the strongest keywords",
+      "Most traffic is buyer-heavy, not creator-heavy",
+      "Canvas-related keywords have strong monetization (high CPC)",
+      "Style-based keywords (boho, minimalist) have low volume individually",
+      "This category is highly visual → mockups are critical"
+    ],
+    "build_focus": [
+      "mockup preview (frame, wall, room)",
+      "style comparison (aesthetic variations)",
+      "aspect ratio presets",
+      "high resolution export",
+      "visual-first comparison UI"
+    ],
+    "content_direction": [
+      "I tested printable wall art before selling on Etsy",
+      "Which wall art style actually sells?",
+      "Stop uploading random art on Etsy",
+      "Minimalist vs boho wall art (tested)"
+    ]
+  },
+  {
+    "id": "uc_005",
+    "name": "coloring_page_testing",
+    "validated_keywords": [
+      {
+        "keyword": "printable coloring pages",
+        "avg_monthly_searches": "10K-100K",
+        "competition_intent": "VERY_HIGH",
+        "top_of_page_bid_low": 4.69,
+        "top_of_page_bid_high": 201.95,
+        "priority_score": 10,
+        "intent_type": "buyer_creator_mix",
+        "notes": "HIGHEST volume keyword across all usecases"
+      },
+      {
+        "keyword": "animal coloring pages",
+        "avg_monthly_searches": "10K-100K",
+        "competition_intent": "VERY_HIGH",
+        "top_of_page_bid_low": 91.16,
+        "top_of_page_bid_high": 426.12,
+        "priority_score": 10,
+        "intent_type": "buyer_heavy",
+        "notes": "Massive demand + strong monetization"
+      },
+      {
+        "keyword": "cartoon coloring pages",
+        "avg_monthly_searches": "1K-10K",
+        "competition_intent": "HIGH",
+        "top_of_page_bid_low": 99.12,
+        "top_of_page_bid_high": 202.72,
+        "priority_score": 9,
+        "intent_type": "buyer_heavy",
+        "notes": "High demand niche"
+      },
+      {
+        "keyword": "holiday coloring pages",
+        "avg_monthly_searches": "1K-10K",
+        "competition_intent": "HIGH",
+        "top_of_page_bid_low": 32.8,
+        "top_of_page_bid_high": 325.19,
+        "priority_score": 9,
+        "intent_type": "buyer_heavy",
+        "notes": "Seasonal opportunity"
+      },
+      {
+        "keyword": "kids coloring pages",
+        "avg_monthly_searches": "1K-10K",
+        "competition_intent": "HIGH",
+        "priority_score": 9,
+        "intent_type": "buyer_heavy",
+        "notes": "Core audience keyword"
+      },
+      {
+        "keyword": "coloring pages etsy",
+        "avg_monthly_searches": "100-1K",
+        "competition_intent": "LOW",
+        "top_of_page_bid_low": 0.94,
+        "top_of_page_bid_high": 0.94,
+        "priority_score": 7,
+        "intent_type": "buyer_creator_mix",
+        "notes": "Etsy-specific entry"
+      },
+      {
+        "keyword": "preschool printables",
+        "avg_monthly_searches": "100-1K",
+        "competition_intent": "HIGH",
+        "top_of_page_bid_low": 63.49,
+        "top_of_page_bid_high": 213.19,
+        "priority_score": 9,
+        "intent_type": "pure_creator",
+        "notes": "Strong monetization + targeted audience"
+      },
+      {
+        "keyword": "homeschool printables",
+        "avg_monthly_searches": "100-1K",
+        "competition_intent": "VERY_HIGH",
+        "top_of_page_bid_low": 108.28,
+        "top_of_page_bid_high": 336.08,
+        "priority_score": 10,
+        "intent_type": "pure_creator",
+        "notes": "VERY high CPC = strong business intent"
+      },
+      {
+        "keyword": "alphabet worksheets printable",
+        "avg_monthly_searches": "100-1K",
+        "competition_intent": "HIGH",
+        "top_of_page_bid_low": 54.04,
+        "top_of_page_bid_high": 161.68,
+        "priority_score": 8,
+        "intent_type": "buyer_creator_mix",
+        "notes": "Educational niche"
+      },
+      {
+        "keyword": "math worksheets printable",
+        "avg_monthly_searches": "1K-10K",
+        "competition_intent": "HIGH",
+        "top_of_page_bid_low": 46.67,
+        "top_of_page_bid_high": 175.48,
+        "priority_score": 9,
+        "intent_type": "buyer_creator_mix",
+        "notes": "Strong evergreen demand"
+      },
+      {
+        "keyword": "kindergarten worksheets printable",
+        "avg_monthly_searches": "1K-10K",
+        "competition_intent": "HIGH",
+        "top_of_page_bid_low": 67.98,
+        "top_of_page_bid_high": 212.73,
+        "priority_score": 9,
+        "intent_type": "buyer_creator_mix",
+        "notes": "Strong niche segment"
+      },
+      {
+        "keyword": "digital products to sell on etsy",
+        "avg_monthly_searches": "100-1K",
+        "competition_intent": "VERY_HIGH",
+        "top_of_page_bid_low": 48.73,
+        "top_of_page_bid_high": 311.28,
+        "priority_score": 10,
+        "intent_type": "pure_creator",
+        "notes": "Top-tier keyword across all usecases"
+      }
+    ],
+    "rejected_keywords": [
+      "coloring books etsy",
+      "etsy digital products",
+      "best digital products to sell on etsy",
+      "selling digital products on etsy"
+    ],
+    "insights": [
+      "This is the HIGHEST traffic usecase overall",
+      "Coloring + worksheets create a massive keyword universe",
+      "Unlike others, this category is NOT Etsy-dependent",
+      "Educational keywords have very high CPC (serious buyers)",
+      "Perfect for scaling traffic via content"
+    ],
+    "build_focus": [
+      "black and white output optimization",
+      "line clarity control",
+      "complexity variation (simple vs detailed)",
+      "print formatting (A4, US letter)",
+      "bundle creation (activity packs)"
+    ],
+    "content_direction": [
+      "I tested coloring pages before selling",
+      "Best printable products to sell online",
+      "Why your coloring pages don’t sell",
+      "Top kids printables that actually make money"
+    ]
+  }
+]

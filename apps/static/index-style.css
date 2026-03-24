@@ -1,0 +1,378 @@
+/* ===== THEME VARIABLES ===== */
+:root {
+    --bg: #f6f7fb;
+    --card: #ffffff;
+    --text: #111;
+    --muted: #6b7280;
+
+    --grad-main: linear-gradient(135deg, #6366f1, #8b5cf6, #ec4899);
+    --grad-soft: linear-gradient(135deg, #e0e7ff, #fce7f3);
+}
+
+/* ===== BASE ===== */
+body {
+    font-family: 'Inter', sans-serif;
+    background: var(--bg);
+}
+
+/* ===== TOPBAR ===== */
+.topbar {
+    background: var(--card);
+    padding: 12px 20px;
+}
+
+/* ===== THEME BUTTONS ===== */
+.theme-btn {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/* ===== CARDS ===== */
+.card-custom {
+    border-radius: 14px;
+    background: var(--card);
+}
+
+/* ===== IMAGE BOX ===== */
+.image-box {
+    height: 180px;
+    background: var(--grad-soft);
+    border-radius: 12px;
+    transition: 0.2s;
+}
+
+/* ===== HOVER ===== */
+.card-hover:hover {
+    transform: translateY(-4px);
+}
+
+/* ===== CONTROL PANEL ===== */
+.control-panel {
+    position: sticky;
+    top: 20px;
+}
+
+/* ===== BUTTON ===== */
+.btn-primary {
+    background: var(--grad-main);
+    border: none;
+    border-radius: 9999px;
+}
+
+/* REMOVE BORDERS */
+.form-control,
+.form-select,
+.btn,
+.card {
+    border: none !important;
+    box-shadow: none !important;
+}
+
+/* ===== LABEL ===== */
+.label {
+    font-size: 12px;
+    color: var(--muted);
+}
+
+/* ========================= */
+/* 🔥 RESULT GRID IMPROVEMENTS */
+/* ========================= */
+
+/* subtle card hover polish */
+.card-img-select {
+    position: relative;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.card-img-select:hover {
+    transform: translateY(-4px) scale(1.01);
+}
+
+/* ===== LOADING STATE (NEW) ===== */
+.image-box.loading {
+    position: relative;
+    background: #e5e7eb;
+    overflow: hidden;
+}
+
+.image-box.loading::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255,255,255,0.6),
+        transparent
+    );
+    animation: shimmer 1.2s infinite;
+}
+
+@keyframes shimmer {
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+/* ===== SELECTION ===== */
+.selected {
+    box-shadow:
+        0 0 0 2px rgba(99, 102, 241, 0.8),
+        0 0 20px rgba(99, 102, 241, 0.6),
+        0 0 40px rgba(99, 102, 241, 0.4);
+}
+
+/* ===== WINNER ===== */
+.winner {
+    box-shadow:
+        0 0 0 2px rgba(236, 72, 153, 0.9),
+        0 0 25px rgba(236, 72, 153, 0.7),
+        0 0 60px rgba(236, 72, 153, 0.5);
+}
+
+/* badge */
+.winner-badge {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    background: linear-gradient(135deg, #6366f1, #ec4899);
+    color: white;
+    font-size: 11px;
+    padding: 4px 8px;
+    border-radius: 999px;
+    display: none;
+}
+
+.winner .winner-badge {
+    display: inline-block;
+}
+
+/* ===== INPUTS ===== */
+.form-control,
+.form-select {
+    background: #f1f3f7;
+    border-radius: 10px;
+    font-size: 14px;
+    padding: 10px 12px;
+    transition: 0.2s;
+}
+
+.form-control::placeholder {
+    color: #9ca3af;
+}
+
+.form-control:focus,
+.form-select:focus {
+    background: #eef2ff;
+    box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.25);
+    outline: none;
+}
+
+/* ===== PROMPT SYSTEM ===== */
+.prompt-section {
+    max-height: 240px;
+    overflow-y: auto;
+    padding-right: 4px;
+}
+
+.prompt-item {
+    position: relative;
+}
+
+.prompt-item .small {
+    font-weight: 500;
+}
+
+/* remove button */
+.remove-btn {
+    position: absolute;
+    top: 12px;
+    right: 4px;
+
+    width: 28px;
+    height: 28px;
+
+    border-radius: 50%;
+    border: 1px solid #ef44446c;
+
+    background: #f1f3f7;
+    color: #6b7280;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.remove-btn:hover {
+    background: #fee2e2;
+    color: #ef4444;
+}
+
+/* ===== CONFIG ===== */
+.config-section {
+    position: sticky;
+    bottom: 0;
+    background: var(--card);
+    padding-top: 10px;
+}
+
+/* ===== TAGS ===== */
+.tag-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.tag {
+    padding: 6px 12px;
+    border-radius: 999px;
+    background: #f1f3f7;
+    font-size: 13px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.tag:hover {
+    background: #e5e7eb;
+}
+
+.tag.active {
+    background: linear-gradient(135deg, #6366f1, #ec4899);
+    color: white;
+    box-shadow:
+        0 0 0 2px rgba(99, 102, 241, 0.25),
+        0 6px 15px rgba(99, 102, 241, 0.3);
+    transform: scale(1.05);
+}
+
+/* check */
+.tag .check {
+    display: none;
+    margin-right: 6px;
+}
+
+.tag.active .check {
+    display: inline;
+}
+
+/* ========================= */
+/* CARD V2 CLEAN */
+/* ========================= */
+
+/* top meta */
+.card-meta-top {
+  display: flex;
+  justify-content: space-between;
+  font-size: 11px;
+  color: #6b7280;
+  margin-bottom: 6px;
+}
+
+/* selection check */
+.select-check {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+
+  width: 26px;
+  height: 26px;
+
+  border-radius: 50%;
+  background: #f1f3f7;
+  color: #6b7280;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 13px;
+  opacity: 0;
+  transition: 0.2s;
+}
+
+/* show when selected */
+.card-img-select.selected .select-check {
+  opacity: 1;
+  background: linear-gradient(135deg,#6366f1,#ec4899);
+  color: white;
+}
+
+/* overlay */
+.card-overlay {
+  position: absolute;
+  inset: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+
+  background: rgba(0,0,0,0.35);
+  color: white;
+  font-size: 13px;
+
+  opacity: 0;
+  transition: 0.2s;
+  border-radius: 12px;
+}
+
+/* show on hover */
+.card-img-select:hover .card-overlay {
+  opacity: 1;
+}
+
+/* base button */
+.card-overlay span {
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+/* SECONDARY: Preview */
+.card-overlay span:first-child {
+  background: rgba(255,255,255,0.15);
+  color: white;
+}
+
+/* PRIMARY: Select */
+.card-overlay span:last-child {
+  background: linear-gradient(135deg,#6366f1,#ec4899);
+  color: white;
+  font-weight: 500;
+  padding: 5px 14px; /* slightly larger */
+  box-shadow: 0 4px 12px rgba(99,102,241,0.4);
+}
+
+/* hover polish */
+.card-overlay span:hover {
+  transform: scale(1.05);
+}
+
+.select-check {
+  position: absolute;
+  top: -8px;   /* move outside */
+  left: -8px;
+
+  width: 26px;
+  height: 26px;
+
+  border-radius: 50%;
+  background: linear-gradient(135deg,#6366f1,#ec4899);
+  color: white;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 13px;
+  z-index: 2;
+}

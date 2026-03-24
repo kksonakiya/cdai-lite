@@ -264,3 +264,11 @@ def delete_image(filename):
         # Log or flash the error for debugging
         flash(f"An error occurred: {str(e)}", "danger")
         return redirect(url_for("gallery"))
+
+@app.route("/v1")
+def version1():
+    return render_template("index-1.html")
+
+@app.route("/v2")
+def version2():
+    return render_template("index-2.html")

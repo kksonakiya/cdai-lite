@@ -24,8 +24,9 @@
         <table class="table table-hover">
           <thead>
             <tr>
-              <th style="max-width: 20px">S.No.</th>
+              <th style="max-width: 20px">#</th>
               <th>Name</th>
+              <th>Path</th>
               <th>Actions</th>
             </tr>
           </thead>
@@ -34,6 +35,7 @@
             <tr>
               <td>{{ loop.index }}</td>
               <td>{{ model['name'] }}</td>
+              <td>{{model['model_path']}}</td>
               <td class="action-btns">
              
                 <button
@@ -68,8 +70,9 @@
         <table class="table table-hover">
           <thead>
             <tr>
-              <th style="max-width: 20px">S.No.</th>
+              <th style="max-width: 20px">#</th>
               <th>Name</th>
+              <th>Path</th>
               <th>Actions</th>
             </tr>
           </thead>
@@ -78,6 +81,7 @@
             <tr>
               <td>{{ loop.index }}</td>
               <td>{{ model['name'] }}</td>
+              <td>{{ model['model_path'] }}</td>
               <td class="action-btns">
                 <button
                   class="btn btn-sm btn-outline-info"

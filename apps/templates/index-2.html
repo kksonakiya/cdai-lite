@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>CDAI Lite</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+body {
+  font-family: 'Inter', sans-serif;
+  background: #f6f7fb;
+}
+
+/* Topbar */
+.topbar {
+  background: white;
+  border-bottom: 1px solid #eee;
+  padding: 12px 20px;
+}
+
+/* Cards */
+.card-custom {
+  border: none;
+  border-radius: 14px;
+  background: white;
+}
+
+/* Image Grid */
+.image-box {
+  height: 180px;
+  background: linear-gradient(135deg,#e0e7ff,#fce7f3);
+  border-radius: 12px;
+}
+
+/* Hover */
+.card-hover:hover {
+  transform: translateY(-4px);
+  transition: 0.2s;
+}
+
+/* Floating Panel */
+.control-panel {
+  position: sticky;
+  top: 20px;
+}
+
+/* Buttons */
+.btn-primary {
+  background: #6366f1;
+  border: none;
+}
+
+/* Labels */
+.label {
+  font-size: 12px;
+  color: #6b7280;
+}
+</style>
+</head>
+
+<body>
+
+<!-- Topbar -->
+<div class="topbar d-flex justify-content-between align-items-center">
+  <div class="fw-semibold">CDAI Lite</div>
+  <button class="btn btn-primary btn-sm">Run Experiment</button>
+</div>
+
+<div class="container-fluid mt-4">
+  <div class="row g-4">
+
+    <!-- LEFT: VISUAL GRID -->
+        <div class="col-lg-3">
+
+      <div class="card card-custom p-3 control-panel">
+
+        <h6 class="mb-3">Create Experiment</h6>
+
+        <label class="label">Prompt</label>
+        <textarea class="form-control mb-3" rows="3" placeholder="Describe your design..."></textarea>
+
+        <label class="label">Negative Prompt</label>
+        <textarea class="form-control mb-3" rows="2"></textarea>
+
+        <label class="label">Model</label>
+        <select class="form-select mb-3">
+          <option>SDXL</option>
+          <option>DreamShaper</option>
+        </select>
+
+        <label class="label">LoRA</label>
+        <select class="form-select mb-3">
+          <option>None</option>
+          <option>Pixel Art</option>
+          <option>Comic Style</option>
+        </select>
+
+        <button class="btn btn-primary w-100">Run Batch</button>
+
+      </div>
+
+    </div>
+
+
+    <!-- RIGHT: CONTROL PANEL -->
+     <div class="col-lg-9">
+
+      <div class="d-flex justify-content-between mb-3">
+        <h5 class="mb-0">Batch Results</h5>
+        <div>
+          <button class="btn btn-light btn-sm">Compare</button>
+          <button class="btn btn-light btn-sm">Select Best</button>
+        </div>
+      </div>
+
+      <div class="row g-3">
+
+        <!-- Card -->
+        <div class="col-md-3">
+          <div class="card card-custom p-2 card-hover">
+            <div class="image-box"></div>
+            <div class="mt-2 small text-muted">Prompt A · LoRA 1</div>
+          </div>
+        </div>
+
+        <div class="col-md-3">
+          <div class="card card-custom p-2 card-hover">
+            <div class="image-box"></div>
+            <div class="mt-2 small text-muted">Prompt B · LoRA 2</div>
+          </div>
+        </div>
+
+        <div class="col-md-3">
+          <div class="card card-custom p-2 card-hover">
+            <div class="image-box"></div>
+            <div class="mt-2 small text-muted">Prompt C · LoRA 3</div>
+          </div>
+        </div>
+
+        <div class="col-md-3">
+          <div class="card card-custom p-2 card-hover">
+            <div class="image-box"></div>
+            <div class="mt-2 small text-muted">Prompt D · LoRA 4</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</div>
+
+</body>
+</html>
