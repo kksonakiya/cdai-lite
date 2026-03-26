@@ -1,45 +1,251 @@
+<style>
+    .problem-section {
+  position: relative;
+  padding: 100px 0;
+  overflow: hidden;
+
+  /* LOW ENERGY BASE */
+  background: linear-gradient(
+    to bottom,
+    #ffffff,
+    #f3f4f6
+  );
+}
+
+/* 🔻 PRIMARY LOW-ENERGY GLOW (LEFT) */
+.problem-bg-glow {
+    pointer-events: none;
+    position: absolute;
+    top: -120px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 700px;
+    height: 400px;
+    background: radial-gradient(circle,
+            rgba(124, 58, 237, 0.15) 0%,
+            transparent 70%);
+    filter: blur(80px);
+    z-index: 0;
+}
+
+/* 🔻 SECONDARY LOW-ENERGY GLOW (RIGHT) */
+.problem-section::after {
+  content: "";
+  position: absolute;
+  bottom: -160px;
+  right: -160px;
+  width: 460px;
+  height: 460px;
+  background: radial-gradient(
+    circle,
+    rgba(236,72,153,0.12),
+    transparent 70%
+  );
+  filter: blur(120px);
+  opacity: 0.25;
+  z-index: 0;
+}
+
+/* 🔻 CENTER FADE (ADDS “DULL” FEEL) */
+.problem-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at center,
+    rgba(0,0,0,0.03),
+    transparent 60%
+  );
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* 🚨 CRITICAL: CONTENT ABOVE GLOW */
+.problem-section .container {
+  position: relative;
+  z-index: 2;
+}
+
+/* TITLE */
+.section-title {
+  font-weight: 600;
+  font-size: 30px;
+}
+
+.section-subtitle {
+  color: #6c757d;
+  margin-top: 10px;
+  font-size: 15px;
+}
+
+/* CARD (SLIGHTLY DULL) */
+.problem-card {
+  background: linear-gradient(180deg, #ffffff, #f9f9f9);
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  height: 100%;
+}
+
+.problem-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+}
+
+/* IMAGE HEADER */
+.image-header {
+  height: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+
+/* LOW ENERGY IMAGE FEEL */
+.image-header img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  filter: grayscale(40%) contrast(95%);
+  transition: 0.3s ease;
+}
+
+/* HOVER = SLIGHT RELIEF */
+.problem-card:hover img {
+  filter: grayscale(0%);
+  transform: scale(1.05);
+}
+
+/* CONTENT */
+.problem-card h5,
+.problem-card p,
+.problem-label {
+  padding: 0 18px;
+}
+
+/* LABEL */
+.problem-label {
+  display: inline-block;
+  margin-top: 12px;
+  font-size: 11px;
+  color: #868e96;
+  background: #f1f3f5;
+  padding: 4px 8px;
+  border-radius: 6px;
+}
+
+/* VARIANTS */
+.problem-label.danger {
+  color: #c92a2a;
+  background: #fff5f5;
+}
+
+.problem-label.warning {
+  color: #e67700;
+  background: #fff4e6;
+}
+
+/* TEXT */
+.problem-card h5 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-top: 8px;
+}
+
+.problem-card p {
+  font-size: 14px;
+  color: #6c757d;
+  margin-bottom: 18px;
+}
+</style>
 <section class="problem-section">
-
-    <div class="container">
-
-        <div class="text-center mb-5">
-            <h2 class="section-title">
-                Creating designs with AI shouldn’t feel like this
-            </h2>
-        </div>
-
-        <div class="row g-4">
-
-            <div class="col-md-3">
-                <div class="problem-card">
-                    <span class="problem-icon">❌</span>
-                    <p>One prompt at a time</p>
-                </div>
-            </div>
-
-            <div class="col-md-3">
-                <div class="problem-card">
-                    <span class="problem-icon">💸</span>
-                    <p>Credits run out fast</p>
-                </div>
-            </div>
-
-            <div class="col-md-3">
-                <div class="problem-card">
-                    <span class="problem-icon">⏳</span>
-                    <p>Too much waiting</p>
-                </div>
-            </div>
-
-            <div class="col-md-3">
-                <div class="problem-card">
-                    <span class="problem-icon">🤷</span>
-                    <p>Still unsure what works</p>
-                </div>
-            </div>
-
-        </div>
-
+  <div class="problem-bg-glow"></div>
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="section-title">
+        Generating Etsy designs with AI shouldn’t feel like guesswork
+      </h2>
+      <p class="section-subtitle">
+        Creating Etsy mockups one by one wastes time, credits, and potential sales — especially without a way to compare results.
+      </p>
+      <small class="text-muted mt-2">
+  Most AI tools generate images — but don’t help you decide what actually sells.
+      </small>
     </div>
 
+    <div class="row g-4">
+      <!-- CARD 1 -->
+      <div class="col-md-3">
+        <div class="problem-card">
+          <div class="image-header">
+            <img src="/static/images/landing/one-prompt.png" alt="Generating one AI image at a time" />
+          </div>
+          <span class="problem-label">only 1 result</span>
+          <h5>One AI image at a time</h5>
+          <p>You try one prompt, wait, tweak… and lose momentum</p>
+        </div>
+      </div>
+
+      <!-- CARD 2 -->
+      <div class="col-md-3">
+        <div class="problem-card">
+          <div class="image-header">
+            <img src="/static/images/landing/wasting-credits.jpg" alt="Wasting AI credits on unusable images" />
+          </div>
+          <span class="problem-label danger">wasted</span>
+          <h5>Wasting credits on bad AI outputs</h5>
+          <p>Most generations aren’t usable — but they still cost you</p>
+        </div>
+      </div>
+
+      <!-- CARD 3 -->
+      <div class="col-md-3">
+        <div class="problem-card">
+          <div class="image-header">
+            <img src="/static/images/landing/slow-trends.jpg" alt="Slow AI image generation missing trends" />
+          </div>
+          <span class="problem-label warning">too late</span>
+          <h5>Too slow for Etsy trends</h5>
+          <p>By the time you find something good, the trend is gone</p>
+        </div>
+      </div>
+
+      <!-- CARD 4 -->
+      <div class="col-md-3">
+        <div class="problem-card">
+          <div class="image-header">
+            <img src="/static/images/landing/confused-seller.png" alt="Choosing best AI generated design" />
+          </div>
+          <span class="problem-label">which one?</span>
+          <h5>Hard to choose the best design</h5>
+          <p>You generate designs… but don’t know which one is worth listing</p>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const cards = document.querySelectorAll(".problem-card");
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.style.transform = "translateY(0)";
+            entry.target.style.opacity = "1";
+          }
+        });
+      },
+      { threshold: 0.2 },
+    );
+
+    cards.forEach((card) => {
+      card.style.transform = "translateY(20px)";
+      card.style.opacity = "0";
+      card.style.transition = "all 0.6s ease";
+      observer.observe(card);
+    });
+  });
+</script>

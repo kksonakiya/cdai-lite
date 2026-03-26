@@ -1,87 +1,28 @@
 <section id="demo" class="demo-section">
+  <!-- 🔥 Background Glow Layer -->
+  <div class="demo-bg-glow"></div>
 
-    <div class="container">
-
-        <!-- HEADER -->
-        <div class="text-center mb-5">
-            <h2 class="section-title">Try it instantly</h2>
-            <p class="section-subtitle">
-                Generate multiple design variations and pick the best — just like your real workflow.
-            </p>
-        </div>
-
-        <div class="row g-4">
-
-            <!-- LEFT: INPUT PANEL -->
-            <div class="col-lg-4">
-
-                <div class="demo-panel">
-
-                    <label class="demo-label">Prompt</label>
-
-                    <textarea 
-                        class="demo-input" 
-                        placeholder="Minimalist cat t-shirt design..."
-                        rows="4"
-                    ></textarea>
-
-                    <button class="demo-add">
-                        + Add Prompt
-                    </button>
-
-                    <label class="demo-label mt-4">Style</label>
-
-                    <div class="demo-tags">
-                        <span class="tag active">Pixel</span>
-                        <span class="tag">Sticker</span>
-                        <span class="tag">Anime</span>
-                        <span class="tag">Outline</span>
-                    </div>
-
-                    <button class="demo-run mt-4">
-                        Run Batch
-                    </button>
-
-                </div>
-
-            </div>
-
-            <!-- RIGHT: RESULTS -->
-            <div class="col-lg-8">
-
-                <div class="demo-results">
-
-                    <div class="row g-3">
-
-                        <div class="col-md-4">
-                            <div class="result-card">
-                                <div class="result-img"></div>
-                                <div class="result-meta">Prompt A</div>
-                            </div>
-                        </div>
-
-                        <div class="col-md-4">
-                            <div class="result-card selected">
-                                <div class="result-img"></div>
-                                <div class="result-meta">Prompt B ✓</div>
-                            </div>
-                        </div>
-
-                        <div class="col-md-4">
-                            <div class="result-card">
-                                <div class="result-img"></div>
-                                <div class="result-meta">Prompt C</div>
-                            </div>
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-
+  <div class="container position-relative" style="z-index: 1;">
+    <!-- HEADER -->
+    <div class="text-center mb-5">
+      <h2 class="section-title">Generate and compare AI images instantly</h2>
+      <p class="section-subtitle">
+        Create multiple Etsy mockups using local AI image generation, compare variations side-by-side, and pick the best design in seconds.
+      </p>
     </div>
 
+    <!-- 🔥 Elevated Card Wrapper -->
+    <div class="demo-card">
+      <div class="row g-4">
+        <!-- LEFT: INPUT PANEL -->
+        {% include 'pages/landing/components/demo_input_panel.html' %}
+        
+        <!-- RIGHT: RESULTS -->
+        {% include 'pages/landing/components/demo_results_panel.html' %}
+      </div>
+    </div>
+  </div>
 </section>
+
+<script src="{{url_for('static', filename='js/landing-demo.js')}}"></script>
+{% include 'pages/landing/modals/image_preview_landing.html' %}

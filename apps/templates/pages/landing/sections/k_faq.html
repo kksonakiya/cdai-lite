@@ -1,75 +1,338 @@
+<style>
+  /* SECTION */
+  .faq-section {
+    position: relative;
+    padding: 100px 0;
+    background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+    overflow: hidden;
+  }
+
+  /* glow */
+  .faq-section::before {
+    content: "";
+    position: absolute;
+    top: -120px;
+    left: -120px;
+    width: 350px;
+    height: 350px;
+    background: radial-gradient(
+      circle,
+      rgba(99, 102, 241, 0.12),
+      transparent 70%
+    );
+    filter: blur(80px);
+  }
+
+  .faq-section::after {
+    content: "";
+    position: absolute;
+    bottom: -120px;
+    right: -120px;
+    width: 350px;
+    height: 350px;
+    background: radial-gradient(
+      circle,
+      rgba(16, 185, 129, 0.1),
+      transparent 70%
+    );
+    filter: blur(80px);
+  }
+
+  .faq-section .container {
+    position: relative;
+    z-index: 1;
+  }
+
+  /* ACCORDION */
+  .faq-item {
+    border-radius: 14px;
+    overflow: hidden;
+    margin-bottom: 12px;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+  }
+
+  /* BUTTON */
+  .faq-button {
+    font-weight: 500;
+    font-size: 15px;
+  }
+
+  /* BODY */
+  .faq-body {
+    font-size: 14px;
+    color: #4b5563;
+    line-height: 1.6;
+  }
+  /* BRAND GRADIENT TEXT */
+  .highlight {
+    background: linear-gradient(135deg, #6366f1, #ec4899);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 600;
+    letter-spacing: -0.2px;
+  }
+</style>
 <section class="faq-section">
-
-    <div class="container">
-
-        <div class="text-center mb-5">
-            <h2 class="section-title">Frequently asked questions</h2>
-        </div>
-
-        <div class="faq-wrapper mx-auto">
-
-            <div class="accordion" id="faqAccordion">
-
-                <!-- ITEM 1 -->
-                <div class="accordion-item faq-item">
-                    <h2 class="accordion-header">
-                        <button class="accordion-button faq-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
-                            Do I need a powerful computer?
-                        </button>
-                    </h2>
-                    <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
-                        <div class="accordion-body faq-body">
-                            PixaPick is built for Windows systems with NVIDIA GPUs. The better your hardware, the faster your results.
-                        </div>
-                    </div>
-                </div>
-
-                <!-- ITEM 2 -->
-                <div class="accordion-item faq-item">
-                    <h2 class="accordion-header">
-                        <button class="accordion-button collapsed faq-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
-                            Does it use cloud credits?
-                        </button>
-                    </h2>
-                    <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                        <div class="accordion-body faq-body">
-                            No. Everything runs locally on your machine, so you don’t pay per image or use credits.
-                        </div>
-                    </div>
-                </div>
-
-                <!-- ITEM 3 -->
-                <div class="accordion-item faq-item">
-                    <h2 class="accordion-header">
-                        <button class="accordion-button collapsed faq-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
-                            Can I use this for Etsy designs?
-                        </button>
-                    </h2>
-                    <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                        <div class="accordion-body faq-body">
-                            Yes. PixaPick is ideal for testing Etsy mockups, prompts, and design ideas before publishing.
-                        </div>
-                    </div>
-                </div>
-
-                <!-- ITEM 4 -->
-                <div class="accordion-item faq-item">
-                    <h2 class="accordion-header">
-                        <button class="accordion-button collapsed faq-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
-                            What happens after I purchase?
-                        </button>
-                    </h2>
-                    <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                        <div class="accordion-body faq-body">
-                            You’ll get access to the app along with setup guides. If needed, you can opt for our setup support.
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
-        </div>
-
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="section-title">
+        Frequently asked questions about
+        <span class="highlight">local AI image generation</span>
+      </h2>
     </div>
 
+    <div class="faq-wrapper mx-auto">
+      <div class="accordion" id="faqAccordion">
+        <!-- 1 -->
+        <div class="accordion-item faq-item">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button faq-button"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#faq1"
+            >
+              What is local AI image generation?
+            </button>
+          </h2>
+          <div
+            id="faq1"
+            class="accordion-collapse collapse show"
+            data-bs-parent="#faqAccordion"
+          >
+            <div class="accordion-body faq-body">
+              Local AI image generation means creating images directly on your
+              own computer using your GPU, without relying on cloud tools or
+              paying per image.
+            </div>
+          </div>
+        </div>
+
+        <!-- 2 -->
+        <div class="accordion-item faq-item">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed faq-button"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#faq2"
+            >
+              Is local AI image generation better than cloud tools?
+            </button>
+          </h2>
+          <div
+            id="faq2"
+            class="accordion-collapse collapse"
+            data-bs-parent="#faqAccordion"
+          >
+            <div class="accordion-body faq-body">
+              Yes, for many creators. Local AI image generation is faster,
+              cheaper over time, and gives full control compared to cloud tools
+              that charge per image.
+            </div>
+          </div>
+        </div>
+
+        <!-- 3 -->
+        <div class="accordion-item faq-item">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed faq-button"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#faq3"
+            >
+              Can I use local AI image generation for Etsy designs?
+            </button>
+          </h2>
+          <div
+            id="faq3"
+            class="accordion-collapse collapse"
+            data-bs-parent="#faqAccordion"
+          >
+            <div class="accordion-body faq-body">
+              Yes. Local AI image generation is ideal for Etsy sellers to test
+              mockups, create variations, and find winning designs before
+              listing products.
+            </div>
+          </div>
+        </div>
+
+        <!-- 4 -->
+        <div class="accordion-item faq-item">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed faq-button"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#faq4"
+            >
+              Do I need a powerful PC for local AI image generation?
+            </button>
+          </h2>
+          <div
+            id="faq4"
+            class="accordion-collapse collapse"
+            data-bs-parent="#faqAccordion"
+          >
+            <div class="accordion-body faq-body">
+              A Windows PC with an NVIDIA GPU is recommended. Better hardware
+              means faster generation, but even mid-range GPUs can run Stable
+              Diffusion locally.
+            </div>
+          </div>
+        </div>
+
+        <!-- 5 -->
+        <div class="accordion-item faq-item">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed faq-button"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#faq5"
+            >
+              Why are NVIDIA GPUs better for local AI image generation?
+            </button>
+          </h2>
+          <div
+            id="faq5"
+            class="accordion-collapse collapse"
+            data-bs-parent="#faqAccordion"
+          >
+            <div class="accordion-body faq-body">
+              NVIDIA GPUs support CUDA, which is widely used by tools like
+              Stable Diffusion and PyTorch, making them faster and more reliable
+              than AMD GPUs.
+            </div>
+          </div>
+        </div>
+
+        <!-- 6 -->
+        <div class="accordion-item faq-item">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed faq-button"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#faq6"
+            >
+              Can I generate unlimited images locally?
+            </button>
+          </h2>
+          <div
+            id="faq6"
+            class="accordion-collapse collapse"
+            data-bs-parent="#faqAccordion"
+          >
+            <div class="accordion-body faq-body">
+              Yes. With local AI image generation, there are no per-image costs,
+              so you can generate unlimited designs without paying extra.
+            </div>
+          </div>
+        </div>
+
+        <!-- 7 -->
+        <div class="accordion-item faq-item">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed faq-button"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#faq7"
+            >
+              How is this useful for Etsy print-on-demand sellers?
+            </button>
+          </h2>
+          <div
+            id="faq7"
+            class="accordion-collapse collapse"
+            data-bs-parent="#faqAccordion"
+          >
+            <div class="accordion-body faq-body">
+              It helps you quickly test multiple design ideas, compare outputs,
+              and pick the best-performing Etsy designs without wasting time or
+              money.
+            </div>
+          </div>
+        </div>
+
+        <!-- 8 -->
+        <div class="accordion-item faq-item">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed faq-button"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#faq8"
+            >
+              Does PixaPick use cloud credits or subscriptions?
+            </button>
+          </h2>
+          <div
+            id="faq8"
+            class="accordion-collapse collapse"
+            data-bs-parent="#faqAccordion"
+          >
+            <div class="accordion-body faq-body">
+              No. PixaPick is built for local AI image generation, so everything
+              runs on your machine with no credits or monthly fees.
+            </div>
+          </div>
+        </div>
+
+        <!-- 9 -->
+        <div class="accordion-item faq-item">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed faq-button"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#faq9"
+            >
+              What tools are used for local AI image generation?
+            </button>
+          </h2>
+          <div
+            id="faq9"
+            class="accordion-collapse collapse"
+            data-bs-parent="#faqAccordion"
+          >
+            <div class="accordion-body faq-body">
+              Tools like Stable Diffusion and PyTorch power local AI image
+              generation, allowing you to run advanced models directly on your
+              PC.
+            </div>
+          </div>
+        </div>
+
+        <!-- 10 -->
+        <div class="accordion-item faq-item">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed faq-button"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#faq10"
+            >
+              Is local AI image generation worth it in 2026?
+            </button>
+          </h2>
+          <div
+            id="faq10"
+            class="accordion-collapse collapse"
+            data-bs-parent="#faqAccordion"
+          >
+            <div class="accordion-body faq-body">
+              Yes. With rising cloud costs, local AI image generation is
+              becoming the preferred choice for creators who want speed,
+              control, and long-term savings.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>

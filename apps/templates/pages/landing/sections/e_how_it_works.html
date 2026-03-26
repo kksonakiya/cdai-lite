@@ -1,44 +1,218 @@
+<style>
+.how-section {
+  position: relative;
+  padding: 100px 0;
+  overflow: hidden;
+  background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+}
+
+/* 🔥 BRAND GLOW */
+.how-bg-glow {
+  position: absolute;
+  top: -100px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 500px;
+  height: 500px;
+  background:
+    radial-gradient(circle, rgba(99,102,241,0.14), transparent 70%);
+  filter: blur(120px);
+  z-index: 0;
+}
+
+.how-section .container {
+  position: relative;
+  z-index: 2;
+}
+
+/* FLOW LAYOUT */
+.how-flow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+/* CONNECTOR */
+.how-connector {
+  flex: 1;
+  height: 2px;
+  background: linear-gradient(
+    to right,
+    rgba(99,102,241,0.1),
+    rgba(236,72,153,0.5)
+  );
+}
+
+/* CARD */
+.how-card {
+  background: rgba(255,255,255,0.85);
+  backdrop-filter: blur(10px);
+  border-radius: 18px;
+  padding: 20px;
+  width: 260px;
+  text-align: center;
+  border: 1px solid rgba(0,0,0,0.05);
+  transition: 0.3s ease;
+}
+
+.how-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 40px rgba(99,102,241,0.12);
+}
+
+/* STEP NUMBER */
+.how-step {
+  width: 32px;
+  height: 32px;
+  margin: 0 auto 12px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #6366f1, #ec4899);
+  color: #fff;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* VISUAL AREA */
+.how-visual {
+  height: 80px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* STEP 1 DOTS */
+.how-visual .dot {
+  width: 10px;
+  height: 10px;
+  background: #6366f1;
+  border-radius: 50%;
+  margin: 0 4px;
+  opacity: 0.7;
+}
+
+/* STEP 2 LOADING */
+.how-visual.loading::before {
+  content: "";
+  width: 70%;
+  height: 6px;
+  background: #e5e7eb;
+  border-radius: 4px;
+  position: relative;
+}
+
+.how-visual.loading::after {
+  content: "";
+  width: 40%;
+  height: 6px;
+  background: linear-gradient(135deg, #6366f1, #ec4899);
+  border-radius: 4px;
+  position: absolute;
+  animation: loadMove 1.5s infinite alternate;
+}
+
+@keyframes loadMove {
+  0% { transform: translateX(-20px); }
+  100% { transform: translateX(20px); }
+}
+
+/* STEP 3 RESULT */
+.how-visual.result {
+  display: flex;
+  gap: 6px;
+}
+
+.how-visual.result::before,
+.how-visual.result::after {
+  content: "";
+  width: 30px;
+  height: 50px;
+  background: #e5e7eb;
+  border-radius: 6px;
+}
+
+.how-visual.result::after {
+  background: linear-gradient(135deg, #6366f1, #ec4899);
+}
+
+/* TEXT */
+.how-card h6 {
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+.how-card p {
+  font-size: 14px;
+  color: #64748b;
+}
+</style>
 <section id="how-it-works" class="how-section">
 
-    <div class="container">
+  <div class="how-bg-glow"></div>
 
-        <div class="text-center mb-5">
-            <h2 class="section-title">
-                How it works
-            </h2>
-            <p class="section-subtitle">
-                Simple workflow. No learning curve.
-            </p>
+  <div class="container">
+
+    <div class="text-center mb-5">
+      <h2 class="section-title">
+        How to generate and compare AI images locally
+      </h2>
+      <p class="section-subtitle">
+        Turn your idea into winning Etsy designs using local AI image generation — no credits, no complex setup.
+      </p>
+    </div>
+
+    <div class="how-flow">
+
+      <!-- STEP 1 -->
+      <div class="how-card">
+        <div class="how-step">1</div>
+        <div class="how-visual">
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
         </div>
+        <h6>Add your prompt variations</h6>
+        <p>Enter multiple ideas or Etsy mockup concepts you want to test</p>
+      </div>
 
-        <div class="row g-4 text-center">
+      <!-- CONNECTOR -->
+      <div class="how-connector"></div>
 
-            <div class="col-md-4">
-                <div class="how-card">
-                    <div class="how-step">1</div>
-                    <h6>Add your prompts</h6>
-                    <p>Enter multiple ideas or variations you want to test</p>
-                </div>
-            </div>
+      <!-- STEP 2 -->
+      <div class="how-card">
+        <div class="how-step">2</div>
+        <div class="how-visual loading"></div>
+        <h6>Generate images locally</h6>
+        <p>Run all variations at once using local AI — no queues or credits</p>
+      </div>
 
-            <div class="col-md-4">
-                <div class="how-card">
-                    <div class="how-step">2</div>
-                    <h6>Run them together</h6>
-                    <p>Generate all outputs at once using your machine</p>
-                </div>
-            </div>
+      <!-- CONNECTOR -->
+      <div class="how-connector"></div>
 
-            <div class="col-md-4">
-                <div class="how-card">
-                    <div class="how-step">3</div>
-                    <h6>Pick the winner</h6>
-                    <p>Compare results and select what works best</p>
-                </div>
-            </div>
-
-        </div>
+      <!-- STEP 3 -->
+      <div class="how-card">
+        <div class="how-step">3</div>
+        <div class="how-visual result"></div>
+        <h6>Compare and pick the best design</h6>
+        <p>View results side-by-side and choose what works before listing</p>
+      </div>
 
     </div>
 
+  </div>
 </section>
+<script>
+document.querySelectorAll('.how-card').forEach((card, i) => {
+  card.style.opacity = "0";
+  card.style.transform = "translateY(20px)";
+  card.style.transition = `all 0.5s ease ${i * 0.1}s`;
+
+  setTimeout(() => {
+    card.style.opacity = "1";
+    card.style.transform = "translateY(0)";
+  }, 200);
+});
+</script>

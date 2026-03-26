@@ -1,0 +1,107 @@
+<style>
+
+/* =============================
+   IMAGE CLICK HINT
+============================= */
+.demo-result-img {
+  cursor: zoom-in;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.demo-result-img:hover {
+  transform: scale(1.02);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+}
+
+/* =============================
+   MODAL STYLE
+============================= */
+.demo-modal-content {
+  background: transparent;
+  border: none;
+  box-shadow: none;
+}
+
+/* DARK BACKDROP (stronger focus) */
+.modal-backdrop.show {
+  opacity: 0.85;
+}
+
+/* =============================
+   IMAGE
+============================= */
+#previewImage {
+  border-radius: 16px;
+  box-shadow:
+    0 25px 80px rgba(0,0,0,0.35),
+    0 0 0 1px rgba(255,255,255,0.08);
+}
+
+/* =============================
+   CLOSE BUTTON (VISIBLE + PREMIUM RED)
+============================= */
+.preview-close {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+
+  width: 38px;
+  height: 38px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: rgba(239, 68, 68, 0.12); /* soft red bg */
+  border-radius: 50%;
+  backdrop-filter: blur(6px);
+
+  border: 1px solid rgba(239, 68, 68, 0.25);
+
+  opacity: 1;
+  z-index: 10;
+
+  transition: all 0.25s ease;
+}
+
+/* force red icon */
+.preview-close::before {
+  filter: invert(29%) sepia(96%) saturate(7482%) hue-rotate(356deg) brightness(97%) contrast(119%);
+}
+
+/* hover state */
+.preview-close:hover {
+  background: rgba(239, 68, 68, 0.2);
+  transform: scale(1.08);
+  box-shadow: 0 8px 20px rgba(239, 68, 68, 0.25);
+}
+
+/* =============================
+   OPTIONAL: SUBTLE ENTRY ANIMATION
+============================= */
+.modal.fade .modal-dialog {
+  transform: scale(0.96);
+  transition: transform 0.2s ease;
+}
+
+.modal.show .modal-dialog {
+  transform: scale(1);
+}
+
+</style>
+
+<!-- IMAGE PREVIEW MODAL -->
+<div class="modal fade" id="imagePreviewModal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content demo-modal-content">
+
+      <div class="modal-body p-0 position-relative">
+        <img id="previewImage" src="" alt="Preview" class="w-100">
+
+        <!-- close button -->
+        <button type="button" class="btn-close preview-close" data-bs-dismiss="modal" aria-label="Close"><i class="bi bi-x-lg text-danger"></i></button>
+      </div>
+
+    </div>
+  </div>
+</div>

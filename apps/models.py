@@ -7,12 +7,27 @@ from apps import db
 
 class ModelInfo(db.Model):
     id = db.Column(db.Integer, primary_key=True)
+
+    # UI
     name = db.Column(db.String(150), nullable=False)
-    base_model = db.Column(db.String(255))  # sdxl1.0
-    model_path = db.Column(db.String(255))
-    model_type = db.Column(db.String(50))  # lora # checkpoint
-    trigger_words=db.Column(db.String(255))
     description = db.Column(db.Text)
+
+    # SYSTEM
+    alias = db.Column(db.String(150), unique=True, nullable=False)
+
+    # TYPE
+    model_type = db.Column(db.String(50), nullable=False)  # checkpoint | lora
+    base_model = db.Column(db.String(255))  # sdxl_1_0
+
+    # FILE
+    file_path = db.Column(db.String(255), nullable=False)
+
+    # LORA SPECIFIC
+    trigger_words = db.Column(db.Text)
+
+    # CONTROL
+    is_active = db.Column(db.Boolean, default=True)
+
     created_at = db.Column(db.DateTime, default=datetime.utcnow)
 
     def __repr__(self):

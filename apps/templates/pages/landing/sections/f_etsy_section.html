@@ -1,60 +1,254 @@
+<style>
+  .etsy-section {
+    position: relative;
+    padding: 100px 0;
+    overflow: hidden;
+    background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+  }
+
+  /* 🔥 BRAND GLOW */
+  .etsy-bg-glow {
+    position: absolute;
+    top: -100px;
+    right: -120px;
+    width: 500px;
+    height: 500px;
+    background:
+      radial-gradient(
+        circle at 40% 40%,
+        rgba(99, 102, 241, 0.18),
+        transparent 70%
+      ),
+      radial-gradient(
+        circle at 70% 60%,
+        rgba(236, 72, 153, 0.14),
+        transparent 70%
+      );
+    filter: blur(120px);
+    z-index: 0;
+  }
+
+  .etsy-section .container {
+    position: relative;
+    z-index: 2;
+  }
+
+  /* LIST */
+  .etsy-list {
+    list-style: none;
+    padding: 0;
+  }
+
+  .etsy-list li {
+    margin-bottom: 10px;
+    color: #64748b;
+    position: relative;
+    padding-left: 20px;
+  }
+
+  .etsy-list li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #6366f1;
+    font-weight: bold;
+  }
+
+  /* PREVIEW */
+  .etsy-preview-wrapper {
+    position: relative;
+    animation: floatPreview 6s ease-in-out infinite alternate;
+  }
+
+  .etsy-preview-glow {
+    position: absolute;
+    inset: -80px;
+    z-index: 0;
+    background:
+      radial-gradient(
+        circle at 30% 30%,
+        rgba(99, 102, 241, 0.25),
+        transparent 60%
+      ),
+      radial-gradient(
+        circle at 70% 70%,
+        rgba(236, 72, 153, 0.18),
+        transparent 60%
+      );
+    filter: blur(80px);
+    opacity: 0.9;
+  }
+
+  .etsy-preview {
+    position: relative;
+    z-index: 2;
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 24px;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    box-shadow:
+      0 20px 60px rgba(99, 102, 241, 0.12),
+      inset 0 1px 0 rgba(255, 255, 255, 0.6);
+  }
+
+  /* glow ring */
+  .etsy-preview::before {
+    content: "";
+    position: absolute;
+    inset: -12px;
+    border-radius: 24px;
+    background: linear-gradient(
+      135deg,
+      rgba(99, 102, 241, 0.25),
+      rgba(236, 72, 153, 0.15)
+    );
+    filter: blur(25px);
+    z-index: -1;
+    opacity: 0.6;
+  }
+
+  /* CARD */
+  .etsy-card {
+    position: relative;
+    background: #f8fafc;
+    border-radius: 18px;
+    overflow: hidden;
+    transition: 0.3s ease;
+    min-height: 320px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* IMAGE (FIXED) */
+  .etsy-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    padding: 0;
+    background: #f8fafc;
+    border-radius: 0;
+  }
+
+  /* HOVER */
+  .etsy-card:hover {
+    transform: scale(1.03);
+  }
+
+  /* 🔥 SELECTED */
+  .etsy-card.selected {
+    box-shadow:
+      0 0 0 2px #6366f1,
+      0 15px 40px rgba(99, 102, 241, 0.3);
+  }
+
+  /* BADGE */
+  .badge-win {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    background: linear-gradient(135deg, #6366f1, #ec4899);
+    color: #fff;
+    font-size: 11px;
+    padding: 4px 8px;
+    border-radius: 6px;
+  }
+
+  /* FLOAT ANIMATION */
+  @keyframes floatPreview {
+    0% {
+      transform: translateY(0px);
+    }
+    100% {
+      transform: translateY(8px);
+    }
+  }
+</style>
 <section id="etsy-mockup" class="etsy-section">
+  <!-- 🔥 SOFT GLOW -->
+  <div class="etsy-bg-glow"></div>
 
-    <div class="container">
+  <div class="container">
+    <div class="row align-items-center g-5">
+      <!-- LEFT -->
+      <div class="col-lg-6">
+        <h2 class="section-title">
+          Generate Etsy mockups using local AI — and pick what sells
+        </h2>
 
-        <div class="row align-items-center g-5">
+        <p class="section-subtitle mb-4">
+          Use local AI image generation to create multiple Etsy designs, test
+          variations, and compare mockups side-by-side before you publish —
+          without wasting credits.
+        </p>
+        <small class="text-muted my-2">
+          Stop guessing what might sell — validate your designs before listing.
+        </small>
 
-            <!-- LEFT CONTENT -->
-            <div class="col-lg-6">
+        <ul class="etsy-list">
+          <li>Compare Etsy mockup variations side-by-side</li>
+          <li>Test multiple prompts before listing products</li>
+          <li>Generate unlimited mockups locally (no credits)</li>
+          <li>Built for print-on-demand Etsy workflows</li>
+        </ul>
+      </div>
 
-                <h2 class="section-title">
-                    Perfect for Etsy designs and mockups
-                </h2>
-
-                <p class="section-subtitle mb-4">
-                    Test multiple Etsy AI design ideas, mockups, and prompts at once — and pick what actually works before you list.
-                </p>
-
-                <ul class="etsy-list">
-                    <li>Compare Etsy AI art variations side-by-side</li>
-                    <li>Test multiple prompts before publishing</li>
-                    <li>Generate mockups faster without credits</li>
-                    <li>Ideal for print-on-demand workflows</li>
-                </ul>
-
-            </div>
-
-            <!-- RIGHT VISUAL -->
-            <div class="col-lg-6">
-
-                <div class="etsy-preview">
-
-                    <div class="row g-3">
-
-                        <div class="col-6">
-                            <div class="etsy-card"></div>
-                        </div>
-
-                        <div class="col-6">
-                            <div class="etsy-card selected"></div>
-                        </div>
-
-                        <div class="col-6">
-                            <div class="etsy-card"></div>
-                        </div>
-
-                        <div class="col-6">
-                            <div class="etsy-card"></div>
-                        </div>
-
-                    </div>
-
+      <!-- RIGHT -->
+      <div class="col-lg-6">
+        <div class="etsy-preview-wrapper">
+          <div class="etsy-preview-glow"></div>
+          <div class="etsy-preview">
+            <div class="row g-3">
+              <div class="col-6">
+                <div class="etsy-card">
+                  <img
+                    src="/static/images/landing/etsy-mockups/tote-bag.png"
+                    alt="Etsy tote bag mockup design variation"
+                  />
                 </div>
+              </div>
 
+              <div class="col-6">
+                <div class="etsy-card selected">
+                  <img
+                    src="/static/images/landing/etsy-mockups/cup.png"
+                    alt="Best performing Etsy mockup design"
+                  />
+                  <span class="badge-win">Best</span>
+                </div>
+              </div>
+
+              <div class="col-6">
+                <div class="etsy-card">
+                  <img
+                    src="/static/images/landing/etsy-mockups/t-shirt.png"
+                    alt="T-shirt Etsy mockup variation"
+                  />
+                </div>
+              </div>
+
+              <div class="col-6">
+                <div class="etsy-card">
+                  <img
+                    src="/static/images/landing/etsy-mockups/wall-art.png"
+                    alt="Wall art Etsy mockup design"
+                  />
+                </div>
+              </div>
             </div>
-
+          </div>
         </div>
-
+      </div>
     </div>
-
+  </div>
 </section>
+<script>
+  document.querySelectorAll(".etsy-card").forEach((card) => {
+    card.addEventListener("click", () => {
+      document
+        .querySelectorAll(".etsy-card")
+        .forEach((c) => c.classList.remove("selected"));
+      card.classList.add("selected");
+    });
+  });
+</script>

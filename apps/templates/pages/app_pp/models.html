@@ -26,6 +26,7 @@
             <tr>
               <th style="max-width: 20px">#</th>
               <th>Name</th>
+              <th>Alias</th>
               <th>Path</th>
               <th>Actions</th>
             </tr>
@@ -35,7 +36,8 @@
             <tr>
               <td>{{ loop.index }}</td>
               <td>{{ model['name'] }}</td>
-              <td>{{model['model_path']}}</td>
+              <td>{{ model['alias'] }}</td>
+              <td>{{model['file_path']}}</td>
               <td class="action-btns">
              
                 <button
@@ -72,6 +74,7 @@
             <tr>
               <th style="max-width: 20px">#</th>
               <th>Name</th>
+              <th>Alias</th>
               <th>Path</th>
               <th>Actions</th>
             </tr>
@@ -81,7 +84,8 @@
             <tr>
               <td>{{ loop.index }}</td>
               <td>{{ model['name'] }}</td>
-              <td>{{ model['model_path'] }}</td>
+              <td>{{ model['alias'] }}</td>
+              <td>{{ model['file_path'] }}</td>
               <td class="action-btns">
                 <button
                   class="btn btn-sm btn-outline-info"

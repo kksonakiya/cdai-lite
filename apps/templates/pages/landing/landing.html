@@ -32,9 +32,7 @@ Compare AI-generated designs side-by-side, iterate faster, and stop burning cred
     {# TESTIMONIALS #}
     {% include "pages/landing/sections/h_testimonials.html" %}
 
-    {# BENEFITS #}
-    {% include "pages/landing/sections/i_benefits.html" %}
-
+   
     {# PRICING #}
     {% include "pages/landing/sections/j_pricing.html" %}
 
@@ -44,5 +42,32 @@ Compare AI-generated designs side-by-side, iterate faster, and stop burning cred
     {# FINAL CTA #}
     {% include "pages/landing/sections/l_final_cta.html" %}    
 
+{% block extra_js %}
+<script>
+    document.addEventListener("click", function(e) {
 
+  const btn = e.target.closest(".preview-btn");
+  if (!btn) return;
+
+  const index = btn.dataset.index;
+
+  const slot = document.querySelector(`.result-img[data-index="${index}"]`);
+  if (!slot) return;
+
+  const img = slot.querySelector("img");
+  if (!img) return;
+
+  const previewImage = document.getElementById("previewImage");
+  const previewModalEl = document.getElementById("imagePreviewModal");
+
+  if (!previewImage || !previewModalEl) return;
+
+  const previewModal = bootstrap.Modal.getOrCreateInstance(previewModalEl);
+
+  previewImage.src = img.src;
+  previewModal.show();
+
+});
+</script>
+{% endblock %}
 {% endblock %}

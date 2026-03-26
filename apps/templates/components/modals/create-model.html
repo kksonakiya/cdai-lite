@@ -8,7 +8,7 @@
 
             <h1 class="modal-title fs-5 fw-bold text-dark" id="createModelLabel">
                 
-                Create New AI Model    </h1>
+                Add New AI Model    </h1>
                 Define a new model configuration to use within your workspace.
             </p>
         </div>
@@ -42,12 +42,12 @@
       </div>
 
       <div class="mb-3">
-        <label for="model_path" class="form-label">Model Path</label>
+        <label for="file_path" class="form-label">Model Path</label>
         <input
           type="text"
           class="form-control"
-          id="model_path"
-          name="model_path"
+          id="file_path"
+          name="file_path"
           placeholder="/models/path/model.safetensors"
         />
       </div>
@@ -95,7 +95,7 @@
       const formData = {
         name: document.getElementById("name").value,
         base_model: document.getElementById("base_model").value,
-        model_path: document.getElementById("model_path").value,
+        file_path: document.getElementById("file_path").value,
         model_type: document.getElementById("model_type").value,
         description: document.getElementById("description").value,
       };
@@ -151,7 +151,7 @@
     console.log("Resolved base_model:", baseModel);
     document.getElementById("base_model").value = baseModel;
 
-    document.getElementById("model_path").value = model.model_path;
+    document.getElementById("file_path").value = model.file_path;
     document.getElementById("model_type").value = model.model_type.toLowerCase();
     document.getElementById("description").value = model.description || "";
 

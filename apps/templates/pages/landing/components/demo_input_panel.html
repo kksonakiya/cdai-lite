@@ -1,0 +1,212 @@
+<style>
+.demo-panel {
+    background: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.06);
+}
+
+.demo-label {
+    font-weight: 500;
+    font-size: 14px;
+    color: #111827;
+}
+
+.demo-input {
+    width: 100%;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 12px;
+    font-size: 14px;
+    resize: none;
+    transition: all 0.2s ease;
+}
+
+.demo-input:focus {
+    border-color: #7c5cff;
+    box-shadow: 0 0 0 3px rgba(124,92,255,0.1);
+    outline: none;
+}
+
+.demo-hint {
+    font-size: 12px;
+    color: #9ca3af;
+}
+
+.demo-add {
+    background: none;
+    border: none;
+    color: #7c5cff;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.demo-tags {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+}
+
+.tag {
+    font-weight: 500;
+    width: 100%;
+    padding: 8px 10px;
+    border-radius: 999px;
+    background: #f3f4f6;
+    font-size: 13px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+
+    white-space: nowrap;
+}
+
+.tag.active {
+    background: linear-gradient(135deg, #7c5cff, #d946ef);
+     box-shadow: 0 4px 12px rgba(124,92,255,0.25);
+    color: #fff;
+}
+
+.demo-run {
+    background: linear-gradient(135deg, #7c5cff, #d946ef);
+    border: none;
+    color: white;
+    padding: 12px;
+    border-radius: 12px;
+    width: 100%;
+}
+
+.result-card {
+    border-radius: 18px;
+    background: #f9fafb;
+    padding: 10px;
+    text-align: center;
+    transition: 0.2s;
+}
+
+.result-card:hover {
+    transform: translateY(-3px);
+}
+
+.result-img {
+    height: 220px;
+    border-radius: 12px;
+    background: #e5e7eb;
+}
+
+.spinner-box {
+    height: 220px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.prompt-block {
+    transition: all 0.2s ease;
+}
+.prompt-block {
+  position: relative;
+}
+
+.remove-prompt-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+
+  border: none;
+  background: rgba(0, 0, 0, 0.05);
+  color: #555;
+
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+
+  font-size: 14px;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: all 0.2s ease;
+}
+
+.remove-prompt-btn:hover {
+  background: rgba(255, 0, 0, 0.1);
+  color: #e11d48;
+}
+</style>
+<!-- LEFT PANEL -->
+<div class="col-lg-5">
+  <div class="demo-panel p-4">
+
+    <form id="generateForm">
+
+      <!-- PROMPTS -->
+      <div class="d-flex justify-content-between align-items-center mb-2">
+        <label class="demo-label mb-0">Your design idea (Etsy mockup or product concept)</label>
+        <small class="text-muted"><span id="prompt-count">1</span>/3</small>
+      </div>
+
+      <div id="prompt-container">
+
+        <!-- Prompt Block -->
+        <div class="prompt-block" data-index="0">
+          <textarea 
+            class="demo-input prompt-input" 
+            rows="3"
+            placeholder="e.g. minimalist cat t-shirt, clean lines..."
+          ></textarea>
+        </div>
+
+      </div>
+
+      <button type="button" id="add-prompt" class="demo-add mt-2">
+        <i class="bi bi-plus"></i> Add another prompt variation
+      </button>
+
+      <!-- DESIGN MODE -->
+<label class="demo-label mt-4">Design Mode</label>
+<div class="demo-tags" id="model-tags">
+
+  {% for model in demo_models %}
+    <span 
+      class="tag {% if loop.first %}active{% endif %}" 
+      data-model="{{ model.name }}"
+    >
+      ✨ {{ model.name.split(' ')[0] }}
+    </span>
+  {% endfor %}
+
+</div>
+
+      <!-- STYLE -->
+<label class="demo-label mt-4">Style</label>
+<div class="demo-tags" id="lora-tags">
+
+  {% for lora in demo_loras %}
+    <span 
+      class="tag {% if loop.first %}active{% endif %}" 
+      data-lora="{{ lora.name }}"
+    >
+      🎨 {{ lora.name.split(' ')[0] }}
+    </span>
+  {% endfor %}
+
+</div>
+
+      <!-- CTA -->
+      <button type="submit" class="demo-run mt-4">
+        Generate AI Variations Locally <i class="bi bi-arrow-right"></i>
+      </button>
+
+      <!-- TRUST LINE -->
+      <div class="text-center mt-2">
+        <small class="text-muted">No signup <i class="bi bi-dot"></i> Runs locally <i class="bi bi-dot"></i> Results in seconds <i class="bi bi-dot"></i> No credits needed</small>
+      </div>
+
+    </form>
+  </div>
+</div>

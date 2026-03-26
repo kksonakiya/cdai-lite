@@ -1,0 +1,256 @@
+<style>
+  .col-lg-7 {
+    align-content: center;
+  }
+  .demo-results {
+    min-height: 260px;
+  }
+
+  /* =============================
+   RESULT CARD
+============================= */
+  .result-card {
+    border-radius: 18px;
+    background: #f9fafb;
+    padding: 10px;
+    cursor: pointer;
+    position: relative;
+
+    transition: all 0.3s ease;
+    will-change: transform;
+  }
+
+  .result-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+  }
+
+  .result-card.selected {
+    border: 2px solid #7c5cff;
+    background: #ffffff;
+  }
+
+  /* =============================
+   FOCUS MODE (used later via JS)
+============================= */
+  .result-card.focused {
+    transform: scale(1.08);
+    z-index: 2;
+  }
+
+  .result-card.dimmed {
+    transform: scale(0.92);
+    opacity: 0.5;
+  }
+
+  /* =============================
+   IMAGE
+============================= */
+  .result-img {
+    height: 280px;
+    border-radius: 12px;
+    background: #e5e7eb;
+    overflow: hidden;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .result-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  /* =============================
+   META
+============================= */
+  .result-meta {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 8px;
+    text-align: center;
+    font-size: 13px;
+    color: #374151;
+  }
+  /* PILL */
+  .variation-pill {
+    font-size: 12px;
+    padding: 4px 10px;
+    border-radius: 999px;
+    background: rgba(99, 102, 241, 0.1);
+    color: #6366f1;
+    font-weight: 500;
+  }
+  .preview-btn {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    border: none;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: rgba(0, 0, 0, 0.05);
+    color: #374151;
+
+    transition: 0.25s ease;
+    cursor: pointer;
+  }
+
+  /* HOVER */
+  .preview-btn:hover {
+    background: linear-gradient(135deg, #6366f1, #ec4899);
+    color: #fff;
+    transform: scale(1.1);
+  }
+
+  /* ICON */
+  .preview-btn i {
+    font-size: 13px;
+  }
+  .badge-best {
+    background: #7c5cff;
+    color: white;
+    font-size: 11px;
+    padding: 2px 6px;
+    border-radius: 6px;
+    margin-left: 6px;
+  }
+
+  /* =============================
+   PLACEHOLDER / LOADING
+============================= */
+  .placeholder-text {
+    font-size: 13px;
+    color: #9ca3af;
+  }
+
+  .spinner-box {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* =============================
+   SELECTOR DOTS
+============================= */
+  .result-selector {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 12px;
+  }
+
+  .dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #d1d5db;
+    border: none;
+    cursor: pointer;
+    transition: all 0.25s ease;
+  }
+
+  .dot:hover {
+    transform: scale(1.2);
+  }
+
+  .dot.active {
+    background: #7c3aed;
+    transform: scale(1.4);
+  }
+
+  @media (max-width: 768px) {
+    .result-card {
+      transform: none !important;
+      opacity: 1 !important;
+    }
+  }
+  @media (max-width: 768px) {
+    .result-selector {
+      display: none;
+    }
+  }
+  /* ✅ Mobile fix */
+  @media (max-width: 768px) {
+    .result-img img {
+      object-fit: cover; /* no cropping */
+      background: #f3f4f6; /* subtle fill */
+    }
+
+    .result-img {
+      height: 600px; /* slightly taller for better fit */
+    }
+  }
+  button:disabled,
+  button.disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    pointer-events: none;
+    transform: none !important;
+    box-shadow: none !important;
+  }
+</style>
+<div class="col-lg-7">
+  <div class="demo-results">
+    <div class="row g-3">
+      <!-- RESULT 1 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="result-card" data-index="0">
+          <div class="result-img" data-index="0">
+            <div class="placeholder-text">Your result</div>
+          </div>
+          <div class="result-meta">
+            <span class="variation-pill">Design Variation A</span>
+
+            <button class="preview-btn" data-index="0" aria-label="Enlarge">
+              <i class="bi bi-arrows-fullscreen"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- RESULT 2 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="result-card" data-index="1">
+          <div class="result-img" data-index="1">
+            <div class="placeholder-text">Your result</div>
+          </div>
+          <div class="result-meta">
+  <span class="variation-pill">Design Variation B</span>
+  <button class="preview-btn" data-index="1" aria-label="Enlarge">
+    <i class="bi bi-arrows-fullscreen"></i>
+  </button>
+</div>
+        </div>
+      </div>
+
+      <!-- RESULT 3 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="result-card" data-index="2">
+          <div class="result-img" data-index="2">
+            <div class="placeholder-text">Your result</div>
+          </div>
+          <div class="result-meta">
+  <span class="variation-pill">Design Variation C</span>
+  <button class="preview-btn" data-index="2" aria-label="Enlarge">
+    <i class="bi bi-arrows-fullscreen"></i>
+  </button>
+</div>
+        </div>
+      </div>
+    </div>
+    <!-- 🔥 NEW: Selector Dots -->
+    <div class="result-selector mt-3">
+      <button class="dot active" data-index="0"></button>
+      <button class="dot" data-index="1"></button>
+      <button class="dot" data-index="2"></button>
+    </div>
+  </div>
+</div>

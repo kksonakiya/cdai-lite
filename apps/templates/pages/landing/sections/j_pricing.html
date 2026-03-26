@@ -1,13 +1,160 @@
+<style>
+
+/* SECTION */
+.pricing-section {
+  position: relative;
+  padding: 100px 0;
+  background: linear-gradient(180deg, #ffffff 0%, #fffbeb 100%);
+  overflow: hidden;
+}
+
+/* GOLD GLOW */
+.pricing-section::before {
+  content: "";
+  position: absolute;
+  top: -120px;
+  left: -120px;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(251,191,36,0.18), transparent 70%);
+  filter: blur(90px);
+}
+
+.pricing-section::after {
+  content: "";
+  position: absolute;
+  bottom: -120px;
+  right: -120px;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(245,158,11,0.14), transparent 70%);
+  filter: blur(90px);
+}
+
+.pricing-section .container {
+  position: relative;
+  z-index: 1;
+}
+
+/* HEADINGS */
+.highlight {
+  background: linear-gradient(90deg, #f59e0b, #fbbf24);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* CARD */
+.pricing-card {
+      display: flex;
+  flex-direction: column;
+  background: rgba(255,255,255,0.8);
+  backdrop-filter: blur(12px);
+  border-radius: 22px;
+  padding: 32px;
+  border: 1px solid rgba(0,0,0,0.05);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.05);
+  transition: all 0.3s ease;
+  height: 100%;
+  position: relative;
+}
+
+.pricing-card:hover {
+  transform: translateY(-8px);
+  box-shadow:
+    0 25px 60px rgba(0,0,0,0.08),
+    0 0 0 1px rgba(251,191,36,0.25);
+}
+
+/* MAIN CARD */
+.pricing-main {
+  border: 1px solid rgba(251,191,36,0.4);
+  box-shadow: 0 20px 60px rgba(251,191,36,0.15);
+}
+
+/* BADGE */
+.pricing-badge {
+  position: absolute;
+  top: -12px;
+  left: 20px;
+  background: linear-gradient(135deg, #fbbf24, #f59e0b);
+  color: #111827;
+  font-size: 11px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-weight: 600;
+}
+
+/* PRICE */
+.pricing-price {
+  font-size: 34px;
+  font-weight: 700;
+  color: #111827;
+}
+
+.pricing-price span {
+  font-size: 14px;
+  color: #6b7280;
+}
+
+/* LIST */
+.pricing-list {
+  margin: 20px 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+.pricing-list li {
+  margin-bottom: 10px;
+  color: #374151;
+  font-size: 14px;
+}
+
+/* BUTTONS */
+.pricing-card .pricing-btn-primary,
+.pricing-card .pricing-btn-secondary {
+  margin-top: auto;
+}
+.pricing-btn-primary {
+  background: linear-gradient(135deg, #fbbf24, #f59e0b);
+  border: none;
+  color: #111827;
+  font-weight: 600;
+  padding: 12px;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.pricing-btn-primary:hover {
+  background: linear-gradient(135deg, #f59e0b, #d97706);
+}
+
+.pricing-btn-secondary {
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  color: #111827;
+  padding: 12px;
+  border-radius: 10px;
+}
+
+/* NOTE */
+.pricing-note {
+  font-size: 14px;
+  color: #92400e;
+  font-weight: 500;
+}
+
+</style>
 <section id="pricing" class="pricing-section">
 
     <div class="container">
 
+        <!-- SEO HEADING -->
         <div class="text-center mb-5">
             <h2 class="section-title">
-                Simple pricing. No subscriptions.
+                Simple pricing for <span class="highlight">local AI image generation</span>
             </h2>
             <p class="section-subtitle">
-                Pay once. Generate forever.
+                Built for Etsy sellers and creators who want unlimited designs without paying per image.
             </p>
         </div>
 
@@ -16,7 +163,9 @@
             <!-- MAIN PRODUCT -->
             <div class="col-lg-4">
 
-                <div class="pricing-card">
+                <div class="pricing-card pricing-main">
+
+                    <span class="pricing-badge">Most Popular</span>
 
                     <h5 class="mb-2">PixaPick</h5>
 
@@ -26,7 +175,8 @@
 
                     <ul class="pricing-list">
                         <li>Full access to all features</li>
-                        <li>Unlimited local generations</li>
+                        <li>Unlimited local AI image generation</li>
+                        <li>Perfect for Etsy design workflows</li>
                         <li>No credits. No monthly fees</li>
                         <li>Email support included</li>
                     </ul>
@@ -52,8 +202,9 @@
 
                     <ul class="pricing-list">
                         <li>We install everything for you</li>
-                        <li>Configure your system properly</li>
-                        <li>Test full workflow on your PC</li>
+                        <li>Optimize your GPU for local AI image generation</li>
+                        <li>Full Stable Diffusion setup</li>
+                        <li>Test complete workflow on your PC</li>
                     </ul>
 
                     <a href="#" class="btn pricing-btn-secondary w-100">
@@ -66,10 +217,10 @@
 
         </div>
 
-        <!-- COMPARISON LINE -->
+        <!-- SEO + CONVERSION NOTE -->
         <div class="text-center mt-4">
             <p class="pricing-note">
-                Stop paying every time you generate an image.
+                Most tools charge per image. With local AI image generation, you pay once and create unlimited Etsy designs.
             </p>
         </div>
 

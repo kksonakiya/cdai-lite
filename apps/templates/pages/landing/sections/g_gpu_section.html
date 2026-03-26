@@ -1,48 +1,216 @@
+<style>
+  /* SECTION BACKGROUND */
+  .gpu-section {
+    position: relative;
+    padding: 100px 0;
+    background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+    overflow: hidden;
+  }
+
+  /* soft glow (subtle, premium) */
+  .gpu-section::before {
+    content: "";
+    position: absolute;
+    top: -120px;
+    left: -120px;
+    width: 350px;
+    height: 350px;
+    background: radial-gradient(
+      circle,
+      rgba(99, 102, 241, 0.12),
+      transparent 70%
+    );
+    filter: blur(80px);
+  }
+
+  .gpu-section::after {
+    content: "";
+    position: absolute;
+    bottom: -120px;
+    right: -120px;
+    width: 350px;
+    height: 350px;
+    background: radial-gradient(
+      circle,
+      rgba(16, 185, 129, 0.1),
+      transparent 70%
+    );
+    filter: blur(80px);
+  }
+
+  /* HEADINGS */
+  .section-title {
+    font-size: 34px;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+
+  .section-subtitle {
+    color: #64748b;
+    font-size: 16px;
+  }
+
+  /* highlight word */
+  .highlight {
+    background: linear-gradient(90deg, #4f46e5, #6366f1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  /* CARD */
+  .gpu-card {
+    background: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 26px;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(0, 0, 0, 0.04);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+    height: 100%;
+    position: relative;
+  }
+  .gpu-card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 20px;
+    background: linear-gradient(
+      120deg,
+      transparent,
+      rgba(255, 255, 255, 0.4),
+      transparent
+    );
+    opacity: 0;
+    transition: 0.4s;
+  }
+  .gpu-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
+    opacity: 1;
+  }
+
+  /* IMAGE WRAPPER */
+  .gpu-image-wrap {
+    width: 100%;
+    height: 140px;
+    border-radius: 14px;
+    overflow: hidden;
+    margin-bottom: 16px;
+    background: #f1f5f9;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* IMAGE */
+  .gpu-image-wrap img {
+    max-width: 80%;
+    max-height: 100%;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+  }
+
+  /* subtle zoom */
+  .gpu-card:hover img {
+    transform: scale(1.05);
+  }
+
+  /* TAG */
+  .gpu-tag {
+    display: inline-block;
+    font-size: 11px;
+    padding: 4px 10px;
+    border-radius: 999px;
+    background: #ecfdf5;
+    color: #059669;
+    margin-bottom: 10px;
+    font-weight: 500;
+  }
+
+  /* CARD TEXT */
+  .gpu-card h6 {
+    font-weight: 600;
+    margin-bottom: 6px;
+  }
+
+  .gpu-card p {
+    font-size: 14px;
+    color: #64748b;
+    margin: 0;
+  }
+
+  /* NOTE */
+  .gpu-note {
+    font-size: 13px;
+    color: #94a3b8;
+  }
+</style>
 <section class="gpu-section">
+  <div class="container">
+    <!-- ATTENTION -->
+    <div class="text-center mb-5">
+      <h2 class="section-title">
+        Local AI Image Generation — turn your PC into an <span class="highlight">Etsy design machine</span>
+      </h2>
 
-    <div class="container">
-
-        <div class="text-center mb-5">
-            <h2 class="section-title">
-                Use the setup you already invested in
-            </h2>
-            <p class="section-subtitle">
-                PixaPick runs on your machine — so you’re not limited by credits, queues, or slow servers.
-            </p>
-        </div>
-
-        <div class="row g-4 text-center">
-
-            <div class="col-md-4">
-                <div class="gpu-card">
-                    <span class="gpu-icon">💻</span>
-                    <p>Your PC, your speed</p>
-                </div>
-            </div>
-
-            <div class="col-md-4">
-                <div class="gpu-card">
-                    <span class="gpu-icon">⚡</span>
-                    <p>Faster with better hardware</p>
-                </div>
-            </div>
-
-            <div class="col-md-4">
-                <div class="gpu-card">
-                    <span class="gpu-icon">💸</span>
-                    <p>No per-image costs</p>
-                </div>
-            </div>
-
-        </div>
-
-        <!-- SMALL NOTE -->
-        <div class="text-center mt-4">
-            <p class="gpu-note">
-                Built for Windows systems with NVIDIA GPUs.
-            </p>
-        </div>
-
+      <p class="section-subtitle">
+        Use local AI image generation to create, compare, and pick Etsy designs faster — without credits, queues, or limits.
+      </p>
     </div>
 
+    <!-- DESIRE -->
+    <div class="row g-4 text-center">
+      <div class="col-md-4">
+        <div class="gpu-card">
+          <div class="gpu-image-wrap">
+            <img
+              src="/static/images/landing/gpu-section/hardware.jpg"
+              alt="Run Stable Diffusion locally on your own PC"
+            />
+          </div>
+          <span class="gpu-tag">full control</span>
+          <h6>Your PC. Your speed.</h6>
+          <p>Run AI image generation locally on your hardware — no queues, no shared GPUs</p>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="gpu-card">
+          <div class="gpu-image-wrap">
+            <img
+              src="/static/images/landing/gpu-section/growth.png"
+              alt="Generate multiple AI images faster locally"
+            />
+          </div>
+          <span class="gpu-tag">scale output</span>
+          <h6>Generate more, faster</h6>
+          <p>Create multiple Etsy mockups at once using local AI — test ideas instantly</p>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="gpu-card">
+          <div class="gpu-image-wrap">
+            <img
+              src="/static/images/landing/gpu-section/low-cost.jpg"
+              alt="Unlimited AI image generation without cost per image"
+            />
+          </div>
+          <span class="gpu-tag">zero cost</span>
+          <h6>No per-image costs</h6>
+          <p>Generate unlimited designs locally without paying for credits</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="text-center mt-4">
+      <p class="gpu-note">
+        Built for Windows systems with NVIDIA GPUs — the ideal setup for 
+        <a href="/local-ai-image-generation" class="gpu-link">
+          local AI image generation
+        </a>, including Stable Diffusion workflows for faster outputs, zero per-image cost, and full control.
+      </p>
+    </div>
+  </div>
 </section>

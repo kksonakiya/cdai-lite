@@ -1,44 +1,148 @@
+<style>
+    /* SECTION */
+.testimonials-section {
+  position: relative;
+  padding: 100px 0;
+  background: linear-gradient(180deg, #f8fafc 0%, #ffffff 100%);
+  overflow: hidden;
+}
+/* subtle glow */
+.testimonials-section::before {
+  content: "";
+  position: absolute;
+  top: -120px;
+  left: -120px;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(99,102,241,0.18), transparent 70%);
+  filter: blur(90px);
+  z-index: 0;
+}
+
+/* BOTTOM RIGHT GLOW */
+.testimonials-section::after {
+  content: "";
+  position: absolute;
+  bottom: -120px;
+  right: -120px;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(16,185,129,0.14), transparent 70%);
+  filter: blur(90px);
+  z-index: 0;
+}
+
+/* HEADINGS */
+.section-title {
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.section-subtitle {
+  color: #64748b;
+  font-size: 16px;
+  margin-top: 8px;
+}
+
+.highlight {
+  background: linear-gradient(90deg, #4f46e5, #6366f1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* CARD */
+.testimonial-card {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(12px);
+  border-radius: 20px;
+  padding: 26px;
+  border: 1px solid rgba(0,0,0,0.04);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.04);
+  transition: all 0.3s ease;
+  height: 100%;
+  text-align: left;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 60px rgba(99,102,241,0.15);
+}
+
+/* BADGE */
+.testimonial-badge {
+  display: inline-block;
+  font-size: 11px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: #eef2ff;
+  color: #4f46e5;
+  margin-bottom: 12px;
+  font-weight: 500;
+}
+
+/* TEXT */
+.testimonial-text {
+  font-size: 15px;
+  color: #111827;
+  margin-bottom: 14px;
+  line-height: 1.6;
+}
+
+/* AUTHOR */
+.testimonial-author {
+  font-size: 13px;
+  color: #6b7280;
+}
+</style>
 <section class="testimonials-section">
 
     <div class="container">
 
+        <!-- ATTENTION -->
         <div class="text-center mb-5">
             <h2 class="section-title">
-                Loved by creators who move fast
+                Trusted by <span class="highlight">Etsy sellers & creators</span>
             </h2>
+            <p class="section-subtitle">
+                Create faster, test more designs, and stop wasting credits on ideas that don’t sell.
+            </p>
         </div>
 
+        <!-- TESTIMONIALS -->
         <div class="row g-4">
 
             <div class="col-md-4">
                 <div class="testimonial-card">
+                    <span class="testimonial-badge">Etsy POD</span>
                     <p class="testimonial-text">
-                        “I test 10 design ideas in one go now. This alone saved me hours.”
+                        “I test 10+ Etsy design ideas in one go now. What used to take hours takes minutes.”
                     </p>
                     <span class="testimonial-author">
-                        — Etsy seller (POD)
+                        Print-on-demand seller
                     </span>
                 </div>
             </div>
 
             <div class="col-md-4">
                 <div class="testimonial-card">
+                    <span class="testimonial-badge">Digital Creator</span>
                     <p class="testimonial-text">
-                        “Stopped wasting credits on bad prompts. I just pick the best and move on.”
+                        “No more wasting money on bad prompts. I generate, compare, and just pick what works.”
                     </p>
                     <span class="testimonial-author">
-                        — Digital creator
+                        Etsy shop owner
                     </span>
                 </div>
             </div>
 
             <div class="col-md-4">
                 <div class="testimonial-card">
+                    <span class="testimonial-badge">Top Seller</span>
                     <p class="testimonial-text">
-                        “The side-by-side comparison is everything. Makes decisions way easier.”
+                        “Side-by-side comparison changed everything. I can instantly see which design will sell better.”
                     </p>
                     <span class="testimonial-author">
-                        — Print-on-demand seller
+                        Print-on-demand brand
                     </span>
                 </div>
             </div>
@@ -48,3 +152,16 @@
     </div>
 
 </section>
+<script>
+    // Optional: simple auto-scroll on mobile
+if (window.innerWidth < 768) {
+  const row = document.querySelector(".testimonials-section .row");
+  let scrollAmount = 0;
+
+  setInterval(() => {
+    scrollAmount += 300;
+    if (scrollAmount > row.scrollWidth) scrollAmount = 0;
+    row.scrollTo({ left: scrollAmount, behavior: "smooth" });
+  }, 3000);
+}
+</script>

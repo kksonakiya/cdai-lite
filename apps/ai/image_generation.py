@@ -51,9 +51,9 @@ class ImageGenerator:
         if not base_model:
             raise ValueError(f"Base model alias '{model_alias}' not found in registry")
 
-        model_path = base_model.get("model_path")
+        file_path = base_model.get("file_path")
         self.model_key = model_alias
-        logger.info(f"Loading base model: {model_alias} from {model_path} with base_model as {base_model["base_model"]}")
+        logger.info(f"Loading base model: {model_alias} from {file_path} with base_model as {base_model["base_model"]}")
 
         if base_model["base_model"].lower().startswith("sdxl"):
             pipeline_class = StableDiffusionXLPipeline
@@ -61,7 +61,7 @@ class ImageGenerator:
             pipeline_class = StableDiffusionPipeline
 
         self.pipe = pipeline_class.from_single_file(
-            model_path,
+            file_path,
             torch_dtype=self.dtype,
             safety_checker=True,
             local_files_only=True,
@@ -90,13 +90,13 @@ class ImageGenerator:
             ),
             None,
         )
-        logger.info(f"LORA Name: {lora_name} | Adapter Name: {lora["name"]} | PATH: {lora["model_path"]} ")
+        logger.info(f"LORA Name: {lora_name} | Adapter Name: {lora["name"]} | PATH: {lora["file_path"]} ")
         if not lora:
             logger.warning(f"LoRA not found: {lora_name}")
             return
 
         try:
-            self.pipe.load_lora_weights(lora["model_path"], adapter_name=lora["name"])
+            self.pipe.load_lora_weights(lora["file_path"], adapter_name=lora["name"])
             self.pipe.set_adapters(lora["name"])
             self.pipe.fuse_lora(lora_scale=0.5)
 

@@ -1,3 +1,59 @@
+<style>
+    /* NAVBAR BASE */
+.pixapick-navbar {
+  background: rgba(255,255,255,0.7);
+  backdrop-filter: blur(12px);
+  transition: all 0.3s ease;
+  padding: 14px 0;
+}
+
+/* SCROLLED STATE */
+.pixapick-navbar.scrolled {
+  background: rgba(255,255,255,0.9);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.05);
+  padding: 10px 0;
+}
+
+/* BRAND */
+.pixapick-brand {
+  font-weight: 700;
+  font-size: 20px;
+}
+
+/* LINKS */
+.pixapick-link {
+  font-size: 14px;
+  color: #374151;
+  margin: 0 10px;
+  transition: 0.2s;
+}
+
+.pixapick-link:hover {
+  color: #6366f1;
+}
+
+/* ACTIVE LINK */
+.pixapick-link.active {
+  color: #6366f1;
+  font-weight: 500;
+}
+
+/* CTA */
+.pixapick-btn-primary {
+  background: linear-gradient(135deg, #6366f1, #ec4899);
+  border: none;
+  color: #fff;
+  padding: 8px 18px;
+  border-radius: 10px;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.pixapick-btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(99,102,241,0.3);
+}
+</style>
 <nav class="navbar navbar-expand-lg pixapick-navbar fixed-top">
     <div class="container">
 
@@ -18,15 +74,15 @@
             <ul class="navbar-nav mx-auto">
 
                 <li class="nav-item">
-                    <a class="nav-link pixapick-link" href="#how-it-works">How It Works</a>
+                    <a class="nav-link pixapick-link" href="#how-it-works">How it works</a>
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link pixapick-link" href="#etsy-mockup">Etsy Mockup</a>
+                    <a class="nav-link pixapick-link" href="#demo">See demo</a>
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link pixapick-link" href="#demo">Demo</a>
+                    <a class="nav-link pixapick-link" href="#etsy-mockup">For Etsy</a>
                 </li>
 
                 <li class="nav-item">
@@ -38,7 +94,7 @@
             <!-- CTA -->
             <div class="d-flex">
                 <a href="#demo" class="btn pixapick-btn-primary">
-                    Try PixaPick
+                    Generate Designs
                 </a>
             </div>
 

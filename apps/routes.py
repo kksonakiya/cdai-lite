@@ -1,3 +1,5 @@
+import re
+
 from apps import app, db
 from flask import (
     render_template,
@@ -7,70 +9,69 @@ from flask import (
     stream_with_context,
     redirect,
     url_for,
-    flash
+    flash,
 )
+from apps.generate_image_component import (
+    GenerationRequest,
+    ImageGenerationService,
+    StreamGenerator,
+)
+from apps.generate_image_legacy import LegacyImageGenerator
 from apps.models import ImageGeneration, ModelInfo
 import time, json
 from apps.ai.image_generation import ImageGenerator
 from time import perf_counter
 from apps.filepath import SearchFile
 import os
-with app.app_context():
 
-    def build_model_registry():
-        base_models = []
-        sdxl_loras = []
+from apps.utils import build_model_registry
 
-        # Load all models
-        all_models = ModelInfo.query.all()
+USE_NEW_ENGINE = True
 
-        for model in all_models:
-            if model.model_type == "checkpoint":
-                base_models.append(
-                    {
-                        "id": f"{model.id}",
-                        "name": f"{model.name}",
-                        "model_type": f"{model.model_type}",
-                        "alias": f"{model.name.lower().replace(" ", "-")}",
-                        "model_path": f"{model.model_path}",
-                        "output_dir": f"{model.name.lower().replace(" ", "_")}",
-                        "base_model": f"{model.base_model}",
-                    }
-                )
-
-            elif model.model_type == "lora":
-                sdxl_loras.append(
-                    {
-                        "id": model.id,
-                        "name": model.name,
-                        "model_type": model.model_type,
-                        "model_path": model.model_path,
-                        "tags": "",  # You can add a `tags` column to your model if needed
-                        "details": {
-                            "type": "Lora",
-                            "base_model": model.base_model,
-                            "trigger_words": [],
-                            "url": "",  # Optional: Add a URL column to ModelInfo if needed
-                        },
-                        "examples": [],  # Add example entries if you're storing them
-                    }
-                )
-
-        return {"base_models": base_models, "sdxl_loras": sdxl_loras}
 
 @app.route("/")
 def landing_page():
-    return render_template("pages/landing/landing.html", title='Home Page')
+    MODEL_REGISTRY = build_model_registry()
+    print(f'MODEL Registry: {MODEL_REGISTRY}')
+    # 🔥 YOU CONTROL DEMO HERE
+    DEMO_CONFIG = {
+        "models": [
+            "Dynavision",
+            "Dreamshaper XL v21 Turbo",
+            "JuggernautXL",
+        ],
+        "loras": ["Harrlogos XL", "Smol Animals", "Pixel Art", "Comic Book Style"],
+    }
+
+    demo_models = [
+        m for m in MODEL_REGISTRY["base_models"] if m["name"] in DEMO_CONFIG["models"]
+    ]
+
+    demo_loras = [
+        l for l in MODEL_REGISTRY["sdxl_loras"] if l["name"] in DEMO_CONFIG["loras"]
+    ]
+
+    return render_template(
+        "pages/landing/landing.html",
+        title="Home Page",
+        demo_models=demo_models,
+        demo_loras=demo_loras,
+    )
+
 
 @app.route("/playground")
 def index():
     MODEL_REGISTRY = build_model_registry()
     print(f"MODEL Registry: {MODEL_REGISTRY}")
-    return render_template("pages/index.html", models=MODEL_REGISTRY, title="Playground")
+    return render_template(
+        "pages/index.html", models=MODEL_REGISTRY, title="Playground"
+    )
+
 
 @app.route("/prompt-guide")
 def prompt_guide():
     return render_template("prompt-guide.html", title="Prompt Guide")
+
 
 @app.get("/gallery")
 def gallery():
@@ -92,13 +93,15 @@ def disclaimer():
 def tos():
     return render_template("tos.html", title="Terms of Service")
 
+
 @app.get("/privacy-policy")
 def privacy_policy():
     return render_template("privacy-policy.html", title="Privacy Policy")
+
+
 @app.get("/about-us")
 def about_us():
     return render_template("about-us.html", title="About CDAI Lite")
-
 
 
 @app.get("/models")
@@ -108,36 +111,64 @@ def manage_models():
     return render_template("pages/app_pp/models.html", models=MODEL_REGISTRY)
 
 
+def generate_alias(name):
+    return re.sub(r"[^a-z0-9\-]+", "", name.lower().replace(" ", "-"))
+
+
 @app.post("/create-model")
 def create_model():
     data = request.get_json()
     print(f"Request: {data}")
-    new_model = ModelInfo(**data)
-    db.session.add(new_model)
-    db.session.commit()
-    return jsonify({"status": "success", "data": "Model created succesfully."})
+
+    try:
+        name = data.get("name")
+        file_path = data.get("file_path")
+
+        if not name or not file_path:
+            return jsonify({"error": "Name and file_path are required"}), 400
+
+        alias = generate_alias(name)
+
+        # 🔥 prevent duplicate alias
+        existing = ModelInfo.query.filter_by(alias=alias).first()
+        if existing:
+            return jsonify({"error": "Model with similar name already exists"}), 400
+
+        new_model = ModelInfo(
+            name=name,
+            alias=alias,  # ✅ CRITICAL
+            base_model=data.get("base_model"),
+            file_path=file_path,
+            model_type=data.get("model_type"),
+            description=data.get("description"),
+            trigger_words=data.get("trigger_words"),
+            is_active=True,
+        )
+
+        db.session.add(new_model)
+        db.session.commit()
+
+        return jsonify({"status": "success", "message": "Model created successfully."})
+
+    except Exception as e:
+        db.session.rollback()
+        return jsonify({"error": "Failed to create model", "details": str(e)}), 500
 
 
 @app.get("/delete-model/<int:id>")
 def delete_model(id):
-    # Query for the model by ID
     model = ModelInfo.query.get(id)
 
     if not model:
-        # Return a 404 if not found
-        # return jsonify({"error": "Model not found"}), 404
         return redirect(url_for("manage_models"))
 
     try:
-        # Delete the model from the database
         db.session.delete(model)
         db.session.commit()
-        # return jsonify({"success": True, "message": f"Model with ID {id} deleted."})
-        return redirect(url_for("manage_models"))
-    except Exception as e:
+    except Exception:
         db.session.rollback()
-        # return jsonify({"error": "An error occurred while deleting the model.", "details": str(e)}), 500
-        return redirect(url_for("manage_models"))
+
+    return redirect(url_for("manage_models"))
 
 
 @app.post("/update-model/<int:id>")
@@ -148,14 +179,34 @@ def update_model(id):
     if not model:
         return jsonify({"error": "Model not found"}), 404
 
-    model.name = data.get("name")
-    model.base_model = data.get("base_model")
-    model.model_path = data.get("model_path")
-    model.model_type = data.get("model_type")
-    model.description = data.get("description")
-
     try:
+        name = data.get("name")
+        file_path = data.get("file_path")
+
+        if not name or not file_path:
+            return jsonify({"error": "Name and file_path are required"}), 400
+
+        alias = generate_alias(name)
+
+        # 🔥 prevent alias collision (excluding current)
+        existing = ModelInfo.query.filter(
+            ModelInfo.alias == alias, ModelInfo.id != id
+        ).first()
+
+        if existing:
+            return jsonify({"error": "Another model with similar name exists"}), 400
+
+        # ✅ update fields
+        model.name = name
+        model.alias = alias  # 🔥 ALWAYS sync
+        model.base_model = data.get("base_model")
+        model.file_path = file_path
+        model.model_type = data.get("model_type")
+        model.description = data.get("description")
+        model.trigger_words = data.get("trigger_words")
+
         db.session.commit()
+
         return jsonify({"message": "Model updated successfully!"})
 
     except Exception as e:
@@ -163,83 +214,32 @@ def update_model(id):
         return jsonify({"error": "Update failed", "details": str(e)}), 500
 
 
-# @app.post("/generate-image")
-# def generate_image():
-#     data = request.get_json()
-#     print("Received payload:", data)
-
-#     # Extract base models selected
-#     base_models = data.get("base_models", [])
-#     prompt = data.get("prompt", "N/A")
-#     lora = data.get("lora", "N/A")
-
-#     generated_images = []
-#     count = 3
-#     for i, base_model in enumerate(base_models):
-#         print(f"Generating for model: {base_model} + lora: {lora}")
-#         time.sleep(count)  # Simulate 3 seconds per image generation
-
-#         # Dummy image URL (replace with actual generation logic)
-#         generated_images.append(
-#             {
-#                 "base_model": base_model,
-#                 "lora": lora,
-#                 "image": f"https://picsum.photos/seed/{base_model}-{lora}/400",
-#             }
-#         )
-#         count += 2
-
-#     return jsonify({"images": generated_images})
-
-
 @app.route("/stream-generate-image", methods=["POST"])
 def stream_generate_image():
+
     data = request.get_json()
-    base_models = data.get("base_models", [])
-    prompt = data.get("prompt", "N/A")
-    negative_prompt = data.get("negative_prompt", "N/A")
-    lora = data.get("lora", "N/A")
-    trigger_words = data.get("trigger_words", "N/A")
-    if lora == "no-lora":
-        lora = None
-    MODEL_REGISTRY = build_model_registry()
-    generator = ImageGenerator(model_registry=MODEL_REGISTRY)
 
-    @stream_with_context
-    def generate():
+    if not USE_NEW_ENGINE:
+        print("----USING LEGACY ENGINE-----")
+        legacy = LegacyImageGenerator()
 
-        for base_model in base_models:
-            print(f"Generating for model: {base_model} + lora: {lora}")
-            start = perf_counter()
-            save_path, filename = generator.generate_image(
-                base_model=base_model,
-                image_style=lora,
-                prompt=prompt,
-                negative_prompt=negative_prompt,
-            )
-            end = perf_counter()
-            duration = end - start
-            new_image = ImageGeneration(
-                prompt=prompt,
-                negative_prompt=negative_prompt,
-                model_used=base_model,
-                style=lora,
-                trigger_words=trigger_words,
-                file_path=filename,
-                duration=duration,
-            )
-            db.session.add(new_image)
-            db.session.commit()
-            # Just use filename to build a public URL
-            public_url = f"/static/images/{filename}"
-            image_data = {
-                "base_model": base_model,
-                "lora": lora,
-                "image": public_url,
-            }
-            yield f"data: {json.dumps(image_data)}\n\n"
+        return Response(
+            stream_with_context(legacy.stream(data)), content_type="text/event-stream"
+        )
 
-    return Response(generate(), content_type="text/event-stream")
+    # ----------------------------
+    # NEW ENGINE
+    # ----------------------------
+    print("----USING NEW ENGINE----")
+    request_obj = GenerationRequest.from_payload(data)
+
+    service = ImageGenerationService()
+    streamer = StreamGenerator(service)
+
+    return Response(
+        stream_with_context(streamer.stream(request_obj)),
+        content_type="text/event-stream",
+    )
 
 
 @app.route("/delete-image/<string:filename>")
@@ -268,9 +268,14 @@ def delete_image(filename):
         flash(f"An error occurred: {str(e)}", "danger")
         return redirect(url_for("gallery"))
 
+@app.get("/local-ai-image-generation")
+def local_ai_image_generation():
+    return render_template("pages/misc/local_ai_image_generation.html")
+
 @app.route("/v1")
 def version1():
     return render_template("pages/index-1.html")
+
 
 @app.route("/v2")
 def version2():

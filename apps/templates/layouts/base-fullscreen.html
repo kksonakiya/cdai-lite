@@ -18,5 +18,30 @@
 
     {% block extra_js %}{% endblock %}
 {% include "includes/footer.html" %}
+<button id="scrollTopBtn" class="scroll-top-btn" aria-label="Back to top">
+    ↑
+</button>
+<script>
+
+const scrollBtn = document.getElementById("scrollTopBtn");
+
+// show button after scroll
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 300) {
+    scrollBtn.classList.add("show");
+  } else {
+    scrollBtn.classList.remove("show");
+  }
+});
+
+// smooth scroll to top
+scrollBtn.addEventListener("click", () => {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+});
+
+</script>
 </body>
 </html>
