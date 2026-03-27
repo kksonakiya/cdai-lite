@@ -156,7 +156,7 @@ class ImageGenerationService:
         duration = perf_counter() - start
         
         public_url = f"{self.base_url}/static/images/{filename}"
-
+        print('public url: ', public_url)
         return {
             "prompt": prompt,
             "base_model": base_model,

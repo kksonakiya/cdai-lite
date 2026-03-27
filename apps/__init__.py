@@ -3,7 +3,8 @@ from flask_sqlalchemy import SQLAlchemy
 import os
 from apps.logging_config import setup_logging
 from flask_cors import CORS
-
+from dotenv import load_dotenv
+load_dotenv()
 app = Flask(__name__)
 app.config["SECRET_KEY"] = (
     "supersecret$007"  # Replace with a secure, random key in production
@@ -19,13 +20,9 @@ CORS(
         }
     },
 )
-ENVIRONMENT = os.getenv("ENV", "development")
 
-app.config["PIXAPICK_APP_BASE_URL"] = (
-    os.getenv("PIXAPICK_APP_TUNNEL_URL")
-    if ENVIRONMENT == "production"
-    else os.getenv("PIXAPICK_APP_BASE_URL", "http://localhost:5020")
-)
+app.config["PIXAPICK_APP_BASE_URL"] =  os.getenv("PIXAPICK_APP_TUNNEL_URL", "http://localhost:5020")
+   
 app.config["UPLOAD_FOLDER"] = "uploads/"
 app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///project.sqlite3"
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
