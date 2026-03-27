@@ -42,5 +42,5 @@ with app.app_context():
             elif model.model_type == "lora":
                 entry = build_model_entry(model)
                 sdxl_loras.append(entry)
-
+        
         return {"base_models": base_models, "sdxl_loras": sdxl_loras}

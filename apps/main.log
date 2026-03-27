@@ -5501,3 +5501,152 @@
 2026-03-27 00:41:56,330 — flask-app — INFO — Using resolution: 512x768
 2026-03-27 00:42:00,384 — flask-app — DEBUG — Generated filename: G:\K K Sonakiya\Projects\30. AI Image Generation\1. Image Generation\CDAI Lite\apps\static\images\generated_20260327_004200.png
 2026-03-27 00:42:00,423 — flask-app — INFO — Image saved at: G:\K K Sonakiya\Projects\30. AI Image Generation\1. Image Generation\CDAI Lite\apps\static\images\generated_20260327_004200.png
+2026-03-27 12:48:34,621 — flask-app — INFO — ImageGenerator initialized with device=cuda
+2026-03-27 12:48:34,625 — flask-app — INFO — [Generate] Request params: {'base_model': 'dynavision', 'image_style': 'Smol Animals', 'prompt': 'cute cat', 'negative_prompt': None}
+2026-03-27 12:48:34,626 — flask-app — INFO — Switching base model from None to dynavision
+2026-03-27 12:48:34,626 — flask-app — INFO — Base Model Details: {'id': '2', 'name': 'Dynavision', 'alias': 'dynavision', 'model_type': 'checkpoint', 'file_path': 'C:\\Users\\kkson\\Models\\dynavision.safetensors', 'base_model': 'sdxl_1_0', 'output_dir': 'dynavision', 'details': {'type': 'Checkpoint', 'base_model': 'sdxl_1_0', 'trigger_words': [], 'url': ''}, 'examples': []}
+2026-03-27 12:48:34,628 — flask-app — INFO — Loading base model: dynavision from C:\Users\kkson\Models\dynavision.safetensors with base_model as sdxl_1_0
+2026-03-27 12:48:48,616 — flask-app — INFO — LORA Name: Smol Animals | Adapter Name: Smol Animals | PATH: C:\Users\kkson\Models\Lora\smol-animals.safetensors 
+2026-03-27 12:48:52,925 — flask-app — INFO — LoRA loaded: Smol Animals
+2026-03-27 12:48:52,927 — flask-app — INFO — Using resolution: 512x768
+2026-03-27 12:49:00,084 — flask-app — DEBUG — Generated filename: G:\K K Sonakiya\Projects\30. AI Image Generation\1. Image Generation\CDAI Lite\apps\static\images\generated_20260327_124900.png
+2026-03-27 12:49:00,178 — flask-app — INFO — Image saved at: G:\K K Sonakiya\Projects\30. AI Image Generation\1. Image Generation\CDAI Lite\apps\static\images\generated_20260327_124900.png
+2026-03-27 12:50:21,384 — flask-app — INFO — ImageGenerator initialized with device=cuda
+2026-03-27 12:50:21,387 — flask-app — INFO — [Generate] Request params: {'base_model': 'dynavision', 'image_style': 'Smol Animals', 'prompt': 'cute cat', 'negative_prompt': None}
+2026-03-27 12:50:21,388 — flask-app — INFO — Switching base model from None to dynavision
+2026-03-27 12:50:21,389 — flask-app — INFO — Base Model Details: {'id': '2', 'name': 'Dynavision', 'alias': 'dynavision', 'model_type': 'checkpoint', 'file_path': 'C:\\Users\\kkson\\Models\\dynavision.safetensors', 'base_model': 'sdxl_1_0', 'output_dir': 'dynavision', 'details': {'type': 'Checkpoint', 'base_model': 'sdxl_1_0', 'trigger_words': [], 'url': ''}, 'examples': []}
+2026-03-27 12:50:21,391 — flask-app — INFO — Loading base model: dynavision from C:\Users\kkson\Models\dynavision.safetensors with base_model as sdxl_1_0
+2026-03-27 12:50:26,695 — flask-app — INFO — LORA Name: Smol Animals | Adapter Name: Smol Animals | PATH: C:\Users\kkson\Models\Lora\smol-animals.safetensors 
+2026-03-27 12:50:29,296 — flask-app — INFO — LoRA loaded: Smol Animals
+2026-03-27 12:50:29,297 — flask-app — INFO — Using resolution: 512x768
+2026-03-27 12:50:33,345 — flask-app — DEBUG — Generated filename: G:\K K Sonakiya\Projects\30. AI Image Generation\1. Image Generation\CDAI Lite\apps\static\images\generated_20260327_125033.png
+2026-03-27 12:50:33,386 — flask-app — INFO — Image saved at: G:\K K Sonakiya\Projects\30. AI Image Generation\1. Image Generation\CDAI Lite\apps\static\images\generated_20260327_125033.png
+2026-03-27 12:53:04,229 — flask-app — INFO — ImageGenerator initialized with device=cuda
+2026-03-27 12:53:04,231 — flask-app — INFO — [Generate] Request params: {'base_model': 'dynavision', 'image_style': 'harrlogos', 'prompt': 'minimal cat', 'negative_prompt': None}
+2026-03-27 12:53:04,233 — flask-app — INFO — Switching base model from None to dynavision
+2026-03-27 12:53:04,235 — flask-app — INFO — Base Model Details: {'id': '2', 'name': 'Dynavision', 'alias': 'dynavision', 'model_type': 'checkpoint', 'file_path': 'C:\\Users\\kkson\\Models\\dynavision.safetensors', 'base_model': 'sdxl_1_0', 'output_dir': 'dynavision', 'details': {'type': 'Checkpoint', 'base_model': 'sdxl_1_0', 'trigger_words': [], 'url': ''}, 'examples': []}
+2026-03-27 12:53:04,236 — flask-app — INFO — Loading base model: dynavision from C:\Users\kkson\Models\dynavision.safetensors with base_model as sdxl_1_0
+2026-03-27 12:53:41,957 — flask-app — INFO — ImageGenerator initialized with device=cuda
+2026-03-27 12:53:41,959 — flask-app — INFO — [Generate] Request params: {'base_model': 'dynavision', 'image_style': 'Smol Animals', 'prompt': 'cute cat', 'negative_prompt': None}
+2026-03-27 12:53:41,960 — flask-app — INFO — Switching base model from None to dynavision
+2026-03-27 12:53:41,961 — flask-app — INFO — Base Model Details: {'id': '2', 'name': 'Dynavision', 'alias': 'dynavision', 'model_type': 'checkpoint', 'file_path': 'C:\\Users\\kkson\\Models\\dynavision.safetensors', 'base_model': 'sdxl_1_0', 'output_dir': 'dynavision', 'details': {'type': 'Checkpoint', 'base_model': 'sdxl_1_0', 'trigger_words': [], 'url': ''}, 'examples': []}
+2026-03-27 12:53:41,963 — flask-app — INFO — Loading base model: dynavision from C:\Users\kkson\Models\dynavision.safetensors with base_model as sdxl_1_0
+2026-03-27 12:53:46,630 — flask-app — INFO — LORA Name: Smol Animals | Adapter Name: Smol Animals | PATH: C:\Users\kkson\Models\Lora\smol-animals.safetensors 
+2026-03-27 12:53:49,237 — flask-app — INFO — LoRA loaded: Smol Animals
+2026-03-27 12:53:49,239 — flask-app — INFO — Using resolution: 512x768
+2026-03-27 12:53:53,155 — flask-app — DEBUG — Generated filename: G:\K K Sonakiya\Projects\30. AI Image Generation\1. Image Generation\CDAI Lite\apps\static\images\generated_20260327_125353.png
+2026-03-27 12:53:53,192 — flask-app — INFO — Image saved at: G:\K K Sonakiya\Projects\30. AI Image Generation\1. Image Generation\CDAI Lite\apps\static\images\generated_20260327_125353.png
+2026-03-27 13:01:41,294 — flask-app — INFO — ImageGenerator initialized with device=cuda
+2026-03-27 13:01:41,299 — flask-app — INFO — [Generate] Request params: {'base_model': 'dynavision', 'image_style': 'Smol Animals', 'prompt': 'cute cat', 'negative_prompt': None}
+2026-03-27 13:01:41,301 — flask-app — INFO — Switching base model from None to dynavision
+2026-03-27 13:01:41,303 — flask-app — INFO — Base Model Details: {'id': '2', 'name': 'Dynavision', 'alias': 'dynavision', 'model_type': 'checkpoint', 'file_path': 'C:\\Users\\kkson\\Models\\dynavision.safetensors', 'base_model': 'sdxl_1_0', 'output_dir': 'dynavision', 'details': {'type': 'Checkpoint', 'base_model': 'sdxl_1_0', 'trigger_words': [], 'url': ''}, 'examples': []}
+2026-03-27 13:01:41,305 — flask-app — INFO — Loading base model: dynavision from C:\Users\kkson\Models\dynavision.safetensors with base_model as sdxl_1_0
+2026-03-27 13:01:46,195 — flask-app — INFO — LORA Name: Smol Animals | Adapter Name: Smol Animals | PATH: C:\Users\kkson\Models\Lora\smol-animals.safetensors 
+2026-03-27 13:01:48,837 — flask-app — INFO — LoRA loaded: Smol Animals
+2026-03-27 13:01:48,837 — flask-app — INFO — Using resolution: 512x768
+2026-03-27 13:01:53,176 — flask-app — DEBUG — Generated filename: G:\K K Sonakiya\Projects\30. AI Image Generation\1. Image Generation\CDAI Lite\apps\static\images\generated_20260327_130153.png
+2026-03-27 13:01:53,237 — flask-app — INFO — Image saved at: G:\K K Sonakiya\Projects\30. AI Image Generation\1. Image Generation\CDAI Lite\apps\static\images\generated_20260327_130153.png
+2026-03-27 13:02:01,904 — flask-app — INFO — ImageGenerator initialized with device=cuda
+2026-03-27 13:02:01,906 — flask-app — INFO — [Generate] Request params: {'base_model': 'dynavision', 'image_style': 'Smol Animals', 'prompt': 'cute cat', 'negative_prompt': None}
+2026-03-27 13:02:01,907 — flask-app — INFO — Switching base model from None to dynavision
+2026-03-27 13:02:01,908 — flask-app — INFO — Base Model Details: {'id': '2', 'name': 'Dynavision', 'alias': 'dynavision', 'model_type': 'checkpoint', 'file_path': 'C:\\Users\\kkson\\Models\\dynavision.safetensors', 'base_model': 'sdxl_1_0', 'output_dir': 'dynavision', 'details': {'type': 'Checkpoint', 'base_model': 'sdxl_1_0', 'trigger_words': [], 'url': ''}, 'examples': []}
+2026-03-27 13:02:01,910 — flask-app — INFO — Loading base model: dynavision from C:\Users\kkson\Models\dynavision.safetensors with base_model as sdxl_1_0
+2026-03-27 13:02:07,312 — flask-app — INFO — LORA Name: Smol Animals | Adapter Name: Smol Animals | PATH: C:\Users\kkson\Models\Lora\smol-animals.safetensors 
+2026-03-27 13:02:10,066 — flask-app — INFO — LoRA loaded: Smol Animals
+2026-03-27 13:02:10,068 — flask-app — INFO — Using resolution: 512x768
+2026-03-27 13:02:14,354 — flask-app — DEBUG — Generated filename: G:\K K Sonakiya\Projects\30. AI Image Generation\1. Image Generation\CDAI Lite\apps\static\images\generated_20260327_130214.png
+2026-03-27 13:02:14,390 — flask-app — INFO — Image saved at: G:\K K Sonakiya\Projects\30. AI Image Generation\1. Image Generation\CDAI Lite\apps\static\images\generated_20260327_130214.png
+2026-03-27 13:02:29,936 — flask-app — INFO — ImageGenerator initialized with device=cuda
+2026-03-27 13:02:29,938 — flask-app — INFO — [Generate] Request params: {'base_model': 'dynavision', 'image_style': 'Smol Animals', 'prompt': 'cute cat', 'negative_prompt': None}
+2026-03-27 13:02:29,939 — flask-app — INFO — Switching base model from None to dynavision
+2026-03-27 13:02:29,940 — flask-app — INFO — Base Model Details: {'id': '2', 'name': 'Dynavision', 'alias': 'dynavision', 'model_type': 'checkpoint', 'file_path': 'C:\\Users\\kkson\\Models\\dynavision.safetensors', 'base_model': 'sdxl_1_0', 'output_dir': 'dynavision', 'details': {'type': 'Checkpoint', 'base_model': 'sdxl_1_0', 'trigger_words': [], 'url': ''}, 'examples': []}
+2026-03-27 13:02:29,941 — flask-app — INFO — Loading base model: dynavision from C:\Users\kkson\Models\dynavision.safetensors with base_model as sdxl_1_0
+2026-03-27 13:02:35,138 — flask-app — INFO — LORA Name: Smol Animals | Adapter Name: Smol Animals | PATH: C:\Users\kkson\Models\Lora\smol-animals.safetensors 
+2026-03-27 13:02:37,659 — flask-app — INFO — LoRA loaded: Smol Animals
+2026-03-27 13:02:37,660 — flask-app — INFO — Using resolution: 512x768
+2026-03-27 13:02:41,549 — flask-app — DEBUG — Generated filename: G:\K K Sonakiya\Projects\30. AI Image Generation\1. Image Generation\CDAI Lite\apps\static\images\generated_20260327_130241.png
+2026-03-27 13:02:41,586 — flask-app — INFO — Image saved at: G:\K K Sonakiya\Projects\30. AI Image Generation\1. Image Generation\CDAI Lite\apps\static\images\generated_20260327_130241.png
+2026-03-27 13:06:49,363 — flask-app — INFO — ImageGenerator initialized with device=cuda
+2026-03-27 13:06:49,365 — flask-app — INFO — [Generate] Request params: {'base_model': 'dynavision', 'image_style': 'Smol Animals', 'prompt': 'cute cat', 'negative_prompt': None}
+2026-03-27 13:06:49,366 — flask-app — INFO — Switching base model from None to dynavision
+2026-03-27 13:06:49,366 — flask-app — INFO — Base Model Details: {'id': '2', 'name': 'Dynavision', 'alias': 'dynavision', 'model_type': 'checkpoint', 'file_path': 'C:\\Users\\kkson\\Models\\dynavision.safetensors', 'base_model': 'sdxl_1_0', 'output_dir': 'dynavision', 'details': {'type': 'Checkpoint', 'base_model': 'sdxl_1_0', 'trigger_words': [], 'url': ''}, 'examples': []}
+2026-03-27 13:06:49,369 — flask-app — INFO — Loading base model: dynavision from C:\Users\kkson\Models\dynavision.safetensors with base_model as sdxl_1_0
+2026-03-27 13:06:54,322 — flask-app — INFO — LORA Name: Smol Animals | Adapter Name: Smol Animals | PATH: C:\Users\kkson\Models\Lora\smol-animals.safetensors 
+2026-03-27 13:06:56,987 — flask-app — INFO — LoRA loaded: Smol Animals
+2026-03-27 13:06:56,988 — flask-app — INFO — Using resolution: 512x768
+2026-03-27 13:07:00,908 — flask-app — DEBUG — Generated filename: G:\K K Sonakiya\Projects\30. AI Image Generation\1. Image Generation\CDAI Lite\apps\static\images\generated_20260327_130700.png
+2026-03-27 13:07:00,943 — flask-app — INFO — Image saved at: G:\K K Sonakiya\Projects\30. AI Image Generation\1. Image Generation\CDAI Lite\apps\static\images\generated_20260327_130700.png
+2026-03-27 13:12:12,808 — flask-app — INFO — ImageGenerator initialized with device=cuda
+2026-03-27 13:12:12,811 — flask-app — INFO — [Generate] Request params: {'base_model': 'dynavision', 'image_style': 'Smol Animals', 'prompt': 'cute cat', 'negative_prompt': None}
+2026-03-27 13:12:12,827 — flask-app — INFO — Switching base model from None to dynavision
+2026-03-27 13:12:12,829 — flask-app — INFO — Base Model Details: {'id': '2', 'name': 'Dynavision', 'alias': 'dynavision', 'model_type': 'checkpoint', 'file_path': 'C:\\Users\\kkson\\Models\\dynavision.safetensors', 'base_model': 'sdxl_1_0', 'output_dir': 'dynavision', 'details': {'type': 'Checkpoint', 'base_model': 'sdxl_1_0', 'trigger_words': [], 'url': ''}, 'examples': []}
+2026-03-27 13:12:12,831 — flask-app — INFO — Loading base model: dynavision from C:\Users\kkson\Models\dynavision.safetensors with base_model as sdxl_1_0
+2026-03-27 13:12:18,211 — flask-app — INFO — LORA Name: Smol Animals | Adapter Name: Smol Animals | PATH: C:\Users\kkson\Models\Lora\smol-animals.safetensors 
+2026-03-27 13:12:20,883 — flask-app — INFO — LoRA loaded: Smol Animals
+2026-03-27 13:12:20,884 — flask-app — INFO — Using resolution: 512x768
+2026-03-27 13:12:24,791 — flask-app — DEBUG — Generated filename: G:\K K Sonakiya\Projects\30. AI Image Generation\1. Image Generation\CDAI Lite\apps\static\images\generated_20260327_131224.png
+2026-03-27 13:12:24,827 — flask-app — INFO — Image saved at: G:\K K Sonakiya\Projects\30. AI Image Generation\1. Image Generation\CDAI Lite\apps\static\images\generated_20260327_131224.png
+2026-03-27 13:15:02,973 — flask-app — INFO — ImageGenerator initialized with device=cuda
+2026-03-27 13:15:02,975 — flask-app — INFO — [Generate] Request params: {'base_model': 'dynavision', 'image_style': 'Smol Animals', 'prompt': 'cute cat', 'negative_prompt': None}
+2026-03-27 13:15:02,977 — flask-app — INFO — Switching base model from None to dynavision
+2026-03-27 13:15:02,979 — flask-app — INFO — Base Model Details: {'id': '2', 'name': 'Dynavision', 'alias': 'dynavision', 'model_type': 'checkpoint', 'file_path': 'C:\\Users\\kkson\\Models\\dynavision.safetensors', 'base_model': 'sdxl_1_0', 'output_dir': 'dynavision', 'details': {'type': 'Checkpoint', 'base_model': 'sdxl_1_0', 'trigger_words': [], 'url': ''}, 'examples': []}
+2026-03-27 13:15:02,981 — flask-app — INFO — Loading base model: dynavision from C:\Users\kkson\Models\dynavision.safetensors with base_model as sdxl_1_0
+2026-03-27 13:15:07,890 — flask-app — INFO — LORA Name: Smol Animals | Adapter Name: Smol Animals | PATH: C:\Users\kkson\Models\Lora\smol-animals.safetensors 
+2026-03-27 13:15:10,444 — flask-app — INFO — LoRA loaded: Smol Animals
+2026-03-27 13:15:10,445 — flask-app — INFO — Using resolution: 512x768
+2026-03-27 13:15:14,410 — flask-app — DEBUG — Generated filename: G:\K K Sonakiya\Projects\30. AI Image Generation\1. Image Generation\CDAI Lite\apps\static\images\generated_20260327_131514.png
+2026-03-27 13:15:14,446 — flask-app — INFO — Image saved at: G:\K K Sonakiya\Projects\30. AI Image Generation\1. Image Generation\CDAI Lite\apps\static\images\generated_20260327_131514.png
+2026-03-27 13:17:04,615 — flask-app — INFO — ImageGenerator initialized with device=cuda
+2026-03-27 13:17:04,617 — flask-app — INFO — [Generate] Request params: {'base_model': 'dynavision', 'image_style': 'Smol Animals', 'prompt': 'cute cat', 'negative_prompt': None}
+2026-03-27 13:17:04,618 — flask-app — INFO — Switching base model from None to dynavision
+2026-03-27 13:17:04,619 — flask-app — INFO — Base Model Details: {'id': '2', 'name': 'Dynavision', 'alias': 'dynavision', 'model_type': 'checkpoint', 'file_path': 'C:\\Users\\kkson\\Models\\dynavision.safetensors', 'base_model': 'sdxl_1_0', 'output_dir': 'dynavision', 'details': {'type': 'Checkpoint', 'base_model': 'sdxl_1_0', 'trigger_words': [], 'url': ''}, 'examples': []}
+2026-03-27 13:17:04,621 — flask-app — INFO — Loading base model: dynavision from C:\Users\kkson\Models\dynavision.safetensors with base_model as sdxl_1_0
+2026-03-27 13:17:09,773 — flask-app — INFO — LORA Name: Smol Animals | Adapter Name: Smol Animals | PATH: C:\Users\kkson\Models\Lora\smol-animals.safetensors 
+2026-03-27 13:17:12,424 — flask-app — INFO — LoRA loaded: Smol Animals
+2026-03-27 13:17:12,425 — flask-app — INFO — Using resolution: 512x768
+2026-03-27 13:17:16,384 — flask-app — DEBUG — Generated filename: G:\K K Sonakiya\Projects\30. AI Image Generation\1. Image Generation\CDAI Lite\apps\static\images\generated_20260327_131716.png
+2026-03-27 13:17:16,418 — flask-app — INFO — Image saved at: G:\K K Sonakiya\Projects\30. AI Image Generation\1. Image Generation\CDAI Lite\apps\static\images\generated_20260327_131716.png
+2026-03-27 13:21:15,393 — flask-app — INFO — ImageGenerator initialized with device=cuda
+2026-03-27 13:21:15,395 — flask-app — INFO — [Generate] Request params: {'base_model': 'dynavision', 'image_style': 'Smol Animals', 'prompt': 'cute cat', 'negative_prompt': None}
+2026-03-27 13:21:15,397 — flask-app — INFO — Switching base model from None to dynavision
+2026-03-27 13:21:15,398 — flask-app — INFO — Base Model Details: {'id': '2', 'name': 'Dynavision', 'alias': 'dynavision', 'model_type': 'checkpoint', 'file_path': 'C:\\Users\\kkson\\Models\\dynavision.safetensors', 'base_model': 'sdxl_1_0', 'output_dir': 'dynavision', 'details': {'type': 'Checkpoint', 'base_model': 'sdxl_1_0', 'trigger_words': [], 'url': ''}, 'examples': []}
+2026-03-27 13:21:15,400 — flask-app — INFO — Loading base model: dynavision from C:\Users\kkson\Models\dynavision.safetensors with base_model as sdxl_1_0
+2026-03-27 13:21:20,805 — flask-app — INFO — LORA Name: Smol Animals | Adapter Name: Smol Animals | PATH: C:\Users\kkson\Models\Lora\smol-animals.safetensors 
+2026-03-27 13:21:23,725 — flask-app — INFO — LoRA loaded: Smol Animals
+2026-03-27 13:21:23,726 — flask-app — INFO — Using resolution: 512x768
+2026-03-27 13:21:27,642 — flask-app — DEBUG — Generated filename: G:\K K Sonakiya\Projects\30. AI Image Generation\1. Image Generation\CDAI Lite\apps\static\images\generated_20260327_132127.png
+2026-03-27 13:21:27,678 — flask-app — INFO — Image saved at: G:\K K Sonakiya\Projects\30. AI Image Generation\1. Image Generation\CDAI Lite\apps\static\images\generated_20260327_132127.png
+2026-03-27 13:21:49,041 — flask-app — INFO — ImageGenerator initialized with device=cuda
+2026-03-27 13:21:49,042 — flask-app — INFO — [Generate] Request params: {'base_model': 'dynavision', 'image_style': 'Smol Animals', 'prompt': 'cute cat', 'negative_prompt': None}
+2026-03-27 13:21:49,044 — flask-app — INFO — Switching base model from None to dynavision
+2026-03-27 13:21:49,044 — flask-app — INFO — Base Model Details: {'id': '2', 'name': 'Dynavision', 'alias': 'dynavision', 'model_type': 'checkpoint', 'file_path': 'C:\\Users\\kkson\\Models\\dynavision.safetensors', 'base_model': 'sdxl_1_0', 'output_dir': 'dynavision', 'details': {'type': 'Checkpoint', 'base_model': 'sdxl_1_0', 'trigger_words': [], 'url': ''}, 'examples': []}
+2026-03-27 13:21:49,047 — flask-app — INFO — Loading base model: dynavision from C:\Users\kkson\Models\dynavision.safetensors with base_model as sdxl_1_0
+2026-03-27 13:21:54,895 — flask-app — INFO — LORA Name: Smol Animals | Adapter Name: Smol Animals | PATH: C:\Users\kkson\Models\Lora\smol-animals.safetensors 
+2026-03-27 13:21:57,558 — flask-app — INFO — LoRA loaded: Smol Animals
+2026-03-27 13:21:57,559 — flask-app — INFO — Using resolution: 512x768
+2026-03-27 13:22:01,537 — flask-app — DEBUG — Generated filename: G:\K K Sonakiya\Projects\30. AI Image Generation\1. Image Generation\CDAI Lite\apps\static\images\generated_20260327_132201.png
+2026-03-27 13:22:01,574 — flask-app — INFO — Image saved at: G:\K K Sonakiya\Projects\30. AI Image Generation\1. Image Generation\CDAI Lite\apps\static\images\generated_20260327_132201.png
+2026-03-27 13:22:01,577 — flask-app — INFO — [Generate] Request params: {'base_model': 'dynavision', 'image_style': 'Smol Animals', 'prompt': 'cute dog', 'negative_prompt': None}
+2026-03-27 13:22:01,579 — flask-app — INFO — Base model dynavision already loaded. Skipping reload.
+2026-03-27 13:22:01,580 — flask-app — INFO — LORA Name: Smol Animals | Adapter Name: Smol Animals | PATH: C:\Users\kkson\Models\Lora\smol-animals.safetensors 
+2026-03-27 13:22:01,689 — flask-app — ERROR — Failed to load LoRA 'Smol Animals': Adapter name Smol Animals already in use in the model - please select a new adapter name.
+2026-03-27 13:22:01,694 — flask-app — INFO — Using resolution: 512x768
+2026-03-27 13:22:05,659 — flask-app — DEBUG — Generated filename: G:\K K Sonakiya\Projects\30. AI Image Generation\1. Image Generation\CDAI Lite\apps\static\images\generated_20260327_132205.png
+2026-03-27 13:22:05,700 — flask-app — INFO — Image saved at: G:\K K Sonakiya\Projects\30. AI Image Generation\1. Image Generation\CDAI Lite\apps\static\images\generated_20260327_132205.png
+2026-03-27 13:22:05,702 — flask-app — INFO — [Generate] Request params: {'base_model': 'dynavision', 'image_style': 'Smol Animals', 'prompt': 'cute horse', 'negative_prompt': None}
+2026-03-27 13:22:05,704 — flask-app — INFO — Base model dynavision already loaded. Skipping reload.
+2026-03-27 13:22:05,706 — flask-app — INFO — LORA Name: Smol Animals | Adapter Name: Smol Animals | PATH: C:\Users\kkson\Models\Lora\smol-animals.safetensors 
+2026-03-27 13:22:05,820 — flask-app — ERROR — Failed to load LoRA 'Smol Animals': Adapter name Smol Animals already in use in the model - please select a new adapter name.
+2026-03-27 13:22:05,826 — flask-app — INFO — Using resolution: 512x768
+2026-03-27 13:22:09,822 — flask-app — DEBUG — Generated filename: G:\K K Sonakiya\Projects\30. AI Image Generation\1. Image Generation\CDAI Lite\apps\static\images\generated_20260327_132209.png
+2026-03-27 13:22:09,863 — flask-app — INFO — Image saved at: G:\K K Sonakiya\Projects\30. AI Image Generation\1. Image Generation\CDAI Lite\apps\static\images\generated_20260327_132209.png
+2026-03-28 00:16:40,855 — flask-app — INFO — ImageGenerator initialized with device=cuda
+2026-03-28 00:16:40,864 — flask-app — INFO — [Generate] Request params: {'base_model': 'dynavision', 'image_style': 'Smol Animals', 'prompt': 'cute bug', 'negative_prompt': None}
+2026-03-28 00:16:40,867 — flask-app — INFO — Switching base model from None to dynavision
+2026-03-28 00:16:40,868 — flask-app — INFO — Base Model Details: {'id': '2', 'name': 'Dynavision', 'alias': 'dynavision', 'model_type': 'checkpoint', 'file_path': 'C:\\Users\\kkson\\Models\\dynavision.safetensors', 'base_model': 'sdxl_1_0', 'output_dir': 'dynavision', 'details': {'type': 'Checkpoint', 'base_model': 'sdxl_1_0', 'trigger_words': [], 'url': ''}, 'examples': []}
+2026-03-28 00:16:40,871 — flask-app — INFO — Loading base model: dynavision from C:\Users\kkson\Models\dynavision.safetensors with base_model as sdxl_1_0
+2026-03-28 00:16:57,927 — flask-app — INFO — LORA Name: Smol Animals | Adapter Name: Smol Animals | PATH: C:\Users\kkson\Models\Lora\smol-animals.safetensors 
+2026-03-28 00:17:02,375 — flask-app — INFO — LoRA loaded: Smol Animals
+2026-03-28 00:17:02,377 — flask-app — INFO — Using resolution: 512x768
+2026-03-28 00:17:10,432 — flask-app — DEBUG — Generated filename: G:\K K Sonakiya\Projects\30. AI Image Generation\1. Image Generation\CDAI Lite\apps\static\images\generated_20260328_001710.png
+2026-03-28 00:17:10,477 — flask-app — INFO — Image saved at: G:\K K Sonakiya\Projects\30. AI Image Generation\1. Image Generation\CDAI Lite\apps\static\images\generated_20260328_001710.png

@@ -1,6 +1,8 @@
 from dataclasses import dataclass
 from typing import List, Optional
 
+from flask import current_app
+
 from apps.utils import build_model_registry
 from apps.ai.image_generation import ImageGenerator
 from time import perf_counter
@@ -126,7 +128,7 @@ class ImageGenerationService:
     def __init__(self):
         self.model_registry = build_model_registry()
         self.generator = ImageGenerator(model_registry=self.model_registry)
-
+        self.base_url=current_app.config.get("PIXAPICK_APP_BASE_URL")
     def generate_one(self, task: dict):
         """
         task = {
@@ -152,8 +154,8 @@ class ImageGenerationService:
         )
 
         duration = perf_counter() - start
-
-        public_url = f"/static/images/{filename}"
+        
+        public_url = f"{self.base_url}/static/images/{filename}"
 
         return {
             "prompt": prompt,
